@@ -1,0 +1,360 @@
+{% extends 'master.html' %}
+
+{% block title %}
+Mauritius Emergency Services
+{% endblock %}
+
+{% block meta %}
+<meta content="" name="description">
+<meta content="" name="keywords">
+{% endblock %}
+
+{% block body %}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+
+    <div class="container d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
+        <h1>Stay in Proximity with Mauritius' Phone Services</h1>
+        <h2>It is an app designed efficiently for rapid emergency service calls</h2>
+
+        <br>
+
+        <!-- Google play button -->
+        <a
+            href='https://play.google.com/store/apps/details?id=com.th3pl4gu3.mes&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+            <img width="300px" alt='Get it on Google Play'
+                src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
+        </a>
+
+        <img width="500px" src="{{ url_for('web.static', filename='img/hero-header.webp') }}" class="img-fluid hero-img"
+            alt="" data-aos="zoom-in" data-aos-delay="150">
+    </div>
+
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row no-gutters">
+                <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-right">
+                    <div class="content">
+                        <h3>Yellow Pages? We are way past that era!</h3>
+                        <p>
+                            Get the important phone services of Mauritius with you, right in your pocket, all the time.
+                        </p>
+                        <a href="#features" class="about-btn">Features <i class="bx bx-chevron-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-stretch" data-aos="fade-left">
+                    <div class="icon-boxes d-flex flex-column justify-content-center">
+                        <div class="row">
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <i class="bx bx-receipt"></i>
+                                <h4>Organized List</h4>
+                                <p>
+                                    An organized list of Mauritius' phone services which makes it simple to find what
+                                    you're looking for
+                                </p>
+                            </div>
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                                <i class="bx bxs-hand-up"></i>
+                                <h4>One Click Away</h4>
+                                <p>
+                                    You are only one click away from contacting your emergency services
+                                </p>
+                            </div>
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                                <i class="bx bx-user-check"></i>
+                                <h4>Easy to Use</h4>
+                                <p>
+                                    Simple, materialistic and minimalist design to adequate all types of users. MES is
+                                    super user friendly to use
+                                </p>
+                            </div>
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                                <i class="bx bx-dollar"></i>
+                                <h4>Free for All</h4>
+                                <p>
+                                    No in-app purchases, no premium priviledges and most importantly, no ads. MES is
+                                    free for all
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- End .content-->
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features" data-aos="fade-up">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Features</h2>
+                <p>
+                    With MES right in your pocket, you can make emergency calls in Mauritius on the go.
+                </p>
+
+                <br>
+
+                <p>
+                    No need to lose time by looking for the appropriate number to call, we have it right there for you.
+                </p>
+
+                <br>
+
+                <p>
+                    Below are samples of MES and currently available features + user experience that you will be able to
+                    enjoy in Mauritius Emergency Services
+                </p>
+            </div>
+
+            <div class="row content">
+                <div class="col-md-3" data-aos="fade-right" data-aos-delay="100">
+                    <img width="300" src="{{ url_for('web.static', filename='img/feature-one-button.webp') }}"
+                        class="img-fluid rounded" alt="">
+                </div>
+
+                <div class="col-md-3" data-aos="fade-right" data-aos-delay="100">
+                    <img width="300" src="{{ url_for('web.static', filename='img/feature-easy.webp') }}"
+                        class="img-fluid rounded" alt="">
+                </div>
+
+                <div class="col-md-3" data-aos="fade-right" data-aos-delay="100">
+                    <img width="300" src="{{ url_for('web.static', filename='img/feature-contact.webp') }}"
+                        class="img-fluid rounded" alt="">
+                </div>
+
+                <div class="col-md-3" data-aos="fade-right" data-aos-delay="100">
+                    <img width="300" src="{{ url_for('web.static', filename='img/feature-dark-mode.webp') }}"
+                        class="img-fluid rounded" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End Features Section -->
+
+    <!-- ======= Developer Section ======= -->
+    <section id="developer" class="developer">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Developer</h2>
+                <p>
+                    MES was designed and developed by anonymous, non-profit, not really a developer, 
+                    <a href="https://www.th3pl4gu3.com" target="__blank">Th3pl4gu3</a>
+                </p>
+
+                <br>
+
+                <p>
+                    Images & Icons were inspired and developed by Graphic Designed, 
+                    <a href="https://www.nickfookune.com/" target="__blank">Nick Foo Kune</a>
+                </p>
+
+                <br>
+            </div>
+
+            <div class="row justify-content-md-center">
+                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member">
+                        <img src="{{ url_for('web.static', filename='img/dev-mervin.webp') }}" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Th3pl4gu3, 1345</h4>
+                                <span>Not a Developer</span>
+                            </div>
+                            <div class="social">
+                                <a href="https://www.th3pl4gu3.com" target="__blank"><i class="bx bx-world"></i></a>
+                                <a href="https://play.google.com/store/apps/dev?id=5236150593519379806"
+                                    target="__blank"><i class="bx bxl-play-store"></i></a>
+                                <a href="https://github.com/mervin16" target="__blank"><i class="bx bxl-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member">
+                        <img src="{{ url_for('web.static', filename='img/dev-nick.webp') }}" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Nick Foo Kune, 1995</h4>
+                                <span>Graphic Designer</span>
+                            </div>
+                            <div class="social">
+                                <a href="https://www.nickfookune.com/" target="__blank"><i class="bx bx-world"></i></a>
+                                <a href="https://play.google.com/store/apps/dev?id=5236150593519379806"
+                                    target="__blank"><i class="bx bxl-instagram-alt"></i></a>
+                                <a href="https://github.com/mervin16" target="__blank"><i class="bx bxl-facebook-circle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Developer Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <ul class="faq-list">
+
+                <li>
+                    <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">
+                        It all sounds great but what does this app actually do?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            MES is a simplified Android application that provides a list of common phones services in
+                            Mauritius.
+                            Common services may include, police help, ambulance, general info and many others.
+                            You can then call these services from your phone directly.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">
+                        Why use MES ?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            MES has been designed to be available both online and offline. You can get info on your
+                            local phone services anytime and anywhere.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">
+                        Is MES a paid software ?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                    </div>
+                    <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            MES is completely free for use! You don't have to pay for any features and specially, no ADs
+                            ruining your user experience.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">
+                        Is MES available on Iphone ?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            MES is currently available on Android only.
+                            We don't plan to include an IOS version for the time being.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">
+                        Does calling a service from MES provide extra assistance ?
+                        <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            Calling a service from MES is the exact same thing from calling a regular phone app.
+                            MES just facilitates your experience by providing the contact on point without you going to
+                            search
+                            each service's phone number on the internet.
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p>
+                    If the <a href="#faq">FAQs</a> doesn't help you, feel free to contact us anytime and we should get
+                    back to you as soon as possible.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="info-box">
+                                <i class="bx bx-map"></i>
+                                <h3>Location</h3>
+                                <p>
+                                    We're situated in <b>Mauritius</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="info-box mt-4">
+                                <i class="bx bx-envelope"></i>
+                                <h3>Email Us</h3>
+                                <p>th3pl4gu33@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 mt-4 mt-md-0">
+                    <form action="{{ url_for('web.send_email') }}" method="post" role="form" class="php-email-form">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                                    required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                                required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Message"
+                                required></textarea>
+                        </div>
+                        <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+{% endblock %}

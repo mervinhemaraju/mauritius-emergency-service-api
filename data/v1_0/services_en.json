@@ -1,0 +1,127 @@
+[{
+        "identifier": "security-police-direct-5",
+        "name": "Police Direct Line 1",
+        "type": "E",
+        "icon": "https://img.icons8.com/fluent/100/000000/policeman-male.png",
+        "number": 999
+    },
+    {
+        "identifier": "security-police-direct-2",
+        "name": "Police Direct Line 2",
+        "type": "E",
+        "icon": "https://img.icons8.com/fluent/100/000000/policeman-male.png",
+        "number": 112
+    },
+    {
+        "identifier": "health-samu",
+        "name": "Samu",
+        "type": "E",
+        "icon": "https://img.icons8.com/bubbles/100/000000/ambulance.png",
+        "number": 114
+    },
+    {
+        "identifier": "health-ambulance",
+        "name": "Ambulance",
+        "type": "E",
+        "icon": "https://img.icons8.com/bubbles/100/000000/ambulance.png",
+        "number": 999
+    },
+    {
+        "identifier": "security-police-tourism",
+        "name": "Tourism Police",
+        "type": "N",
+        "icon": "https://img.icons8.com/fluent/100/000000/policeman-male.png",
+        "number": 2131740
+    },
+    {
+        "identifier": "security-crime-stoppers",
+        "name": "Crime Stoppers",
+        "type": "E",
+        "icon": "https://img.icons8.com/color/100/000000/robber.png",
+        "number": 148
+    },
+    {
+        "identifier": "security-fire-services-1",
+        "name": "Fire Services 1",
+        "type": "E",
+        "icon": "https://img.icons8.com/bubbles/100/000000/fire-element.png",
+        "number": 115
+    },
+    {
+        "identifier": "security-fire-services-2",
+        "name": "Fire Services 2",
+        "type": "E",
+        "icon": "https://img.icons8.com/bubbles/100/000000/fire-element.png",
+        "number": 995
+    },
+    {
+        "identifier": "security-complaints",
+        "name": "Complaints Toll Free",
+        "type": "N",
+        "icon": "https://img.icons8.com/fluent/100/000000/policeman-male.png",
+        "number": 8002345
+    },
+    {
+        "identifier": "security-minor-brigade",
+        "name": "Minor Brigade",
+        "type": "N",
+        "icon": "https://img.icons8.com/bubbles/100/000000/child-safe-zone.png",
+        "number": 2134093
+    },
+    {
+        "identifier": "general-ceb",
+        "name": "Central Electricity Board (CEB)",
+        "type": "N",
+        "icon": "https://img.icons8.com/plasticine/100/000000/electricity-hazard.png",
+        "number": 130
+    },
+    {
+        "identifier": "general-cwa",
+        "name": "Central Water Authority (CWA)",
+        "type": "N",
+        "icon": "https://img.icons8.com/bubbles/100/000000/water.png",
+        "number": 170
+    },
+    {
+        "identifier": "security-police-environmental",
+        "name": "Environmental Police",
+        "type": "N",
+        "icon": "https://img.icons8.com/fluent/100/000000/policeman-male.png",
+        "number": 2105151
+    },
+    {
+        "identifier": "info-national-directory",
+        "name": "National Directory",
+        "type": "N",
+        "icon": "https://img.icons8.com/cute-clipart/100/000000/contacts.png",
+        "number": 150
+    },
+    {
+        "identifier": "info-tourist",
+        "name": "Tourist Info",
+        "type": "N",
+        "icon": "https://img.icons8.com/cute-clipart/100/000000/contacts.png",
+        "number": 152
+    },
+    {
+        "identifier": "info-weather",
+        "name": "Weather Forecasts",
+        "type": "N",
+        "icon": "https://img.icons8.com/color/100/000000/partly-cloudy-day.png",
+        "number": 171
+    },
+    {
+        "identifier": "info-cyclone",
+        "name": "Cyclone Reports",
+        "type": "N",
+        "icon": "https://img.icons8.com/color/48/000000/storm.png",
+        "number": 96
+    },
+    {
+        "identifier": "info-airline",
+        "name": "Airport",
+        "type": "N",
+        "icon": "https://img.icons8.com/color/100/000000/airport.png",
+        "number": 6033030
+    }
+]

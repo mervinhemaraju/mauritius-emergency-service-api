@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CV7EZP05D0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-CV7EZP05D0');
+    </script>
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Google Search Engine Site Verification -->
+    <meta name="google-site-verification" content="PDyMWLepEB8KKXuhv8elWsdCMqxWlrqjl02F_bdLpNk" />
+
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+
+    {% block meta %}
+
+    {% endblock %}
+
+    <!-- Favicons -->
+    <link href="{{ url_for('web.static', filename='img/mes.webp') }}" rel="icon">
+    <link href="{{ url_for('web.static', filename='img/mes.webp') }}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Krub:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ url_for('web.static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ url_for('web.static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('web.static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('web.static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('web.static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('web.static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('web.static', filename='css/style.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo">
+                <a href="index.html">
+                    M<span>auritius</span>
+                    E<span>mergency</span>
+                    S<span>ervices</span>
+                </a>
+            </h1>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="{{ url_for('web.home_view') }}#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="{{ url_for('web.home_view') }}#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="{{ url_for('web.home_view') }}#features">Features</a></li>
+                    <li><a class="nav-link scrollto" href="{{ url_for('web.home_view') }}#developer">Developer</a></li>
+                    <li class="dropdown"><a href="#"><span>API</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/mervin16/Mauritius-Emergency-Services-Api/wiki"
+                                    target="__blank">Documentation</a>
+                            </li>
+                            <li>
+                                <a href="https://mes.th3pl4gu3.com/" target="__blank">Endpoint</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/mervin16/Mauritius-Emergency-Services-Api/"
+                                    target="__blank">Github
+                                    Repository</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="{{ url_for('web.home_view') }}#contact">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    {% block body %}
+
+    {% endblock %}
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>MES</h3>
+                        <p>
+                            Developed with love <br />
+                            in <img width="24px" src="{{ url_for('web.static', filename='img/mru.webp') }}"
+                                class="img-fluid" alt="">
+                            <br /><br />
+
+                            <strong>Email:</strong> th3pl4gu33@gmail.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-5 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="{{ url_for('web.home_view') }}#home">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="{{ url_for('web.home_view') }}#features">Features</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="{{ url_for('web.home_view') }}#faq">FAQs</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="https://github.com/mervin16/Mauritius-Emergency-Services-Api/"
+                                    target="__blank">Github Repository</a></li>
+                            <li>
+                                <i class="bx bx-chevron-right"></i> <a href="{{ url_for('web.privacy_view') }}"
+                                    target="__blank">Privacy policy</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Find us on Playstore</h4>
+                        <p>
+                            <!-- Google play button -->
+                            <a
+                                href='https://play.google.com/store/apps/details?id=com.th3pl4gu3.mes&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                                <img width="300px" alt='Get it on Google Play'
+                                    src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright
+                    <strong>
+                        <span>
+                            <a href="https://www.th3pl4gu3.com" target="__blank">Th3pl4gu3</a>
+                        </span>
+                    </strong>
+                    . All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bikin-free-simple-landing-page-template/ -->
+                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="https://play.google.com/store/apps/details?id=com.th3pl4gu3.mes" class="playstore"><i class="bx bxl-play-store"></i></a>
+                <a href="https://github.com/mervin16/Mauritius-Emergency-Services-Api/" class="github"><i
+                        class="bx bxl-github"></i></a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{{ url_for('web.static', filename='vendor/aos/aos.js') }}"></script>
+    <script src="{{ url_for('web.static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('web.static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ url_for('web.static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('web.static', filename='vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ url_for('web.static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{{ url_for('web.static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>

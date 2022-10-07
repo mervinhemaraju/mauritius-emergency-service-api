@@ -1,0 +1,26 @@
+# Virtual environments
+venv/
+
+# Python Cache
+__pycache__/
+
+# Heroku Procfile
+Procfile
+
+# VS Code
+.vscode/
+
+# Github Workflows
+.github/
+
+# Unit Tests
+tests/
+
+# Data file
+data/
+
+# Log File
+log/
+
+# Nginx File
+nginx/
