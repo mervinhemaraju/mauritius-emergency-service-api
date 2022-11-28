@@ -1,6 +1,5 @@
-Flask==1.1.2
-Flask-RESTful==0.3.8
-flask-mail
-validate_email
-pytest
-uWSGI
+Flask==2.2.2
+Flask-Mail==0.9.1
+Flask-RESTful==0.3.9
+uWSGI==2.0.21
+validate-email==1.3

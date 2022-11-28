@@ -1,15 +1,13 @@
 from flask import Blueprint, render_template as HTML, request, current_app
 from flask_mail import Message, Mail
-import app.web.utils.utils as Utils
+from validate_email import validate_email
 import os
 
-# Create the API V1 blueprint
+# * Create the web blueprint
 web = Blueprint("web", __name__, static_folder="static", template_folder="templates")
 
-######################################
-############# Main Pages #############
-######################################
 
+# >>>> Main Pages <<<< #
 @web.route("/")
 def home_view():
     return HTML("index.html")
@@ -17,19 +15,20 @@ def home_view():
 @web.route("/privacy")
 def privacy_view():
     return HTML("privacy.html")
-
-# Send mail from contact form
+    
 @web.route("/send-email", methods=["POST"])
 def send_email():
 
-    # Create a mail object
+    # > Sends a mail from the contact form
+    
+    # * Create a mail object
     mail = Mail(current_app)
 
     try:
         sender_email = request.form["email"]
 
-        # Email validity check
-        if not Utils.validate_email(sender_email):
+        # * Email validity check
+        if not validate_email(sender_email):
             return (
                 "Please enter a valid email",
                 200,
@@ -43,6 +42,7 @@ def send_email():
         msg.body = request.form["message"]
         msg.subject = f"{sender_email} :: {request.form['subject']}"
         mail.send(msg)
+
     except Exception as e:
         print(e)
         return (
@@ -50,7 +50,7 @@ def send_email():
             200,
         )
 
-    # Returns a no content status code
-    # because the user doesn't need to get away
-    # from current page
+    # * Returns a no content status code
+    # * because the user doesn't need to get away
+    # * from current page
     return "OK", 200

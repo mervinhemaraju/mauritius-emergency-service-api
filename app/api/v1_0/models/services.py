@@ -1,7 +1,7 @@
 from flask_restful import Resource, request
 import json
-import app.messages.messages as MSG
-import app.api.v1_0.utils.helpers as Helpers
+from app.messages.messages import *
+from app.api.v1_0.utils.helpers import sort_queried_service
 
 # A list of the available json file in each language mapping its path
 json_file = {
@@ -32,12 +32,12 @@ class OneService(Resource):
             # Checks if not empty
             if service:
                 return (
-                    MSG.Message.content_service(service),
+                    content_service(service),
                     200,
                 )
             else:
                 return (
-                    MSG.Message.CONTENT_NOT_FOUND,
+                    CONTENT_NOT_FOUND,
                     404,
                 )
 
@@ -58,11 +58,11 @@ class AllServices(Resource):
             args = request.args
 
             # Process services
-            services = Helpers.Utils.sort_queried_service(args, services)
+            services = sort_queried_service(args, services)
 
             # Returns the output in the correct format
             return (
-                MSG.Message.content_services(services),
+                content_services(services),
                 200,
             )  # 200 OK HTTP VERB
 
@@ -87,16 +87,16 @@ class EmergencyOnly(Resource):
             args = request.args
 
             # Process services
-            emergencies = Helpers.Utils.sort_queried_service(args, emergencies)
+            emergencies = sort_queried_service(args, emergencies)
 
             # Checks if not empty
             if emergencies:
                 return (
-                    MSG.Message.content_service(emergencies),
+                    content_service(emergencies),
                     200,
                 )
             else:
                 return (
-                    MSG.Message.CONTENT_NOT_FOUND,
+                    CONTENT_NOT_FOUND,
                     404,
                 )
