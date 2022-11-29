@@ -1,8 +1,8 @@
-from flask import Flask, redirect, url_for
+import os
 import app.api.v1_0.v1_0 as V1_0
 import app.web.web as Web
 from app.messages.messages import *
-import os
+from flask import Flask, redirect, url_for
 
 # * Create a Flask Application
 app = Flask(__name__)

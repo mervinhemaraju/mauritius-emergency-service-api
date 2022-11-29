@@ -4,7 +4,7 @@ Mauritius Emergency Services is an API that provides a list of emergency phone s
 
 ## Base URL
 
-`https://mes.th3pl4gu3.com/`
+`https://mes.mervinhemaraju.com/`
 
 ## License
 

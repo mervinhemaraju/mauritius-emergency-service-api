@@ -33,8 +33,10 @@
     {% endblock %}
 
     <!-- Favicons -->
-    <link href="{{ url_for('web.static', filename='img/mes.webp') }}" rel="icon">
-    <link href="{{ url_for('web.static', filename='img/mes.webp') }}" rel="apple-touch-icon">
+    <link href="{{ url_for('web.static', filename='img/mes.webp') }}"
+        rel="icon">
+    <link href="{{ url_for('web.static', filename='img/mes.webp') }}"
+        rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -42,15 +44,28 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{ url_for('web.static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
-    <link href="{{ url_for('web.static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ url_for('web.static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ url_for('web.static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-    <link href="{{ url_for('web.static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ url_for('web.static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link
+        href="{{ url_for('web.static', filename='vendor/aos/aos.css') }}"
+        rel="stylesheet">
+    <link
+        href="{{ url_for('web.static', filename='vendor/bootstrap/css/bootstrap.min.css') }}"
+        rel="stylesheet">
+    <link
+        href="{{ url_for('web.static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}"
+        rel="stylesheet">
+    <link
+        href="{{ url_for('web.static', filename='vendor/boxicons/css/boxicons.min.css') }}"
+        rel="stylesheet">
+    <link
+        href="{{ url_for('web.static', filename='vendor/glightbox/css/glightbox.min.css') }}"
+        rel="stylesheet">
+    <link
+        href="{{ url_for('web.static', filename='vendor/swiper/swiper-bundle.min.css') }}"
+        rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="{{ url_for('web.static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('web.static', filename='css/style.css') }}"
+        rel="stylesheet">
 
 </head>
 
@@ -70,27 +85,32 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="{{ url_for('web.home_view') }}#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="{{ url_for('web.home_view') }}#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="{{ url_for('web.home_view') }}#features">Features</a></li>
-                    <li><a class="nav-link scrollto" href="{{ url_for('web.home_view') }}#developer">Developer</a></li>
+                    <li><a class="nav-link scrollto active"
+                            href="{{ url_for('web.home_view') }}#hero">Home</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="{{ url_for('web.home_view') }}#about">About</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="{{ url_for('web.home_view') }}#features">Features</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="{{ url_for('web.home_view') }}#developer">Developer</a></li>
                     <li class="dropdown"><a href="#"><span>API</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li>
-                                <a href="https://github.com/mervin16/Mauritius-Emergency-Services-Api/wiki"
+                                <a href="https://github.com/mervinhemaraju/mauritius-emergency-service-api/wiki"
                                     target="__blank">Documentation</a>
                             </li>
                             <li>
-                                <a href="https://mes.th3pl4gu3.com/" target="__blank">Endpoint</a>
+                                <a href="https://mes.mervinhemaraju.com/" target="__blank">Endpoint</a>
                             </li>
                             <li>
-                                <a href="https://github.com/mervin16/Mauritius-Emergency-Services-Api/"
+                                <a href="https://github.com/mervinhemaraju/mauritius-emergency-service-api/"
                                     target="__blank">Github
                                     Repository</a>
                             </li>
                         </ul>
                     </li>
-                    <li><a class="nav-link scrollto" href="{{ url_for('web.home_view') }}#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto"
+                            href="{{ url_for('web.home_view') }}#contact">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -113,7 +133,8 @@
                         <h3>MES</h3>
                         <p>
                             Developed with love <br />
-                            in <img width="24px" src="{{ url_for('web.static', filename='img/mru.webp') }}"
+                            in <img width="24px"
+                                src="{{ url_for('web.static', filename='img/mru.webp') }}"
                                 class="img-fluid" alt="">
                             <br /><br />
 
@@ -131,11 +152,12 @@
                             <li><i class="bx bx-chevron-right"></i> <a
                                     href="{{ url_for('web.home_view') }}#faq">FAQs</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a
-                                    href="https://github.com/mervin16/Mauritius-Emergency-Services-Api/"
+                                    href="https://github.com/mervinhemaraju/mauritius-emergency-service-api/"
                                     target="__blank">Github Repository</a></li>
                             <li>
-                                <i class="bx bx-chevron-right"></i> <a href="{{ url_for('web.privacy_view') }}"
-                                    target="__blank">Privacy policy</a>
+                                <i class="bx bx-chevron-right"></i> <a
+                                    href="{{ url_for('web.privacy_view') }}" target="__blank">Privacy
+                                    policy</a>
                             </li>
                         </ul>
                     </div>
@@ -163,7 +185,7 @@
                     &copy; Copyright
                     <strong>
                         <span>
-                            <a href="https://www.th3pl4gu3.com" target="__blank">Th3pl4gu3</a>
+                            <a href="https://www.mervinhemaraju.com" target="__blank">Mervin Hemaraju</a>
                         </span>
                     </strong>
                     . All Rights Reserved
@@ -177,8 +199,9 @@
                 </div>
             </div>
             <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                <a href="https://play.google.com/store/apps/details?id=com.th3pl4gu3.mes" class="playstore"><i class="bx bxl-play-store"></i></a>
-                <a href="https://github.com/mervin16/Mauritius-Emergency-Services-Api/" class="github"><i
+                <a href="https://play.google.com/store/apps/details?id=com.th3pl4gu3.mes" class="playstore"><i
+                        class="bx bxl-play-store"></i></a>
+                <a href="https://github.com/mervinhemaraju/mauritius-emergency-service-api/" class="github"><i
                         class="bx bxl-github"></i></a>
             </div>
         </div>
@@ -189,15 +212,28 @@
             class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="{{ url_for('web.static', filename='vendor/aos/aos.js') }}"></script>
-    <script src="{{ url_for('web.static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ url_for('web.static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
-    <script src="{{ url_for('web.static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ url_for('web.static', filename='vendor/php-email-form/validate.js') }}"></script>
-    <script src="{{ url_for('web.static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script
+        src="{{ url_for('web.static', filename='vendor/aos/aos.js') }}">
+    </script>
+    <script
+        src="{{ url_for('web.static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}">
+    </script>
+    <script
+        src="{{ url_for('web.static', filename='vendor/glightbox/js/glightbox.min.js') }}">
+    </script>
+    <script
+        src="{{ url_for('web.static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}">
+    </script>
+    <script
+        src="{{ url_for('web.static', filename='vendor/php-email-form/validate.js') }}">
+    </script>
+    <script
+        src="{{ url_for('web.static', filename='vendor/swiper/swiper-bundle.min.js') }}">
+    </script>
 
     <!-- Template Main JS File -->
-    <script src="{{ url_for('web.static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('web.static', filename='js/main.js') }}">
+    </script>
 
 </body>
 

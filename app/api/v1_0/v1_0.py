@@ -1,15 +1,14 @@
 from flask import Blueprint
 from flask_restful import Api
-import app.api.v1_0.models.services as services
+from app.api.v1_0.models.services import *
 
-# Create the API V1 blueprint
+# * Create the API V1 blueprint
 v1_0_blueprint = Blueprint("v1_0", __name__)
 
-# Generate a Flask API from the blueprint
+# * Generate a Flask API from the blueprint
 v1_0_api = Api(v1_0_blueprint)
 
-
-# Define API Routes
-v1_0_api.add_resource(services.AllServices, "/<string:lang>/services")
-v1_0_api.add_resource(services.OneService, "/<string:lang>/service/<string:identifier>")
-v1_0_api.add_resource(services.EmergencyOnly, "/<string:lang>/services/emergencies")
+# * Define API Routes
+v1_0_api.add_resource(AllServices, "/<string:lang>/services")
+v1_0_api.add_resource(OneService, "/<string:lang>/service/<string:identifier>")
+v1_0_api.add_resource(EmergencyOnly, "/<string:lang>/services/emergencies")

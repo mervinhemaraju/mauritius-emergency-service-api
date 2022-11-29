@@ -1,7 +1,7 @@
+import os
 from flask import Blueprint, render_template as HTML, request, current_app
 from flask_mail import Message, Mail
 from validate_email import validate_email
-import os
 
 # * Create the web blueprint
 web = Blueprint("web", __name__, static_folder="static", template_folder="templates")

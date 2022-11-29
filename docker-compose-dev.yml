@@ -8,14 +8,14 @@ services:
     networks:
       - mes_net
     expose:
-      - 8089
+      - 8081
     restart: always
 
   nginx_mes:
     image: nginx
     container_name: nginx_mes
     ports:
-      - "8089:80"
+      - "8081:80"
     networks:
       - mes_net
     volumes:

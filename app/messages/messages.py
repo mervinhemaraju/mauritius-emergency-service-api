@@ -1,12 +1,12 @@
 CONTENT_NOT_FOUND = {
     "services": [],
-    "message": "No services found under this identifier. Check the docs at https://github.com/mervin16/Mauritius-Emergency-Services-Api",
+    "message": "No services found under this identifier. Check the docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
     "success": False,
 }
 
 CONTENT_BAD_REQUEST = {
     "services": [],
-    "message": "Your browser sent a request that this server could not understand. Check the docs at https://github.com/mervin16/Mauritius-Emergency-Services-Api",
+    "message": "Your browser sent a request that this server could not understand. Check the docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
     "success": False,
 }
 
