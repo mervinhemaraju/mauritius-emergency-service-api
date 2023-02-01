@@ -7,7 +7,7 @@ body {
 }
 
 a {
-  color: #f75f5f;
+  color: #003964;
   text-decoration: none;
 }
 
@@ -35,7 +35,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #f37070;
+  background: #003964;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -49,7 +49,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #be3333;
+  background: #003964;
   color: #fff;
 }
 
@@ -77,7 +77,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #f75f5f;
+  border: 6px solid #003964;
   border-top-color: #e2e5fe;
   border-radius: 50%;
   width: 60px;
@@ -119,7 +119,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff6f6;
+  background: #E5F1F8;
   border-bottom: 2px solid #feecec;
   transition: all 0.5s;
   z-index: 997;
@@ -142,7 +142,7 @@ h6 {
 }
 
 #header .logo a {
-  color: #220000;
+  color: #002744;
 }
 
 #header .logo img {
@@ -179,7 +179,7 @@ h6 {
   font-family: "Krub", sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: #220000;
+  color: #002744;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -193,7 +193,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar li:hover>a {
-  color: #f75f5f;
+  color: #003964;
 }
 
 .navbar .getstarted {
@@ -203,12 +203,12 @@ h6 {
   border-radius: 5px;
   font-weight: 600;
   color: #fff;
-  color: #f75f5f;
+  color: #003964;
 }
 
 .navbar .getstarted:hover {
   color: #fff;
-  background: #f75f5f;
+  background: #003964;
 }
 
 .navbar .dropdown ul {
@@ -244,7 +244,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #f75f5f;
+  color: #003964;
 }
 
 .navbar .dropdown:hover>ul {
@@ -280,7 +280,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #220000;
+  color: #002744;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -337,13 +337,13 @@ h6 {
 .navbar-mobile a {
   padding: 10px 20px;
   font-size: 15px;
-  color: #220000;
+  color: #002744;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #f75f5f;
+  color: #003964;
 }
 
 .navbar-mobile .getstarted {
@@ -377,7 +377,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #f75f5f;
+  color: #003964;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -406,14 +406,14 @@ h6 {
   line-height: 56px;
   color: #141d2b;
   width: 60%;
-  color: #220000;
+  color: #002744;
 }
 
 #hero h2 {
-  color: #ad5151;
+  color: #003964;
   margin: 15px 0 0 0;
   font-size: 24px;
-  color: #220000;
+  color: #002744;
 }
 
 #hero .hero-img {
@@ -467,7 +467,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #220000;
+  color: #002744;
 }
 
 .section-title h2::after {
@@ -476,7 +476,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #d7aaaa;
+  background: #003964;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -489,7 +489,7 @@ section {
 # About
 --------------------------------------------------------------*/
 .about {
-  background: #3d0000e3;
+  background: #003964;
   background-size: cover;
   padding: 60px 0;
   position: relative;
@@ -534,7 +534,7 @@ section {
 
 .about .icon-boxes .icon-box i {
   font-size: 40px;
-  color: #fcb6b6;
+  color: #E5F1F8;
   margin-bottom: 10px;
 }
 
@@ -584,7 +584,7 @@ section {
 .features .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #f75f5f;
+  color: #003964;
 }
 
 .features .content p:last-child {
@@ -702,13 +702,13 @@ section {
 .faq .faq-list .question {
   display: block;
   position: relative;
-  font-family: #f75f5f;
+  font-family: #003964;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
   padding-left: 25px;
   cursor: pointer;
-  color: #ff4545;
+  color: #003964;
   transition: 0.3s;
 }
 
@@ -733,7 +733,7 @@ section {
 }
 
 .faq .faq-list .collapsed:hover {
-  color: #f75f5f;
+  color: #003964;
 }
 
 .faq .faq-list .collapsed .icon-show {
@@ -750,7 +750,7 @@ section {
 # Contact
 --------------------------------------------------------------*/
 .contact .info-box {
-  color: #220000;
+  color: #002744;
   text-align: center;
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
   padding: 20px 0 30px 0;
@@ -759,7 +759,7 @@ section {
 
 .contact .info-box i {
   font-size: 32px;
-  color: #f75f5f;
+  color: #003964;
   padding: 8px;
 }
 
@@ -846,7 +846,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #f75f5f;
+  background: #003964;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -855,7 +855,8 @@ section {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #ff4545;
+  background: #89d4ff;
+  color: #003964;
 }
 
 @-webkit-keyframes animate-loading {
@@ -923,7 +924,7 @@ section {
 #footer {
   color: #444444;
   font-size: 14px;
-  background: #fff1f1;
+  background: #E5F1F8;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -942,7 +943,7 @@ section {
   padding: 2px 0 2px 0;
   line-height: 1;
   font-weight: 700;
-  color: #220000;
+  color: #002744;
 }
 
 #footer .footer-top .footer-contact p {
@@ -950,13 +951,13 @@ section {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Krub", sans-serif;
-  color: #a44e4e;
+  color: #003964;
 }
 
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #220000;
+  color: #002744;
   position: relative;
   padding-bottom: 12px;
 }
@@ -973,7 +974,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #f75f5f;
+  color: #003964;
   font-size: 18px;
   line-height: 1;
 }
@@ -997,7 +998,7 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #f75f5f;
+  color: #003964;
 }
 
 #footer .footer-newsletter {
@@ -1007,7 +1008,7 @@ section {
 #footer .footer-newsletter h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #220000;
+  color: #002744;
   position: relative;
   padding-bottom: 12px;
 }
@@ -1037,7 +1038,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #f75f5f;
+  background: #003964;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 5px 5px 0;
@@ -1045,7 +1046,7 @@ section {
 }
 
 #footer .footer-newsletter form input[type="submit"]:hover {
-  background: #ff4545;
+  background: #003964;
 }
 
 #footer .credits {
@@ -1057,8 +1058,8 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #fee7e7;
-  color: #f75f5f;
+  background: #E5F1F8;
+  color: #003964;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1070,7 +1071,7 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #f75f5f;
+  background: #003964;
   color: #fff;
   text-decoration: none;
 }
