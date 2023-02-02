@@ -2,15 +2,8 @@ import json
 from flask_restful import Resource, request
 from app.messages.messages import *
 from app.api.v1_0.utils.helpers import sort_queried_service
+from app.api.v1_0.utils.constants import *
 
-# * A list of the available json file in each language mapping its path
-json_file = {
-    "en": "data/v1_0/services_en.json",
-    "fr": "data/v1_0/services_fr.json",
-}
-
-# * The default path if language doesn't math any of them
-json_def = "data/v1_0/services_en.json"
 
 # * The Service class returns a single
 # * item from the give parameter
