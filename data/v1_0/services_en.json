@@ -1,127 +1,173 @@
-[{
-        "identifier": "security-police-direct-5",
-        "name": "Police Direct Line 1",
-        "type": "E",
-        "icon": "https://img.icons8.com/fluent/100/000000/policeman-male.png",
-        "number": 999
-    },
+[
     {
-        "identifier": "security-police-direct-2",
-        "name": "Police Direct Line 2",
+        "identifier": "security-police-direct",
+        "name": "Police Direct",
         "type": "E",
         "icon": "https://img.icons8.com/fluent/100/000000/policeman-male.png",
-        "number": 112
+        "number": 999,
+        "other_contact": {
+            "number2": 112
+        }
     },
     {
         "identifier": "health-samu",
         "name": "Samu",
         "type": "E",
         "icon": "https://img.icons8.com/bubbles/100/000000/ambulance.png",
-        "number": 114
+        "number": 114,
+        "other_contact": {}
     },
     {
-        "identifier": "health-ambulance",
-        "name": "Ambulance",
+        "identifier": "health-ccare-ambulance",
+        "name": "C-Care Ambulance",
         "type": "E",
         "icon": "https://img.icons8.com/bubbles/100/000000/ambulance.png",
-        "number": 999
+        "number": 118,
+        "other_contact": {
+            "number2": 132
+        }
     },
     {
         "identifier": "security-police-tourism",
         "name": "Tourism Police",
         "type": "N",
         "icon": "https://img.icons8.com/fluent/100/000000/policeman-male.png",
-        "number": 2131740
+        "number": 2131740,
+        "other_contact": {}
     },
     {
-        "identifier": "security-crime-stoppers",
-        "name": "Crime Stoppers",
+        "identifier": "security-crime-prevention-unit",
+        "name": "Crime Prevention Unit",
         "type": "E",
         "icon": "https://img.icons8.com/color/100/000000/robber.png",
-        "number": 148
+        "number": 148,
+        "other_contact": {}
     },
     {
-        "identifier": "security-fire-services-1",
-        "name": "Fire Services 1",
+        "identifier": "security-rescue-fire",
+        "name": "Fire Rescue Services",
         "type": "E",
         "icon": "https://img.icons8.com/bubbles/100/000000/fire-element.png",
-        "number": 115
+        "number": 115,
+        "other_contact": {
+            "number2": 995,
+            "number3": 2120214,
+            "number4": 2120215
+        }
     },
     {
-        "identifier": "security-fire-services-2",
-        "name": "Fire Services 2",
-        "type": "E",
-        "icon": "https://img.icons8.com/bubbles/100/000000/fire-element.png",
-        "number": 995
-    },
-    {
-        "identifier": "security-complaints",
-        "name": "Complaints Toll Free",
+        "identifier": "police-complaints",
+        "name": "Police Complaints",
         "type": "N",
         "icon": "https://img.icons8.com/fluent/100/000000/policeman-male.png",
-        "number": 8002345
+        "number": 8002345,
+        "other_contact": {}
     },
     {
         "identifier": "security-minor-brigade",
         "name": "Minor Brigade",
         "type": "N",
         "icon": "https://img.icons8.com/bubbles/100/000000/child-safe-zone.png",
-        "number": 2134093
+        "number": 2134093,
+        "other_contact": {
+            "email": "bdmineur.mpf@govmu.org"
+        }
     },
     {
         "identifier": "general-ceb",
         "name": "Central Electricity Board (CEB)",
         "type": "N",
         "icon": "https://img.icons8.com/plasticine/100/000000/electricity-hazard.png",
-        "number": 130
+        "number": 130,
+        "other_contact": {
+            "number2": 4042000,
+            "email": "ceb@intnet.mu"
+        }
     },
     {
         "identifier": "general-cwa",
         "name": "Central Water Authority (CWA)",
         "type": "N",
         "icon": "https://img.icons8.com/bubbles/100/000000/water.png",
-        "number": 170
+        "number": 170,
+        "other_contact": {
+            "number2": 6015000,
+            "email": "infodesk@cwa.intnet.mu"
+        }
     },
     {
         "identifier": "security-police-environmental",
         "name": "Environmental Police",
         "type": "N",
         "icon": "https://img.icons8.com/fluent/100/000000/policeman-male.png",
-        "number": 2105151
+        "number": 2105151,
+        "other_contact": {
+            "number2": 2105252,
+            "email": "police-env@govmu.org"
+        }
     },
     {
         "identifier": "info-national-directory",
         "name": "National Directory",
         "type": "N",
         "icon": "https://img.icons8.com/cute-clipart/100/000000/contacts.png",
-        "number": 150
+        "number": 150,
+        "other_contact": {}
     },
     {
         "identifier": "info-tourist",
         "name": "Tourist Info",
         "type": "N",
         "icon": "https://img.icons8.com/cute-clipart/100/000000/contacts.png",
-        "number": 152
+        "number": 152,
+        "other_contact": {
+            "number2": 2031000,
+            "email": "tourism.authority@intnet.mu",
+            "email2": "contactadmin@tourismauthority.mu"
+        }
     },
     {
         "identifier": "info-weather",
         "name": "Weather Forecasts",
         "type": "N",
         "icon": "https://img.icons8.com/color/100/000000/partly-cloudy-day.png",
-        "number": 171
+        "number": 171,
+        "other_contact": {
+            "number2": 6861031,
+            "number3": 6861032,
+            "email": "meteo@intnet.mu"
+        }
     },
     {
         "identifier": "info-cyclone",
         "name": "Cyclone Reports",
         "type": "N",
         "icon": "https://img.icons8.com/color/48/000000/storm.png",
-        "number": 96
+        "number": 96,
+        "other_contact": {}
     },
     {
         "identifier": "info-airline",
         "name": "Airport",
         "type": "N",
         "icon": "https://img.icons8.com/color/100/000000/airport.png",
-        "number": 6033030
+        "number": 6038050,
+        "other_contact": {
+            "customs": 6373187,
+            "lost_and_found": 6038426,
+            "air_mauritius": 6033030,
+            "emirates": 6379750
+        }
+    },
+    {
+        "identifier": "wastewater-management-authority",
+        "name": "Wastewater Management Authority",
+        "type": "N",
+        "icon": "https://img.icons8.com/external-filled-color-icons-papa-vector/100/null/external-Water-Contamination-With-Human-Feces-liver-health-filled-color-icons-papa-vector.png",
+        "number": 2063000,
+        "other_contact": {
+            "hotline": 8001300,
+            "email": "wma@intnet.mu"
+        }
     }
 ]
