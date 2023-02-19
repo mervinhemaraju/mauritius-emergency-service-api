@@ -1,12 +1,27 @@
+from dateutil import parser
 
-def retrieve_cyclone_class_level(message):
+def retrieve_time_from_text(text):
+
+    # * Parse the text to extract all times
+    times = []
+
+    for word in str(text).strip().split():
+        try:
+            time = parser.parse(word).strftime('%H:%M:%S')
+            times.append(time)
+        except ValueError:
+            pass
+    
+    return times[0] if times != None and len(times) > 0 else None
+
+def retrieve_cyclone_class_level(message, keyword):
 
     # * Split the message into a list of words
     words = str(message).split()
 
     # * Iterate over the words and look for the phrase "class" followed by a Roman numeral
     for i in range(len(words)):
-        if words[i] == "class" and i+1 < len(words) and words[i+1].isupper():
+        if words[i] == keyword and i+1 < len(words) and words[i+1].isupper():
             return words[i+1]
 
     # * Else return None

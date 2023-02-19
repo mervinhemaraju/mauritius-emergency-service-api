@@ -42,7 +42,42 @@ class TestHelper:
     def test_retrieve_cyclone_class_level(self,message, expected_result):
 
         # Act
-        result = retrieve_cyclone_class_level(message)
+        result = retrieve_cyclone_class_level(message, keyword="class")
+
+        # Assert
+        assert result == expected_result
+
+    testdata = [
+        (
+            "The next bulletin will be issued at around 23h00.",
+            "23:00:00"
+        ),
+        (
+            "The next bulletin will be issued at around 22h10.",
+            "22:10:00"
+        ),
+        (
+            "The next bulletin will be issued at around 12h10.",
+            "12:10:00"
+        ),
+        (
+            "The next bulletin will be issued at around 12:05.",
+            "12:05:00"
+        ),
+        (
+            "The next bulletin will be issued at around nine.",
+            None
+        ),
+        (
+            None,
+            None
+        ),
+    ]
+    @pytest.mark.parametrize("message,expected_result", testdata)
+    def test_retrieve_time_from_text(self,message, expected_result):
+
+        # Act
+        result = retrieve_time_from_text(message)
 
         # Assert
         assert result == expected_result

@@ -8,19 +8,19 @@ class TestCyclone:
     testdata = [
         (
             "tests/v1.0/dummy_data/cyclone_class_1.html",
-            "The next bulletin will be issued at around 23h00."
+            "23:00:00"
         ),
         (
             "tests/v1.0/dummy_data/cyclone_class_2.html",
-            "The next bulletin will be issued at around 22h10."
+            "22:10:00"
         ),
         (
             "tests/v1.0/dummy_data/cyclone_class_3.html",
-            "The next bulletin will be issued at around 12h10."
+            "12:10:00"
         ),
         (
             "tests/v1.0/dummy_data/cyclone_class_4.html",
-            "The next bulletin will be issued at around 22h10."
+            "22:10:00"
         ),
         (
             "tests/v1.0/dummy_data/cyclone_class_none.html",

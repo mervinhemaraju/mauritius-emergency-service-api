@@ -5,5 +5,8 @@ json_file = {
     "fr": "data/v1_0/services_fr.json",
 }
 
-# * The default path if language doesn't math any of them
+# * The default path if language doesn't match any of the services
 json_def = "data/v1_0/services_en.json"
+
+# * The default url for the cyclone report
+cyclone_report_url_def = "http://metservice.intnet.mu/cyclone-bulletin-english-mauritius.php"

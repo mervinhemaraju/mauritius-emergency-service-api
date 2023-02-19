@@ -2,7 +2,7 @@ import json
 from flask_restful import Resource, request
 from app.messages.messages import *
 from app.api.v1_0.utils.helpers import sort_queried_service
-from app.api.v1_0.utils.constants import *
+from app.api.v1_0.utils.constants import json_file, json_def
 
 
 # * The Service class returns a single

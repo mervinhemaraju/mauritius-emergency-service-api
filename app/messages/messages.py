@@ -23,11 +23,12 @@ def content_service(service):
         "success": True,
     }
 
-def content_cyclone_report(level, next_bulletin):
+def content_cyclone_report(level, next_bulletin, news):
     return {
         "report": {
             "class": level,
-            "next_bulletin": next_bulletin
+            "next_bulletin": next_bulletin,
+            "news": news
         },
         "message": "",
         "success": True,

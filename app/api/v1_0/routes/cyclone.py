@@ -17,7 +17,7 @@ class CycloneReport(Resource):
             # * Create a cyclone report
             return (
                 json.dumps(
-                    content_cyclone_report(level= cyclone.class_level(), next_bulletin=cyclone.next_bulletin())
+                    content_cyclone_report(level= cyclone.class_level(), next_bulletin=cyclone.next_bulletin(), news= cyclone.news())
                 )
                 , 
                 200
