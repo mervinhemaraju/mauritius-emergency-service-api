@@ -31,7 +31,7 @@ class OneService(Resource):
                 )
             else:
                 return (
-                    CONTENT_NOT_FOUND,
+                    CONTENT_NOT_FOUND_SERVICES,
                     404,
                 )
 
@@ -86,6 +86,6 @@ class EmergencyOnly(Resource):
                 )
             else:
                 return (
-                    CONTENT_NOT_FOUND,
+                    CONTENT_NOT_FOUND_SERVICES,
                     404,
                 )
