@@ -1,6 +1,10 @@
 import json
 from flask_restful import Resource, request
-from app.messages.messages import *
+from app.messages.messages import (
+    CONTENT_NOT_FOUND_SERVICES,
+    content_services,
+    content_service
+)
 from app.api.v1_0.utils.helpers import sort_queried_service
 from app.api.v1_0.utils.constants import json_file, json_def
 
@@ -20,7 +24,8 @@ class OneService(Resource):
 
             # * Get the queried service
             service = [
-                next(filter(lambda x: x["identifier"] == identifier, services), None)
+                next(filter(lambda x: x["identifier"]
+                     == identifier, services), None)
             ]
 
             # * Checks if not empty

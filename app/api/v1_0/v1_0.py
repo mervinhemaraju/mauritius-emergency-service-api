@@ -1,7 +1,11 @@
 from flask import Blueprint
 from flask_restful import Api
-from app.api.v1_0.routes.services import *
-from app.api.v1_0.routes.cyclone import *
+from app.api.v1_0.routes.services import (
+    AllServices,
+    OneService,
+    EmergencyOnly
+)
+from app.api.v1_0.routes.cyclone import CycloneReport
 
 # * Create the API V1 blueprint
 v1_0_blueprint = Blueprint("v1_0", __name__)

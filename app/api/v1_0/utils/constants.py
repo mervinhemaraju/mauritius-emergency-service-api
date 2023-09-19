@@ -9,4 +9,7 @@ json_file = {
 json_def = "data/v1_0/services_en.json"
 
 # * The default url for the cyclone report
-cyclone_report_url_def = "http://metservice.intnet.mu/cyclone-bulletin-english-mauritius.php"
+cyclone_report_url_def = {
+    "en": "http://metservice.intnet.mu/cyclone-bulletin-english-mauritius.php",
+    "fr": "http://metservice.intnet.mu/cyclone-bulletin-french-mauritius.php"
+}
