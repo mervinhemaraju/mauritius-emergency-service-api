@@ -62,4 +62,4 @@ jobs:
           context: .
           push: true
         #   tags: ${{ steps.image_tag_finder.outputs.tag_finder }}
-          tags: "dev"
+          tags: "mervinhemaraju/mauritius-emergency-service-api:latest"
