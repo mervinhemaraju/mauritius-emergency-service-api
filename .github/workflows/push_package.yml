@@ -22,8 +22,22 @@ jobs:
       packages: write
       # 
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Determine Tag
+        id: image_tag_finder
+        run: |
+          if [$REF == 'refs/heads/main']
+          then
+              echo "::set-output name=tag_finder::prod"
+          else
+              echo "::set-output name=tag_finder::dev"
+          fi
+        env:
+          REF: ${{ github.ref }}
+
       # Uses the `docker/login-action` action to log in to the Container registry registry using the account and password that will publish the packages. Once published, the packages are scoped to the account defined here.
       - name: Log in to the Container registry
         uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
@@ -45,5 +59,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: "dev"
+          tags: ${{ steps.image_tag_finder.outputs.tag_finder }}
+          labels: ${{ steps.meta.outputs.labels }}
