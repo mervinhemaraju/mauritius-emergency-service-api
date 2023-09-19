@@ -31,9 +31,9 @@ jobs:
         run: |
           if [$REF == 'refs/heads/main']
           then
-              echo "{tag_finder}={prod}" >> $GITHUB_OUTPUT
+              echo "tag_finder=prod" >> $GITHUB_OUTPUT
           else
-              echo "{tag_finder}={dev}" >> $GITHUB_OUTPUT
+              echo "tag_finder=dev" >> $GITHUB_OUTPUT
           fi
         env:
           REF: ${{ github.ref }}
