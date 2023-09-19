@@ -1,0 +1,599 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <link href="http://metservice.intnet.mu/images/favicon.jpg" rel="icon" />
+    <script src="http://metservice.intnet.mu/js/jquery.min.js" type="text/javascript"></script>
+    <!-- CSS for meteo -->
+    <!--[if IE]>
+<link href="css/ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+    <link href="http://metservice.intnet.mu/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="http://metservice.intnet.mu/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="http://metservice.intnet.mu/css/menu.css" rel="stylesheet" type="text/css" />
+    <!-- vacoas // plaisance -->
+    <link href="http://metservice.intnet.mu/css/bjqs.css" rel="stylesheet" type="text/css" />
+    <script src="http://metservice.intnet.mu/js/bjqs-1.3.min.js" type="text/javascript"></script>
+    <script src="http://metservice.intnet.mu/js/stop.js" type="text/javascript"></script>
+    <!-- CSS for slider -->
+    <link href="http://metservice.intnet.mu/css/slider.css" rel="stylesheet" type="text/css" />
+    <link href="http://metservice.intnet.mu/css/jquery.jscrollpane.css" media="all" rel="stylesheet" type="text/css" />
+    <title>Mauritius Meteorological Services</title>
+    <meta content="The Mauritius Meteorological Services website ..." name="description" />
+    <meta content="weather, mauritius, climate, cyclone, tsunami" name="keywords" />
+</head>
+
+<body id="index">
+    <div id="main_menu">
+        <!-- MAIN Logo // menu -->
+        <div class="logo">
+            <a href="http://metservice.intnet.mu/index.php"><img alt="meteo mauritius"
+                    src="http://metservice.intnet.mu/images/mms-logo.png" /></a>
+            <p class="isoheader"></p>
+        </div>
+        <div class="slogan">
+            <p class="sloganmeteo">Mauritius Meteorological Services</p>
+            <p class="website_date"><img alt="meteo mauritius"
+                    src="http://metservice.intnet.mu/images/mauritius_flag.png" /> Sunday, February 19, 2023</p>
+            <p class="iso"><img alt="iso" src="http://metservice.intnet.mu/images/logo-1.png" /></p>
+        </div>
+        <!--<div class="army">
+                        <img src="http://metservice.intnet.mu/images/costofarms.png" alt="meteo mauritius"/>
+                </div>-->
+        <div class="clear"></div> <!-- Logo of meteo and slogan -->
+        <div class="menu">
+            <!-- MENU -->
+            <ul>
+                <li><a href="http://metservice.intnet.mu/index.php"><img alt="Meteo mauritius"
+                            src="http://metservice.intnet.mu/images/home.png"
+                            style="padding-left: 6px;padding-right: 0px;padding-top: 0px; margin-top: -2px; float: left;" /></a>
+                </li>
+                <li>
+                    <a class="main" href="#">Weather</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/maps.php">Weather Map</a></li>
+                        <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-mauritius.php">Forecast
+                                Bulletin French</a></li>
+                        <li><a href="http://metservice.intnet.mu/forecast-bulletin-english-mauritius.php">Forecast
+                                Bulletin English</a></li>
+                        <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-rodrigues.php">Forecast
+                                Bulletin Rodrigues</a></li>
+                        <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-agalega.php">Forecast Bulletin
+                                Agalega</a></li>
+                        <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-stbrandon.php">Forecast
+                                Bulletin St Brandon</a></li>
+                        <li><a href="http://metservice.intnet.mu/probabilistic-forecast.php">7 Day Forecast</a></li>
+                        <li><a href="http://metservice.intnet.mu/latest-weather-data.php">Latest Weather Data</a></li>
+                        <li><a href="http://metservice.intnet.mu/warning-bulletin-special-weather.php">Special Weather
+                                Bulletin</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="main" href="#">Cyclone</a>
+                    <ul>
+                        <!--<li><a href="http://metservice.intnet.mu/cyclone-track.php">Cyclone Track</a></li>-->
+                        <li><a href="http://metservice.intnet.mu/current-cyclone.php">Current Storm/Cyclone</a></li>
+                        <li><a href="#">Cyclone Warning Bulletin Mauritius <span class="menumore"><img
+                                        alt="meteo mauritius"
+                                        src="http://metservice.intnet.mu/images/menumore.png" /></span></a>
+                            <ul>
+                                <li><a
+                                        href="http://metservice.intnet.mu/cyclone-bulletin-english-mauritius.php">English</a>
+                                </li>
+                                <li><a
+                                        href="http://metservice.intnet.mu/cyclone-bulletin-french-mauritius.php">French</a>
+                                </li>
+                                <li><a
+                                        href="http://metservice.intnet.mu/cyclone-bulletin-creole-mauritius.php">Creole</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Cyclone Warning Bulletin Rodrigues <span class="menumore"><img
+                                        alt="meteo mauritius"
+                                        src="http://metservice.intnet.mu/images/menumore.png" /></span></a>
+                            <ul>
+                                <li><a
+                                        href="http://metservice.intnet.mu/cyclone-bulletin-english-rodrigues.php">English</a>
+                                </li>
+                                <li><a
+                                        href="http://metservice.intnet.mu/cyclone-bulletin-french-rodrigues.php">French</a>
+                                </li>
+                                <li><a
+                                        href="http://metservice.intnet.mu/cyclone-bulletin-creole-rodrigues.php">Creole</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="http://metservice.intnet.mu/tropical-cyclone/warning-system.php">Warning System and
+                                General Info</a></li>
+                        <li><a href="http://metservice.intnet.mu/tropical-cyclone/precautions.php">Precautions</a></li>
+                        <li><a href="http://metservice.intnet.mu/tropical-cyclone/cyclone-names.php">Cyclone Names</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="main" href="#">Torrential Rain</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/warning-bulletin-torrential-rain-warning.php">Torrential
+                                Rain Warning Bulletin</a></li>
+                        <li><a href="http://metservice.intnet.mu/torrential-rain/torrential-rain-warning-system.php">Warning
+                                System and General Info</a></li>
+                        <li><a href="http://metservice.intnet.mu/torrential-rain/precautions.php">Precautions</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="main" href="#">High Waves</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/warning-bulletin-heavy-swell-warning.php">Heavy Swell
+                                Warning Bulletin</a></li>
+                        <li><a href="http://metservice.intnet.mu/warning-bulletin-storm-surge-warning.php">Storm Surge
+                                Warning Bulletin</a></li>
+                        <li><a href="http://metservice.intnet.mu/high-waves/high-waves-warning-system.php">Warning
+                                System and General Info</a></li>
+                        <li><a href="http://metservice.intnet.mu/high-waves/precautions.php">Precautions</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="main" href="#">Tsunami</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/warning-bulletin-tsunami-warning.php">Tsunami Warning
+                                Bulletin</a></li>
+                        <li><a href="http://metservice.intnet.mu/tsunami/tsunami-warning-system.php">Warning System and
+                                General Info</a></li>
+                        <li><a href="http://metservice.intnet.mu/tsunami/precautions.php">Precautions</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="main" href="#">Climate Services</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/climate-services/climate-info-and-data.php">Climate
+                                Info &amp; Data</a></li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/climate-of-mauritius.php">Climate of
+                                Mauritius</a></li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/climate-of-rodrigues-and-islands.php">Climate
+                                of Rodrigues &amp; Islands</a></li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/climate-change.php">Climate Change</a>
+                        </li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/climate-info-for-water-resources.php">Climate
+                                Info for Water Resources</a></li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/climate-info-for-agriculture.php">Climate
+                                Info for Agriculture</a></li>
+                        <li><a
+                                href="http://metservice.intnet.mu/climate-services/climate-info-for-fisheries-and-marine.php">Climate
+                                Info for Fisheries &amp; Marine</a></li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/seasonal-climate-forecast.php">Seasonal
+                                Climate Forecast</a></li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/monthly-rainfall-climatology.php">Monthly
+                                Rainfall Climatology</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="main" href="#">Sun, Moon &amp; Tides</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-sunrise-sunset-mauritius.php">Sunrise
+                                Sunset Mauritius</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-sunrise-sunset-rodrigues.php">Sunrise
+                                Sunset Rodrigues</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-moonrise-moonset-mauritius.php">Moonrise
+                                Moonset Mauritius</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-moonrise-moonset-rodrigues.php">Moonrise
+                                Moonset Rodrigues</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-tides-mauritius.php">Tides
+                                Mauritius</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-tides-rodrigues.php">Tides
+                                Rodrigues</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-moon-phase.php">Moon Phase</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-info-eclipses.php">Info Eclipses</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="main" href="#">Satellite &amp; Chart</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/satellite-imagery.php">Satellite Imagery</a></li>
+                        <li><a href="http://metservice.intnet.mu/satellite-anim.php">Satellite Animation</a></li>
+                        <li><a href="http://metservice.intnet.mu/synoptic-chart.php">Synoptic Chart</a></li>
+                        <!--<li><a href="http://metservice.intnet.mu/radar-imagery.php">Radar Imagery </a></li>-->
+                        <li><a href="http://radar.metservice.intnet.mu/radar-image-viewer" target="_blank">Radar
+                                Imagery</a></li>
+                        <!--<li><a href="http://metservice.intnet.mu/radar-anim.php">Radar Imagery Animation Provisional</a></li>-->
+                    </ul>
+                </li>
+            </ul>
+        </div> <!-- END MENU -->
+        <!-- Menu here -->
+    </div><!-- END MAIN Logo // menu -->
+    <div class="clear"></div>
+    <div id="content">
+        <!-- CONTENT OF WEBSITE -->
+        <div class="right_content">
+            <!-- quicklinks, current condtions, news -->
+            <div style="padding: 0px 5px 10px">
+                <a href="https://www.myt.mu/mobile/mytweather-app/?ref=metservice" target="_blank"><img
+                        alt="my.t weather app"
+                        src="http://metservice.intnet.mu/images/app/meteohp-myt-weather.jpg" /></a>
+            </div>
+            <div id="banner-slide">
+                <!-- current conditions slider -->
+                <ul class="bjqs">
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 100px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">Agalega</p>
+                            <p class="conditions">partly cloudy day</p>
+                        </div>
+                        <div style="width: 70px; padding-top: 18px; float: right;">
+                            <p class="temperature">32°</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img alt="meteo mauritius"
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/partly cloudy day.png" />
+                        </div>
+                        <p><b>Wind:</b> <span class="fgrey">SW'LY 03 KM/H</span></p>
+                        <p><b>Humidity:</b> <span class="fgrey">66%</span></p>
+                    </li>
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 100px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">Vacoas</p>
+                            <p class="conditions">fine day</p>
+                        </div>
+                        <div style="width: 70px; padding-top: 18px; float: right;">
+                            <p class="temperature">27°</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img alt="meteo mauritius"
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/fine day.png" />
+                        </div>
+                        <p><b>Wind:</b> <span class="fgrey">SE'LY 15 Km/h</span></p>
+                        <p><b>Humidity:</b> <span class="fgrey">70%</span></p>
+                    </li>
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 100px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">Plaisance </p>
+                            <p class="conditions">partly cloudy day</p>
+                        </div>
+                        <div style="width: 70px; padding-top: 18px; float: right;">
+                            <p class="temperature">30°</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img alt="meteo mauritius"
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/partly cloudy day.png" />
+                        </div>
+                        <p><b>Wind:</b> <span class="fgrey">ESE'LY 20 Km/h</span></p>
+                        <p><b>Humidity:</b> <span class="fgrey">71%</span></p>
+                    </li>
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 100px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">Plaine Corail Airport</p>
+                            <p class="conditions">cloudy</p>
+                        </div>
+                        <div style="width: 70px; padding-top: 18px; float: right;">
+                            <p class="temperature">32°</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img alt="meteo mauritius"
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/cloudy.png" />
+                        </div>
+                        <p><b>Wind:</b> <span class="fgrey">ESE'LY 58 Km/h</span></p>
+                        <p><b>Humidity:</b> <span class="fgrey">78%</span></p>
+                    </li>
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 100px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">St Brandon</p>
+                            <p class="conditions">cloudy</p>
+                        </div>
+                        <div style="width: 70px; padding-top: 18px; float: right;">
+                            <p class="temperature">30°</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img alt="meteo mauritius"
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/cloudy.png" />
+                        </div>
+                        <p><b>Wind:</b> <span class="fgrey">S'LY 22 Km/h</span></p>
+                        <p><b>Humidity:</b> <span class="fgrey">82%</span></p>
+                    </li>
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 100px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">Port Louis</p>
+                            <p class="conditions">partly cloudy day</p>
+                        </div>
+                        <div style="width: 70px; padding-top: 18px; float: right;">
+                            <p class="temperature">32°</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img alt="meteo mauritius"
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/partly cloudy day.png" />
+                        </div>
+                        <p><b>Wind:</b> <span class="fgrey">SE'LY 07 Km/h</span></p>
+                        <p><b>Humidity:</b> <span class="fgrey">50%</span></p>
+                    </li>
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 100px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">Grand Bassin</p>
+                            <p class="conditions">cloudy</p>
+                        </div>
+                        <div style="width: 70px; padding-top: 18px; float: right;">
+                            <p class="temperature">24°</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img alt="meteo mauritius"
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/cloudy.png" />
+                        </div>
+                        <p><b>Wind:</b> <span class="fgrey">SE'LY11 KM/H</span></p>
+                        <p><b>Humidity:</b> <span class="fgrey">67%</span></p>
+                    </li>
+                </ul>
+            </div> <!-- END current conditions slider -->
+            <script type="text/javascript">
+                jQuery(document).ready(function ($) {
+
+                    $('#banner-slide').bjqs({
+                        animtype: 'slide',
+                        height: 300,
+                        width: 175,
+                    });
+
+                });
+            </script>
+            <div class="clear"></div>
+            <br />
+            <div class="right_content">
+                <!-- quicklinks, current condtions, news -->
+                <div class="quicklinks">
+                    <!-- QUICKLINKS -->
+                    <h3>Quick links</h3>
+                    <ul class="bullets">
+                        <li><a href="http://metservice.intnet.mu/forecast-bulletin-english-mauritius.php">Forecast
+                                Bulletin</a></li>
+                        <li><a href="http://metservice.intnet.mu/maps.php">Today's Forecast</a></li>
+                        <!--<li><a href="http://metservice.intnet.mu/synoptic-chart.php">Synoptic Chart</a></li>
+                    <li><a href="http://metservice.intnet.mu/satellite-imagery.php">Satellite imagery</a></li>-->
+                        <li><a href="http://metservice.intnet.mu/latest-weather-data.php">Recent Recorded Data</a></li>
+                        <!-- <li><a target="_blank" href="http://worldweather.wmo.int/en/region.html?ra=1">WWIS</a></li> -->
+                        <!--<li><a target="_blank" href="http://www.addmauritius.org">Association pour le Developpement Durable</a></li>-->
+                        <!--<li><a target="_blank" href="http://sfwf.govmu.org/">SFWF</a></li>-->
+                        <li><a href="http://metservice.intnet.mu/mmsimages/Weather-Forecast-for-Agriculture.pdf"
+                                target="_blank">Meteo Agricole</a></li>
+                        <li><a href="http://metservice.intnet.mu/mmsimages/2022-07-21_12:22:20_May&amp;Jun2022_Temp.pdf"
+                                target="_blank">Mid Winter Temperature Update</a></li>
+                        <li><a href="http://metservice.intnet.mu/mmsimages/2022-09-28_10:36:12_MMS Service Charges.pdf"
+                                target="_blank">CHARGES INFORMATION SERVICE </a></li>
+                        <li><a href="http://metservice.intnet.mu/mmsimages/2022-01-24_10:45:36_Tonga Undersea Volcano.pdf"
+                                target="_blank">Tonga Undersea Volcano</a></li>
+                        <li><a href="http://metservice.intnet.mu/mmsimages/2023-01-16_11:13:12_Climate Bulletin November 2022-Final.pdf"
+                                target="_blank">Monthly Climate Bulletin</a></li>
+                        <li><a href="http://metservice.intnet.mu/mmsimages/2023-02-08_14:56:58_23 Stn 1-31 January  2023.pdf"
+                                target="_blank">Rainfall Summary </a></li>
+                        <li><a href="http://metservice.intnet.mu/publication.php">Publications</a></li>
+                    </ul>
+                </div> <!-- END QUICKLINKS -->
+                <div class="clear"></div>
+            </div>
+        </div><!-- END quicklinks, current condtions, news -->
+        <div class="left_content">
+            <!-- LEFT part contents -->
+            <div class="warning">
+                <!-- CYCLONE WARNING -->
+                <!-- no warning 
+                                -->
+                <p><span class="darkgrey"></span>
+                    <marquee style="width: 630px; font-weight: bold;"><a
+                            href="http://metservice.intnet.mu/cyclone-bulletin-french-mauritius.php "><span
+                                style="color: #ff0000">Un avertissement de cyclone de Classe 2 est en vigueur a Maurice.
+                            </span></a> | <a
+                            href="http://metservice.intnet.mu/cyclone-bulletin-french-rodrigues.php"><span
+                                style="color: #ff0000">Un avertissement de cyclone de Classe 3 est en vigueur a
+                                Rodrigues.</span></a> </marquee>
+                </p>
+                <!-- -->
+            </div> <!-- END CYCLONE WARNING -->
+            <div class="sep"></div>
+            <h1>Cyclone Warning Bulletin Mauritius (English Version)</h1>
+            <p>Sun, Feb 19, 2023<br /><br />
+                <p><strong>A cyclone warning class II is in force in Mauritius<br />
+                        A cyclone warning class II is in force in Mauritius</strong><br />
+                    <br />
+                    <strong>Fifth cyclone bulletin for Mauritius issued at 1610 hours on Sunday 19 February
+                        2023</strong><br />
+                    <br />
+                    Over the last 6 hours Freddy has continued to weaken and is now an intense tropical cyclone. It has
+                    also accelerated with a slight recurvature in its trajectory towards the south.<br />
+                    <br />
+                    The estimated central pressure of Freddy is around 930 hPa and the estimated wind gusts near its
+                    centre is about 280 km/h.<br />
+                    <br />
+                    At 1600 hours, intense tropical cyclone Freddy was centred at about 720 km to the east-north-east of
+                    Mauritius near latitude 17.3 degrees south and longitude 64.1 degrees east. <br />
+                    It is moving in a west south westerly direction at a speed of about 25 km/h. <br />
+                    <br />
+                    On this new trajectory Freddy is dangerously approaching Mauritius and may represent direct threat
+                    to the island. It may pass at about 140 km at its closest distance to the north north west of the
+                    island on Monday evening.<br />
+                    <br />
+                    <strong>A cyclone warning class II is in force in Mauritius.</strong><br />
+                    <br />
+                    The public in Mauritius is advised to complete all preliminary precautions.<br />
+                    <br />
+                    Weather will be partly cloudy to cloudy with passing showers mainly to the east and over the central
+                    plateau.<br />
+                    <br />
+                    Wind will blow from the southeast at a speed of about 30 km/h.<br />
+                    <br />
+                    Sea will become gradually rough beyond the reefs tonight with swells. It is advised not to venture
+                    in the open sea as from tonight.<br />
+                    <br />
+                    The weather conditions are expected to deteriorate rapidly in the early afternoon tomorrow, Monday
+                    20, with intermittent rain and gusts of the order of 100km/h.<br />
+                    <br />
+                    The sea will become very rough to high with heavy swells tomorrow morning. <br />
+                    <br />
+                    <strong>A cyclone warning class II is in force in Mauritius<br />
+                        A cyclone warning class II is in force in Mauritius.</strong><br />
+                    <br />
+                    If intense tropical cyclone Freddy maintains this trajectory towards the west south west, the
+                    warning bulletin may be upgraded to Class III at 0410 hours tomorrow morning.<br />
+                    <br />
+                    The next bulletin will be issued at around 22h10.</p>
+            </p>
+        </div>
+        <div class="clear"></div>
+    </div> <!-- END CONTENT OF WEBSITE -->
+    <div class="clear"></div>
+    <div id="footer_main">
+        <div class="footer">
+            <div class="block_footer">
+                <h4>Weather</h4>
+                <ul>
+                    <li><a href="http://metservice.intnet.mu/maps.php">Weather Map</a></li>
+                    <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-mauritius.php">Forecast Bulletin
+                            French</a></li>
+                    <li><a href="http://metservice.intnet.mu/forecast-bulletin-english-mauritius.php">Forecast Bulletin
+                            English</a></li>
+                    <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-rodrigues.php">Forecast Bulletin
+                            Rodrigues</a></li>
+                    <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-agalega.php">Forecast Bulletin
+                            Agalega</a></li>
+                    <li><a href="http://metservice.intnet.mu/probabilistic-forecast.php">7 Day Forecast</a></li>
+                    <li><a href="http://metservice.intnet.mu/latest-weather-data.php">Latest Weather Data</a></li>
+                    <li><a href="http://metservice.intnet.mu/warning-bulletin-special-weather.php">Special Weather
+                            Bulletin</a></li>
+                </ul>
+                <br />
+                <h4>Tsunami</h4>
+                <ul>
+                    <li><a href="http://metservice.intnet.mu/warning-bulletin-tsunami.php">Tsunami Warning Bulletin</a>
+                    </li>
+                    <li><a href="http://metservice.intnet.mu/tsunami/tsunami-warning-system.php">Warning System and
+                            General Info</a></li>
+                    <li><a href="http://metservice.intnet.mu/tsunami/precautions.php">Precautions</a></li>
+                </ul>
+            </div>
+            <div class="block_footer">
+                <h4>Cyclone</h4>
+                <ul>
+                    <!--<li><a href="http://metservice.intnet.mu/cyclone-track.php">Cyclone Track</a></li>-->
+                    <li><a href="http://metservice.intnet.mu/current-cyclone.php">Current Storm/Cyclone</a></li>
+                    <li><a href="http://metservice.intnet.mu/cyclone-bulletin-english-mauritius.php">Cyclone Warning
+                            Bulletin Mauritius</a></li>
+                    <li><a href="http://metservice.intnet.mu/cyclone-bulletin-french-rodrigues.php">Cyclone Warning
+                            Bulletin Rodrigues</a></li>
+                    <li><a href="http://metservice.intnet.mu/tropical-cyclone/warning-system.php">Warning System and
+                            General Info</a></li>
+                    <li><a href="http://metservice.intnet.mu/tropical-cyclone/precautions.php">Precautions</a></li>
+                    <li><a href="http://metservice.intnet.mu/tropical-cyclone/cyclone-names.php">Cyclone Names</a></li>
+                </ul>
+                <br />
+                <h4>Satellite &amp; Chart</h4>
+                <ul>
+                    <li><a href="satellite-imagery.php">Satellite Imagery</a></li>
+                    <li><a href="satellite-anim.php">Satellite Animation</a></li>
+                    <li><a href="synoptic-chart.php">Synoptic Chart</a></li>
+                    <!--<li><a href="radar-imagery.php">Radar Imagery Provisional</a></li>
+                    <li><a href="radar-anim.php">Radar Imagery Animation Provisional</a></li>-->
+                </ul>
+            </div>
+            <div class="block_footer">
+                <h4>Torrential Rains</h4>
+                <ul>
+                    <li><a href="http://metservice.intnet.mu/warning-bulletin-torrential-rain.php">Torrential Rain
+                            Warning Bulletin</a></li>
+                    <li><a href="http://metservice.intnet.mu/torrential-rain/torrential-rain-warning-system.php">Warning
+                            System and General Info</a></li>
+                    <li><a href="http://metservice.intnet.mu/torrential-rain/precautions.php">Precautions</a></li>
+                </ul>
+                <br />
+                <h4>Climate Services</h4>
+                <ul>
+                    <li><a href="http://metservice.intnet.mu/climate-services/climate-info-and-data.php">Climate Info
+                            &amp; Data</a></li>
+                    <li><a href="http://metservice.intnet.mu/climate-services/climate-of-mauritius.php">Climate of
+                            Mauritius</a></li>
+                    <li><a href="http://metservice.intnet.mu/climate-services/climate-of-rodrigues-and-islands.php">Climate
+                            of Rodrigues &amp; Islands</a></li>
+                    <li><a href="http://metservice.intnet.mu/climate-services/climate-change.php">Climate Change</a>
+                    </li>
+                    <li><a href="http://metservice.intnet.mu/climate-services/climate-info-for-water-resources.php">Climate
+                            Info for Water Resources</a></li>
+                    <li><a href="http://metservice.intnet.mu/climate-services/climate-info-for-agriculture.php">Climate
+                            Info for Agriculture</a></li>
+                    <li><a
+                            href="http://metservice.intnet.mu/climate-services/climate-info-for-fisheries-and-marine.php">Climate
+                            Info for Fisheries &amp; Marine</a></li>
+                    <li><a href="http://metservice.intnet.mu/climate-services/seasonal-climate-forecast.php">Seasonal
+                            Climate Forecast</a></li>
+                </ul>
+            </div>
+            <div class="block_footer">
+                <h4>High Waves</h4>
+                <ul>
+                    <li><a href="http://metservice.intnet.mu/warning-bulletin-heavy-swell.php">Heavy Swell Warning
+                            Bulletin</a></li>
+                    <li><a href="http://metservice.intnet.mu/warning-bulletin-storm-surge.php">Storm Surge Warning
+                            Bulletin</a></li>
+                    <li><a href="http://metservice.intnet.mu/high-waves/high-waves-warning-system.php">Warning System
+                            and General Info</a></li>
+                    <li><a href="http://metservice.intnet.mu/high-waves/precautions.php">Precautions</a></li>
+                </ul>
+                <br />
+                <h4>Sun, Moon &amp; Tides</h4>
+                <ul>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-sunrise-sunset-mauritius.php">Sunrise
+                            Sunset Mauritius</a></li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-sunrise-sunset-rodrigues.php">Sunrise
+                            Sunset Rodrigues</a></li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-moonrise-moonset-mauritius.php">Moonrise
+                            Moonset Mauritius</a></li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-moonrise-moonset-rodrigues.php">Moonrise
+                            Moonset Rodrigues</a></li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-tides-mauritius.php">Tides Mauritius</a>
+                    </li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-tides-rodrigues.php">Tides Rodrigues</a>
+                    </li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-moon-phase.php">Moon Phase</a></li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-info-eclipses.php">Info Eclipses</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="sep_footer"></div>
+            <p style="float: left; width: 570px; font-size: 12px;"><a
+                    href="http://metservice.intnet.mu/about-us/charter/">About Us</a> <span class="sep">|</span> <a
+                    href="http://metservice.intnet.mu/publication.php">Publications</a> <span class="sep">|</span> <a
+                    href="http://publicprocurement.govmu.org" target="_blank">Procurement</a> <span class="sep">|</span>
+                <a href="http://metservice.intnet.mu/survey/survey-links.php">Survey Links</a> <span
+                    class="sep">|</span> <a
+                    href="http://metservice.intnet.mu/faq/frequently-asked-questions.php">FAQ</a> <span
+                    class="sep">|</span> <a href="http://metservice.intnet.mu/feedback.php">Feedback</a> <span
+                    class="sep"><span class="sep">|</span></span> <a
+                    href="http://metservice.intnet.mu/contact-us.php">Contact Us</a> <span class="sep"><span
+                        class="sep">|</span></span> <a
+                    href="http://metservice.intnet.mu/useful-links/links-to-other-websites.php">Useful Links</a></p>
+            <p style="float: right; width: 300px; font-size:11px;">
+                © Copyright <b><a href="http://metservice.intnet.mu/">Mauritius Meteorological Services.</a></b></p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-3805416-14']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+                '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,6 +1,12 @@
-CONTENT_NOT_FOUND = {
+CONTENT_NOT_FOUND_SERVICES = {
     "services": [],
     "message": "No services found under this identifier. Check the docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
+    "success": False,
+}
+
+CONTENT_NOT_FOUND_REPORT = {
+    "services": [],
+    "message": "An error occurred while getting the report: {}",
     "success": False,
 }
 
@@ -17,6 +23,16 @@ def content_service(service):
         "success": True,
     }
 
+def content_cyclone_report(level, next_bulletin, news):
+    return {
+        "report": {
+            "class": level,
+            "next_bulletin": next_bulletin,
+            "news": news
+        },
+        "message": "",
+        "success": True,
+    }
 
 def content_services(services):
     return {"services": services, "message": "", "success": True}

@@ -1,0 +1,3 @@
+
+class CycloneReportFailure(Exception):
+    pass
