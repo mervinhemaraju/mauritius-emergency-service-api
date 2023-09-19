@@ -62,5 +62,5 @@ jobs:
           context: .
           push: true
         #   tags: ${{ steps.image_tag_finder.outputs.tag_finder }}
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: "dev"
           labels: ${{ steps.meta.outputs.labels }}
