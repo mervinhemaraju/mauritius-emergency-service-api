@@ -42,4 +42,3 @@ def page_bad_request(e):
         CONTENT_BAD_REQUEST,
         400,
     )
-
