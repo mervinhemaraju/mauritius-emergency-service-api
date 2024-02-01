@@ -22,19 +22,22 @@ app.config["MAIL_PASSWORD"] = os.environ["MAIL_PASSWORD"]
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USE_SSL"] = False
 
+
 # * Redirect to the correct web page by default
 @app.route("/")
 @app.route("/web")
 def page_web():
     return redirect(url_for("web.home_view"))
 
+
 #! Error Handlers
 @app.errorhandler(404)  #! Handling HTTP 404 NOT FOUND
 def page_not_found(e):
     return (
-        CONTENT_NOT_FOUND,
+        CONTENT_NOT_FOUND_SERVICES,
         404,
     )
+
 
 @app.errorhandler(400)  #! Handling HTTP 400 BAD REQUEST
 def page_bad_request(e):

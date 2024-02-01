@@ -1,11 +1,7 @@
 from flask import Blueprint
 from flask_restful import Api
-from app.api.v1_0.routes.services import (
-    AllServices,
-    OneService,
-    EmergencyOnly
-)
-from app.api.v1_0.routes.cyclone import CycloneReport
+from app.api.v1_0.routes.services import AllServices, OneService, EmergencyOnly
+from app.api.v1_0.routes.cyclone import CycloneReport, CycloneNames
 
 # * Create the API V1 blueprint
 v1_0_blueprint = Blueprint("v1_0", __name__)
@@ -19,3 +15,4 @@ v1_0_api.add_resource(OneService, "/<string:lang>/service/<string:identifier>")
 v1_0_api.add_resource(EmergencyOnly, "/<string:lang>/services/emergencies")
 
 v1_0_api.add_resource(CycloneReport, "/<string:lang>/cyclone/report")
+v1_0_api.add_resource(CycloneNames, "/<string:lang>/cyclone/names")

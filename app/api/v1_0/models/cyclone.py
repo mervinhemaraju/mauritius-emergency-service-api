@@ -3,55 +3,41 @@ import re
 from bs4 import BeautifulSoup
 from app.api.v1_0.utils.helpers import (
     retrieve_cyclone_class_level,
-    retrieve_time_from_text
+    retrieve_time_from_text,
 )
 from app.api.v1_0.models.exceptions import CycloneReportFailure
 from app.api.v1_0.utils.constants import cyclone_report_url_def
 
 
 class Cyclone:
+    __level = {"N/A": 0, "I": 1, "II": 2, "III": 3, "IV": 4}
 
-    __level = {
-        "N/A": 0,
-        "I": 1,
-        "II": 2,
-        "III": 3,
-        "IV": 4
-    }
-
-    def __init__(self, lang) -> None:
-
+    def __init__(self, lang, url=cyclone_report_url_def) -> None:
         # * Get the HTML page
-        response = requests.get(
-            url=cyclone_report_url_def[lang]
-        )
+        response = requests.get(url=url[lang])
 
         # * Verify if request was successful
-        if (response.status_code != 200):
-            raise CycloneReportFailure(
-                "Error occurred while getting cyclone report"
-            )
+        if response.status_code != 200:
+            raise CycloneReportFailure("Error occurred while getting cyclone report")
 
         # * Create a soup for the html page
-        self.soup = BeautifulSoup(response.content, 'html.parser')
+        self.soup = BeautifulSoup(response.content, "html.parser")
 
     def news(self):
-
         # * Retrieve the left content of the page
         left_content = self.soup.select_one(".left_content")
 
         # * Get all the p content of the page
-        ps = left_content.find_all('p')
+        ps = left_content.find_all("p")
 
         # * Clean the paragraphs and return it
         return [
-            p.text.strip().replace('\n', ' ').replace(' \xa0 ', '')
+            p.text.strip().replace("\n", " ").replace(" \xa0 ", "")
             for p in ps
-            if p.text.strip() != ''
+            if p.text.strip() != ""
         ]
 
     def next_bulletin(self):
-
         # * Get the next bulletin time
         next_bulletin = self.soup.find(
             string=re.compile("The next bulletin will be issued")
@@ -61,12 +47,11 @@ class Cyclone:
         return retrieve_time_from_text(next_bulletin)
 
     def class_level(self):
-
         # * Retrieve the left content of the page
         left_content = self.soup.select_one(".left_content")
 
         # * Get all the strong content of the page
-        strongs = left_content.find_all('strong')
+        strongs = left_content.find_all("strong")
 
         # * Get the first element in the list
         message = next(filter(lambda x: x, strongs), None)
@@ -80,3 +65,36 @@ class Cyclone:
 
         # * Return the class level
         return self.__level[class_level]
+
+    def names(self):
+        # * Retrieve the left content of the page
+        left_content = self.soup.select_one(".left_content")
+
+        # * Retrieve the names row
+        names_row = left_content.find("table").find("tbody").find_all("tr")
+
+        # * Remove the table header
+        del names_row[:1]
+
+        # * Define empty list of names
+        names = []
+
+        # * Format the names and return them in an array document
+        for name in names_row:
+            # * Get all the values in the td
+            values = [value.get_text().strip() for value in name.find_all("td")]
+
+            # * Delete column header
+            del values[:1]
+
+            # * Append the name document to the names list
+            names.append(
+                {
+                    "name": values[0] if values[0] != "" else "N/A",
+                    "provided_by": values[1] if values[1] != "" else "N/A",
+                    "named_by": values[2] if values[2] != "" else "N/A",
+                }
+            )
+
+        # * Return the names list
+        return names

@@ -6,7 +6,13 @@ CONTENT_NOT_FOUND_SERVICES = {
 
 CONTENT_NOT_FOUND_REPORT = {
     "services": [],
-    "message": "An error occurred while getting the report: {}",
+    "message": "An error occurred while getting the cyclone report: {}",
+    "success": False,
+}
+
+CONTENT_NOT_FOUND_NAMES = {
+    "services": [],
+    "message": "An error occurred while getting the cyclone names: {}",
     "success": False,
 }
 
@@ -16,6 +22,7 @@ CONTENT_BAD_REQUEST = {
     "success": False,
 }
 
+
 def content_service(service):
     return {
         "services": service,
@@ -23,16 +30,22 @@ def content_service(service):
         "success": True,
     }
 
+
 def content_cyclone_report(level, next_bulletin, news):
     return {
-        "report": {
-            "class": level,
-            "next_bulletin": next_bulletin,
-            "news": news
-        },
+        "report": {"class": level, "next_bulletin": next_bulletin, "news": news},
         "message": "",
         "success": True,
     }
+
+
+def content_cyclone_names(names):
+    return {
+        "names": names,
+        "message": "",
+        "success": True,
+    }
+
 
 def content_services(services):
     return {"services": services, "message": "", "success": True}
