@@ -7,6 +7,7 @@ from app.api.v1.utils.helpers import (
 )
 from app.api.v1.services.exceptions import CycloneReportFailure
 from app.api.v1.utils.constants import cyclone_report_url_def
+from app.api.v1.models.cyclone_name import CycloneName
 
 
 class Cyclone:
@@ -66,7 +67,7 @@ class Cyclone:
         # * Return the class level
         return self.__level[class_level]
 
-    def names(self):
+    def names(self) -> list[CycloneName]:
         # * Retrieve the left content of the page
         left_content = self.soup.select_one(".left_content")
 
@@ -77,7 +78,7 @@ class Cyclone:
         del names_row[:1]
 
         # * Define empty list of names
-        names = []
+        names: list[CycloneName] = []
 
         # * Format the names and return them in an array document
         for name in names_row:
@@ -89,11 +90,7 @@ class Cyclone:
 
             # * Append the name document to the names list
             names.append(
-                {
-                    "name": values[0] if values[0] != "" else "N/A",
-                    "provided_by": values[1] if values[1] != "" else "N/A",
-                    "named_by": values[2] if values[2] != "" else "N/A",
-                }
+                CycloneName(name=values[0], provided_by=values[1], named_by=values[2])
             )
 
         # * Return the names list
