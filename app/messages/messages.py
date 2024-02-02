@@ -4,12 +4,6 @@ CONTENT_NOT_FOUND_SERVICES = {
     "success": False,
 }
 
-CONTENT_BAD_REQUEST = {
-    "services": [],
-    "message": "Your browser sent a request that this server could not understand. Check the docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
-    "success": False,
-}
-
 
 def content_service(service):
     return {
