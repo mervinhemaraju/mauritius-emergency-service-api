@@ -1,12 +1,14 @@
 from flask_restful import Resource
-from app.api.v1_0.models.cyclone import Cyclone
+
+# from flask_restful import fields, marshal_with
+from app.api.v1.services.cyclone import Cyclone
 from app.messages.messages import (
     CONTENT_NOT_FOUND_REPORT,
     CONTENT_NOT_FOUND_NAMES,
     content_cyclone_report,
     content_cyclone_names,
 )
-from app.api.v1_0.utils.constants import cyclone_names_url_def
+from app.api.v1.utils.constants import cyclone_names_url_def
 # * The Service class returns a
 # * cyclone report / cyclone names
 
@@ -48,3 +50,21 @@ class CycloneNames(Resource):
             error_content = CONTENT_NOT_FOUND_NAMES
             error_content["message"] = error_content["message"].format(str(e))
             return (error_content, 404)
+
+
+# resource_fields = {"task": fields.String, "uri": fields.String}
+
+
+# class TodoDao(object):
+#     def __init__(self, todo_id, task):
+#         self.todo_id = todo_id
+#         self.task = task
+
+#         # This field will not be sent in the response
+#         self.status = "active"
+
+
+# class CycloneTest(Resource):
+#     @marshal_with(resource_fields)
+#     def get(self, lang):
+#         return TodoDao(todo_id="my_todo", task="Remember the milk")

@@ -1,8 +1,8 @@
 import pytest
 from bs4 import BeautifulSoup
-from app.api.v1_0.models.cyclone import Cyclone
-from app.api.v1_0.models.exceptions import CycloneReportFailure
-from app.api.v1_0.utils.constants import cyclone_names_url_def
+from app.api.v1.services.cyclone import Cyclone
+from app.api.v1.services.exceptions import CycloneReportFailure
+from app.api.v1.utils.constants import cyclone_names_url_def
 
 
 class TestCyclone:

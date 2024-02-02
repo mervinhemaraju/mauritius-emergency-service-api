@@ -1,7 +1,7 @@
 import os
-import app.api.v1_0.v1_0 as V1_0
 import app.web.web as Web
-from app.messages.messages import *
+from app.api.v1.v1 import v1_blueprint
+from app.messages.messages import CONTENT_NOT_FOUND_SERVICES, CONTENT_BAD_REQUEST
 from flask import Flask, redirect, url_for
 
 # * Create a Flask Application
@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # * Register Blueprints
 # > API Blueprint
-app.register_blueprint(V1_0.v1_0_blueprint, url_prefix="/api/v1")
+app.register_blueprint(v1_blueprint, url_prefix="/api/v1")
 
 # > Web App Blueprints
 app.register_blueprint(Web.web, url_prefix="/web")

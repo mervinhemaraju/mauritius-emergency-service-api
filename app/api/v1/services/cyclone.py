@@ -1,12 +1,12 @@
 import requests
 import re
 from bs4 import BeautifulSoup
-from app.api.v1_0.utils.helpers import (
+from app.api.v1.utils.helpers import (
     retrieve_cyclone_class_level,
     retrieve_time_from_text,
 )
-from app.api.v1_0.models.exceptions import CycloneReportFailure
-from app.api.v1_0.utils.constants import cyclone_report_url_def
+from app.api.v1.services.exceptions import CycloneReportFailure
+from app.api.v1.utils.constants import cyclone_report_url_def
 
 
 class Cyclone:

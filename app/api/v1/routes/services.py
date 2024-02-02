@@ -3,29 +3,25 @@ from flask_restful import Resource, request
 from app.messages.messages import (
     CONTENT_NOT_FOUND_SERVICES,
     content_services,
-    content_service
+    content_service,
 )
-from app.api.v1_0.utils.helpers import sort_queried_service
-from app.api.v1_0.utils.constants import json_file, json_def
+from app.api.v1.utils.helpers import sort_queried_service
+from app.api.v1.utils.constants import json_file, json_def
 
 
 # * The Service class returns a single
 # * item from the give parameter
 class OneService(Resource):
-
     # > GET Request
     def get(self, lang, identifier):
-
         # * Open the file according to the language queried
         with open(json_file.get(lang, json_def)) as services_file:
-
             # * Get the services
             services = json.load(services_file)
 
             # * Get the queried service
             service = [
-                next(filter(lambda x: x["identifier"]
-                     == identifier, services), None)
+                next(filter(lambda x: x["identifier"] == identifier, services), None)
             ]
 
             # * Checks if not empty
@@ -44,13 +40,10 @@ class OneService(Resource):
 # * The Services class which returns
 # * a list of all available services
 class AllServices(Resource):
-
     # > GET Request
     def get(self, lang):
-
         # * Open the file according to the language queried
         with open(json_file.get(lang, json_def)) as services_file:
-
             # * Get the services
             services = json.load(services_file)
 
@@ -67,13 +60,10 @@ class AllServices(Resource):
 # * The Emergencies class returns all services with Type 'E' ONLY
 # * Type 'E' here means emergencies services
 class EmergencyOnly(Resource):
-
     # > GET Request
     def get(self, lang):
-
         # * Open the file according to the language queried
         with open(json_file.get(lang, json_def)) as services_file:
-
             # * Get the services
             services = json.load(services_file)
 
