@@ -24,7 +24,7 @@ class Cyclone:
         # * Create a soup for the html page
         self.soup = BeautifulSoup(response.content, "html.parser")
 
-    def news(self):
+    def news(self) -> list[str]:
         # * Retrieve the left content of the page
         left_content = self.soup.select_one(".left_content")
 
@@ -38,7 +38,7 @@ class Cyclone:
             if p.text.strip() != ""
         ]
 
-    def next_bulletin(self):
+    def next_bulletin(self) -> str:
         # * Get the next bulletin time
         next_bulletin = self.soup.find(
             string=re.compile("The next bulletin will be issued")
@@ -47,7 +47,7 @@ class Cyclone:
         # * Retrieve time from text and return
         return retrieve_time_from_text(next_bulletin)
 
-    def class_level(self):
+    def class_level(self) -> int:
         # * Retrieve the left content of the page
         left_content = self.soup.select_one(".left_content")
 

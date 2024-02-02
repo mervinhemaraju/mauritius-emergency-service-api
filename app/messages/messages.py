@@ -4,18 +4,6 @@ CONTENT_NOT_FOUND_SERVICES = {
     "success": False,
 }
 
-CONTENT_NOT_FOUND_REPORT = {
-    "services": [],
-    "message": "An error occurred while getting the cyclone report: {}",
-    "success": False,
-}
-
-CONTENT_NOT_FOUND_NAMES = {
-    "services": [],
-    "message": "An error occurred while getting the cyclone names: {}",
-    "success": False,
-}
-
 CONTENT_BAD_REQUEST = {
     "services": [],
     "message": "Your browser sent a request that this server could not understand. Check the docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
@@ -26,22 +14,6 @@ CONTENT_BAD_REQUEST = {
 def content_service(service):
     return {
         "services": service,
-        "message": "",
-        "success": True,
-    }
-
-
-def content_cyclone_report(level, next_bulletin, news):
-    return {
-        "report": {"class": level, "next_bulletin": next_bulletin, "news": news},
-        "message": "",
-        "success": True,
-    }
-
-
-def content_cyclone_names(names):
-    return {
-        "names": names,
         "message": "",
         "success": True,
     }
