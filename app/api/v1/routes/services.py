@@ -75,4 +75,4 @@ class EmergencyOnly(Resource):
         output = ServicesOutput(services=emergencies, success=True)
 
         # * Return the output
-        return output, 202
+        return output, 200
