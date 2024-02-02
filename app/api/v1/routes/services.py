@@ -1,86 +1,78 @@
-import json
-from flask_restful import Resource, request
-from app.messages.messages import (
-    CONTENT_NOT_FOUND_SERVICES,
-    content_services,
-    content_service,
-)
+from flask_restful import Resource, request, marshal_with
+from app.api.v1.services.service import Services
+from app.api.v1.models.services import ServicesOutput
 from app.api.v1.utils.helpers import sort_queried_service
-from app.api.v1.utils.constants import json_file, json_def
 
 
 # * The Service class returns a single
 # * item from the give parameter
 class OneService(Resource):
     # > GET Request
+    @marshal_with(ServicesOutput.service_output_fields)
     def get(self, lang, identifier):
-        # * Open the file according to the language queried
-        with open(json_file.get(lang, json_def)) as services_file:
-            # * Get the services
-            services = json.load(services_file)
+        # * Create a new output object
+        output = ServicesOutput()
 
-            # * Get the queried service
-            service = [
-                next(filter(lambda x: x["identifier"] == identifier, services), None)
-            ]
+        # * Retrieve the services
+        services = Services(lang).load()
 
-            # * Checks if not empty
-            if service:
-                return (
-                    content_service(service),
-                    200,
-                )
-            else:
-                return (
-                    CONTENT_NOT_FOUND_SERVICES,
-                    404,
-                )
+        # * Get the queried service
+        service = next(filter(lambda x: x.identifier == identifier, services), None)
+
+        # * Check if service is found
+        if service:
+            # * Update the output object
+            output.services = [service]
+            output.success = True
+
+            # * Return the output
+            return output, 200
+        else:
+            # * Update the output
+            output.services = []
+            output.success = False
+            output.message = f"The service '{identifier}' cannot be found."
+
+            # * Return the output
+            return output, 404
 
 
 # * The Services class which returns
 # * a list of all available services
 class AllServices(Resource):
     # > GET Request
+    @marshal_with(ServicesOutput.service_output_fields)
     def get(self, lang):
-        # * Open the file according to the language queried
-        with open(json_file.get(lang, json_def)) as services_file:
-            # * Get the services
-            services = json.load(services_file)
+        # * Retrieve the services
+        services = Services(lang).load()
 
-            # * Process services
-            services = sort_queried_service(request.args, services)
+        # * Process services
+        services = sort_queried_service(request.args, services)
 
-            # * Returns the output in the correct format
-            return (
-                content_services(services),
-                200,
-            )  # * 200 OK HTTP VERB
+        # * Create a services output object
+        output = ServicesOutput(services=services, success=True)
+
+        # * Returns the output in the correct format
+        return output, 200
 
 
 # * The Emergencies class returns all services with Type 'E' ONLY
 # * Type 'E' here means emergencies services
 class EmergencyOnly(Resource):
     # > GET Request
+    @marshal_with(ServicesOutput.service_output_fields)
     def get(self, lang):
-        # * Open the file according to the language queried
-        with open(json_file.get(lang, json_def)) as services_file:
-            # * Get the services
-            services = json.load(services_file)
+        # * Retrieve the services
+        services = Services(lang).load()
 
-            # * Get emergencies only
-            emergencies = list(filter(lambda x: x["type"] == "E", services))
+        # * Get emergencies only
+        emergencies = list(filter(lambda x: x.type == "E", services))
 
-            # * Process services
-            emergencies = sort_queried_service(request.args, emergencies)
+        # * Process services
+        emergencies = sort_queried_service(request.args, emergencies)
 
-            # * Checks if not empty
-            if emergencies:
-                return (
-                    content_service(emergencies),
-                    200,
-                )
-            else:
-                return (
-                    CONTENT_NOT_FOUND_SERVICES,
-                    404,
-                )
+        # * Create an output servcice object
+        output = ServicesOutput(services=emergencies, success=True)
+
+        # * Return the output
+        return output, 202

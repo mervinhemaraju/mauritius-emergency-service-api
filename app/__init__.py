@@ -38,7 +38,6 @@ def page_not_found(e):
     # * Create a new error object and return it
     return Error(
         message="You've landed on a non-existant page. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
-        status=False,
         code=404,
     ), 404
 
@@ -49,6 +48,5 @@ def page_bad_request(e):
     # * Create a new error object and return it
     return Error(
         message="You've sent a bad request. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
-        status=False,
         code=400,
     ), 400
