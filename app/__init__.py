@@ -1,15 +1,16 @@
 import os
-import app.api.v1_0.v1_0 as V1_0
 import app.web.web as Web
-from app.messages.messages import *
+from app.api.v1.v1 import v1_blueprint
+from app.api.v1.models.errors import Error
 from flask import Flask, redirect, url_for
+from flask_restful import marshal_with
 
 # * Create a Flask Application
 app = Flask(__name__)
 
 # * Register Blueprints
 # > API Blueprint
-app.register_blueprint(V1_0.v1_0_blueprint, url_prefix="/api/v1")
+app.register_blueprint(v1_blueprint, url_prefix="/api/v1")
 
 # > Web App Blueprints
 app.register_blueprint(Web.web, url_prefix="/web")
@@ -22,23 +23,30 @@ app.config["MAIL_PASSWORD"] = os.environ["MAIL_PASSWORD"]
 app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USE_SSL"] = False
 
+
 # * Redirect to the correct web page by default
 @app.route("/")
 @app.route("/web")
 def page_web():
     return redirect(url_for("web.home_view"))
 
+
 #! Error Handlers
 @app.errorhandler(404)  #! Handling HTTP 404 NOT FOUND
+@marshal_with(Error.error_fields)
 def page_not_found(e):
-    return (
-        CONTENT_NOT_FOUND,
-        404,
-    )
+    # * Create a new error object and return it
+    return Error(
+        message="You've landed on a non-existant page. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
+        code=404,
+    ), 404
+
 
 @app.errorhandler(400)  #! Handling HTTP 400 BAD REQUEST
+@marshal_with(Error.error_fields)
 def page_bad_request(e):
-    return (
-        CONTENT_BAD_REQUEST,
-        400,
-    )
+    # * Create a new error object and return it
+    return Error(
+        message="You've sent a bad request. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
+        code=400,
+    ), 400

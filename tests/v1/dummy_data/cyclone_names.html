@@ -1,0 +1,1111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="http://metservice.intnet.mu/images/favicon.jpg">
+
+    <script type="text/javascript" src="http://metservice.intnet.mu/js/jquery.min.js"></script>
+    <!-- CSS for meteo -->
+    <!--[if IE]>
+<link href="css/ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+    <link type="text/css" href="http://metservice.intnet.mu/css/common.css" rel="stylesheet">
+    <link type="text/css" href="http://metservice.intnet.mu/css/style.css" rel="stylesheet">
+    <link type="text/css" href="http://metservice.intnet.mu/css/menu.css" rel="stylesheet">
+
+    <!-- vacoas // plaisance -->
+    <link type="text/css" rel="stylesheet" href="http://metservice.intnet.mu/css/bjqs.css">
+    <script type="text/javascript" src="http://metservice.intnet.mu/js/bjqs-1.3.min.js"></script>
+    <script type="text/javascript" src="http://metservice.intnet.mu/js/stop.js"></script>
+    <!-- CSS for slider -->
+    <link rel="stylesheet" type="text/css" href="http://metservice.intnet.mu/css/slider.css">
+    <link rel="stylesheet" type="text/css" href="http://metservice.intnet.mu/css/jquery.jscrollpane.css" media="all">
+
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+</head>
+
+
+<body id="index">
+
+    <div id="main_menu">
+        <!-- MAIN Logo // menu -->
+
+        <div class="logo">
+            <a href="http://metservice.intnet.mu/index.php"><img src="http://metservice.intnet.mu/images/mms-logo.png"
+                    alt="meteo mauritius" /></a>
+            <p class="isoheader"></p>
+        </div>
+
+        <div class="slogan">
+            <p class="sloganmeteo">Mauritius Meteorological Services</p>
+            <p class="website_date"><img src="http://metservice.intnet.mu/images/mauritius_flag.png"
+                    alt="meteo mauritius" />&nbsp; Thursday, February 1, 2024</p>
+            <p class="iso"><img src="http://metservice.intnet.mu/images/logo-1.png" alt="iso"></p>
+        </div>
+
+        <!--	<div class="army">
+			<img src="http://metservice.intnet.mu/images/costofarms.png" alt="meteo mauritius"/>
+		</div> -->
+
+        <div class="clear"></div>
+
+        <!-- Logo of meteo and slogan -->
+
+        <div class="menu">
+            <!-- MENU -->
+
+            <ul>
+                <li><a href="http://metservice.intnet.mu/index.php"><img
+                            src="http://metservice.intnet.mu/images/home.png" alt="Meteo mauritius"
+                            style="padding-left: 6px;padding-right: 0px;padding-top: 0px; margin-top: -2px; float: left;" /></a>
+                </li>
+                <li>
+                    <a href="#" class="main">Weather</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/maps.php">Weather Map</a></li>
+                        <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-mauritius.php">Forecast
+                                Bulletin French</a></li>
+                        <li><a href="http://metservice.intnet.mu/forecast-bulletin-english-mauritius.php">Forecast
+                                Bulletin English</a></li>
+                        <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-rodrigues.php">Forecast
+                                Bulletin Rodrigues</a></li>
+                        <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-agalega.php">Forecast Bulletin
+                                Agalega</a></li>
+                        <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-stbrandon.php">Forecast
+                                Bulletin St Brandon</a></li>
+                        <li><a href="http://metservice.intnet.mu/probabilistic-forecast.php">7 Day Forecast</a></li>
+                        <li><a href="http://metservice.intnet.mu/latest-weather-data.php">Latest Weather Data</a></li>
+                        <li><a href="http://metservice.intnet.mu/warning-bulletin-special-weather.php">Special Weather
+                                Bulletin</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="main">Cyclone</a>
+                    <ul>
+                        <!--<li><a href="http://metservice.intnet.mu/cyclone-track.php">Cyclone Track</a></li>-->
+                        <li><a href="http://metservice.intnet.mu/current-cyclone.php">Current Storm/Cyclone</a></li>
+                        <li><a href="#">Cyclone Warning Bulletin Mauritius <span class="menumore"><img
+                                        src="http://metservice.intnet.mu/images/menumore.png"
+                                        alt="meteo mauritius" /></span></a>
+                            <ul>
+                                <li><a
+                                        href="http://metservice.intnet.mu/cyclone-bulletin-english-mauritius.php">English</a>
+                                </li>
+                                <li><a
+                                        href="http://metservice.intnet.mu/cyclone-bulletin-french-mauritius.php">French</a>
+                                </li>
+                                <li><a
+                                        href="http://metservice.intnet.mu/cyclone-bulletin-creole-mauritius.php">Creole</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#">Cyclone Warning Bulletin Rodrigues <span class="menumore"><img
+                                        src="http://metservice.intnet.mu/images/menumore.png"
+                                        alt="meteo mauritius" /></span></a>
+                            <ul>
+                                <li><a
+                                        href="http://metservice.intnet.mu/cyclone-bulletin-english-rodrigues.php">English</a>
+                                </li>
+                                <li><a
+                                        href="http://metservice.intnet.mu/cyclone-bulletin-french-rodrigues.php">French</a>
+                                </li>
+                                <li><a
+                                        href="http://metservice.intnet.mu/cyclone-bulletin-creole-rodrigues.php">Creole</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li><a href="http://metservice.intnet.mu/tropical-cyclone/warning-system.php">Warning System and
+                                General Info</a></li>
+                        <li><a href="http://metservice.intnet.mu/tropical-cyclone/precautions.php">Precautions</a></li>
+                        <li><a href="http://metservice.intnet.mu/tropical-cyclone/cyclone-names.php">Cyclone Names</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="main">Torrential Rain</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/warning-bulletin-torrential-rain-warning.php">Torrential
+                                Rain Warning Bulletin</a></li>
+                        <li><a href="http://metservice.intnet.mu/torrential-rain/torrential-rain-warning-system.php">Warning
+                                System and General Info</a></li>
+                        <li><a href="http://metservice.intnet.mu/torrential-rain/precautions.php">Precautions</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="main">High Waves</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/warning-bulletin-heavy-swell-warning.php">Heavy Swell
+                                Warning Bulletin</a></li>
+                        <li><a href="http://metservice.intnet.mu/warning-bulletin-storm-surge-warning.php">Storm Surge
+                                Warning Bulletin</a></li>
+                        <li><a href="http://metservice.intnet.mu/high-waves/high-waves-warning-system.php">Warning
+                                System and General Info</a></li>
+                        <li><a href="http://metservice.intnet.mu/high-waves/precautions.php">Precautions</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="main">Tsunami</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/warning-bulletin-tsunami-warning.php">Tsunami Warning
+                                Bulletin</a></li>
+                        <li><a href="http://metservice.intnet.mu/tsunami/tsunami-warning-system.php">Warning System and
+                                General Info</a></li>
+                        <li><a href="http://metservice.intnet.mu/tsunami/precautions.php">Precautions</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="main">Climate Services</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/climate-services/climate-info-and-data.php">Climate
+                                Info &amp; Data</a></li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/climate-of-mauritius.php">Climate of
+                                Mauritius</a></li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/climate-of-rodrigues-and-islands.php">Climate
+                                of Rodrigues &amp; Islands</a></li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/climate-change.php">Climate Change</a>
+                        </li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/climate-info-for-water-resources.php">Climate
+                                Info for Water Resources</a></li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/climate-info-for-agriculture.php">Climate
+                                Info for Agriculture</a></li>
+                        <li><a
+                                href="http://metservice.intnet.mu/climate-services/climate-info-for-fisheries-and-marine.php">Climate
+                                Info for Fisheries &amp; Marine</a></li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/seasonal-climate-forecast.php">Seasonal
+                                Climate Forecast</a></li>
+                        <li><a href="http://metservice.intnet.mu/climate-services/monthly-rainfall-climatology.php">Monthly
+                                Rainfall Climatology</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="main">Sun, Moon &amp; Tides</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-sunrise-sunset-mauritius.php">Sunrise
+                                Sunset Mauritius</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-sunrise-sunset-rodrigues.php">Sunrise
+                                Sunset Rodrigues</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-moonrise-moonset-mauritius.php">Moonrise
+                                Moonset Mauritius</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-moonrise-moonset-rodrigues.php">Moonrise
+                                Moonset Rodrigues</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-tides-mauritius.php">Tides
+                                Mauritius</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-tides-rodrigues.php">Tides
+                                Rodrigues</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-moon-phase.php">Moon Phase</a></li>
+                        <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-info-eclipses.php">Info Eclipses</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="main">Satellite &amp; Chart</a>
+                    <ul>
+                        <li><a href="http://metservice.intnet.mu/satellite-imagery.php">Satellite Imagery</a></li>
+                        <li><a href="http://metservice.intnet.mu/satellite-anim.php">Satellite Animation</a></li>
+                        <li><a href="http://metservice.intnet.mu/synoptic-chart.php">Synoptic Chart</a></li>
+                        <!--<li><a href="http://metservice.intnet.mu/radar-imagery.php" >Radar Imagery</a></li>-->
+                        <li><a href="http://radar.metservice.intnet.mu/radar-image-viewer" target="_blank">Radar
+                                Imagery</a></li>
+
+                        <!--<li><a href="http://metservice.intnet.mu/radar-anim.php">Radar Imagery Animation Provisional</a></li>-->
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div> <!-- END MENU -->
+        <!-- Menu here -->
+
+    </div><!-- END MAIN Logo // menu -->
+
+    <div class="clear"></div>
+
+    <div id="content">
+        <!-- CONTENT OF WEBSITE -->
+
+        <div class="right_content">
+            <!-- quicklinks, current condtions, news -->
+            <div style="padding: 0px 5px 10px">
+                <a href="https://www.myt.mu/mobile/mytweather-app/?ref=metservice" target="_blank"><img
+                        src="http://metservice.intnet.mu/images/app/meteohp-myt-weather.jpg" alt="my.t weather app"></a>
+            </div>
+            <div id="banner-slide">
+                <!-- current conditions slider -->
+                <ul class="bjqs">
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 200px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">Agalega<br />
+
+                            </p>
+                            <p class="conditions">partly cloudy</p>
+                        </div>
+
+                        <!--<div style="width: 70px; padding-top: 18px; float: right;">-->
+                        <div style="width: 70px;text-align:center;">
+                            <p class="temperature">29&deg;</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/partly cloudy night.png"
+                                alt="meteo mauritius" /></div>
+
+                        <p><b>Wind:</b> <span class="fgrey">CALM</span></p>
+
+                        <p><b>Humidity:</b> <span class="fgrey">84%</span></p>
+
+                    </li>
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 200px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">Vacoas<br />
+
+                            </p>
+                            <p class="conditions">cloudy</p>
+                        </div>
+
+                        <!--<div style="width: 70px; padding-top: 18px; float: right;">-->
+                        <div style="width: 70px;text-align:center;">
+                            <p class="temperature">24&deg;</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/cloudy.png"
+                                alt="meteo mauritius" /></div>
+
+                        <p><b>Wind:</b> <span class="fgrey">ESE'LY 15 Km/h</span></p>
+
+                        <p><b>Humidity:</b> <span class="fgrey">95%</span></p>
+
+                    </li>
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 200px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">Plaisance <br />
+                                (SSR Int Airport)
+                            </p>
+                            <p class="conditions">cloudy</p>
+                        </div>
+
+                        <!--<div style="width: 70px; padding-top: 18px; float: right;">-->
+                        <div style="width: 70px;text-align:center;">
+                            <p class="temperature">27&deg;</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/cloudy.png"
+                                alt="meteo mauritius" /></div>
+
+                        <p><b>Wind:</b> <span class="fgrey">SE'LY 22 Km/h</span></p>
+
+                        <p><b>Humidity:</b> <span class="fgrey">86%</span></p>
+
+                    </li>
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 200px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">Plaine Corail Airport<br />
+
+                            </p>
+                            <p class="conditions">partly cloudy</p>
+                        </div>
+
+                        <!--<div style="width: 70px; padding-top: 18px; float: right;">-->
+                        <div style="width: 70px;text-align:center;">
+                            <p class="temperature">28&deg;</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/partly cloudy night.png"
+                                alt="meteo mauritius" /></div>
+
+                        <p><b>Wind:</b> <span class="fgrey">SE'LY 42 Km/h</span></p>
+
+                        <p><b>Humidity:</b> <span class="fgrey">85%</span></p>
+
+                    </li>
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 200px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">St Brandon<br />
+
+                            </p>
+                            <p class="conditions">partly cloudy</p>
+                        </div>
+
+                        <!--<div style="width: 70px; padding-top: 18px; float: right;">-->
+                        <div style="width: 70px;text-align:center;">
+                            <p class="temperature">29&deg;</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/partly cloudy night.png"
+                                alt="meteo mauritius" /></div>
+
+                        <p><b>Wind:</b> <span class="fgrey">S'LY 15 Km/h</span></p>
+
+                        <p><b>Humidity:</b> <span class="fgrey">81%</span></p>
+
+                    </li>
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 200px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">Port Louis<br />
+
+                            </p>
+                            <p class="conditions">cloudy</p>
+                        </div>
+
+                        <!--<div style="width: 70px; padding-top: 18px; float: right;">-->
+                        <div style="width: 70px;text-align:center;">
+                            <p class="temperature">31&deg;</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/cloudy.png"
+                                alt="meteo mauritius" /></div>
+
+                        <p><b>Wind:</b> <span class="fgrey">E'LY 11 Km/h</span></p>
+
+                        <p><b>Humidity:</b> <span class="fgrey">65%</span></p>
+
+                    </li>
+                    <li>
+                        <h3>Current conditions</h3>
+                        <div style="width: 200px; float: left;padding-top: 5px;">
+                            <p class="vacoas_plaisance">Rodrigues-Pointe Canon<br />
+
+                            </p>
+                            <p class="conditions">cloudy</p>
+                        </div>
+
+                        <!--<div style="width: 70px; padding-top: 18px; float: right;">-->
+                        <div style="width: 70px;text-align:center;">
+                            <p class="temperature">27&deg;</p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="ccweather_icon"><img
+                                src="http://metservice.intnet.mu/images/icons-probabilistic-forecast/cloudy.png"
+                                alt="meteo mauritius" /></div>
+
+                        <p><b>Wind:</b> <span class="fgrey">SSE'LY 28 Km/h</span></p>
+
+                        <p><b>Humidity:</b> <span class="fgrey">88%</span></p>
+
+                    </li>
+                </ul>
+            </div> <!-- END current conditions slider -->
+
+            <script type="text/javascript">
+                jQuery(document).ready(function ($) {
+
+                    $('#banner-slide').bjqs({
+                        animtype: 'slide',
+                        height: 320,
+                        width: 175,
+                    });
+
+                });
+            </script>
+            <div class="clear"></div>
+            <br />
+            <div class="right_content">
+                <!-- quicklinks, current condtions, news -->
+                <div class="quicklinks">
+                    <!-- QUICKLINKS -->
+                    <h3>Quick links</h3>
+                    <ul class="bullets">
+                        <li><a href="http://metservice.intnet.mu/forecast-bulletin-english-mauritius.php">Forecast
+                                Bulletin</a></li>
+                        <li><a href="http://metservice.intnet.mu/maps.php">Today's Forecast</a></li>
+                        <!--<li><a href="http://metservice.intnet.mu/synoptic-chart.php">Synoptic Chart</a></li>
+                    <li><a href="http://metservice.intnet.mu/satellite-imagery.php">Satellite imagery</a></li> -->
+                        <li><a href="http://metservice.intnet.mu/latest-weather-data.php">Recent Recorded Data</a></li>
+                        <!--<li><a target="_blank" href="http://worldweather.wmo.int/en/region.html?ra=1">WWIS</a></li>-->
+                        <!--<li><a target="_blank" href="http://www.addmauritius.org">Association pour le Developpement Durable</a></li>-->
+                        <!--<li><a target="_blank" href="http://sfwf.govmu.org/">SFWF</a></li>-->
+                        <li><a target="_blank"
+                                href="http://metservice.intnet.mu/mmsimages/Weather-Forecast-for-Agriculture.pdf">Meteo
+                                Agricole</a></li>
+                        <li><a target="_blank"
+                                href="http://metservice.intnet.mu/mmsimages/2024-01-09_17:49:37_Warm Spells impacting Mauritius Dec 23-Jan 24_Final.pdf">Warm
+                                Spells impacting Mauritius </a></li>
+                        <li><a target="_blank"
+                                href="http://metservice.intnet.mu/mmsimages/2022-09-28_10:36:12_MMS Service Charges.pdf">CHARGES
+                                INFORMATION SERVICE </a></li>
+                        <li><a target="_blank"
+                                href="http://metservice.intnet.mu/mmsimages/2023-03-23_13:35:46_Eng ver.pdf">World
+                                Meteorological Day 2023</a></li>
+                        <li><a target="_blank"
+                                href="http://metservice.intnet.mu/mmsimages/2024-01-03_13:55:53_Climate Bulletin October 2023-Final.pdf">Monthly
+                                Climate Bulletin</a></li>
+                        <li><a target="_blank"
+                                href="http://metservice.intnet.mu/mmsimages/2023-10-12_11:39:33_AP Plan 2023-24.pdf">Public
+                                Procurement Plan</a></li>
+                        <li><a target="_blank"
+                                href="http://metservice.intnet.mu/mmsimages/2024-01-19_14:55:06_23 Stn 1-15 January 2024.pdf">Rainfall
+                                Summary</a></li>
+                        <li><a target="_blank"
+                                href="http://metservice.intnet.mu/mmsimages/2024-01-04_10:59:44_23 Stn 1-31 December 2023.pdf">Rainfall
+                                Summary </a></li>
+                        <li><a href="http://metservice.intnet.mu/publication.php">Publications</a></li>
+                    </ul>
+                </div> <!-- END QUICKLINKS -->
+                <div class="clear"></div>
+            </div>
+            <br />
+            <div class="right_content">
+                <!-- quicklinks, current condtions, news -->
+                <div class="newsandevents">
+                    <!--News and events -->
+                    <h3>News and Events</h3>
+
+                    <ul class="bullets">
+                        <li><b><a href="http://metservice.intnet.mu/news-details-8.php">World Meteorological Day
+                                    2023</a></b></li>
+                    </ul>
+                    <p style="color: #999999;"></p>
+                    <br />
+                    <ul class="bullets">
+                        <li><b><a href="http://metservice.intnet.mu/news-details-5.php">Summer 2022-2023 Outlook</a></b>
+                        </li>
+                    </ul>
+                    <p style="color: #999999;">The Summer 2022-2023 Outlook gives an indication of the expected
+                        evolution of the 2022-2023 South West Indian Ocean (SWIO) summer namely: cyclone activity,
+                        summer rain and temperature in Mauritius...</p>
+                    <br />
+
+                </div> <!-- END News and events -->
+
+
+            </div><!-- END quicklinks, current condtions, news -->
+
+        </div><!-- END quicklinks, current condtions, news -->
+
+        <div class="left_content">
+            <!-- LEFT part contents -->
+
+            <div class="warning">
+                <!-- CYCLONE WARNING -->
+                <!-- no warning 
+                                -->
+
+                <p><span class="darkgrey"></span>
+                    <marquee style="width: 630px; font-weight: bold;"><a
+                            href="http://metservice.intnet.mu/warning-bulletin-heavy-swell-warning.php"><span
+                                style="color: #ff0000">Heavy Swell Warning for Rodrigues.</span></a> </marquee>
+                </p>
+                <!---->
+
+            </div> <!-- END CYCLONE WARNING -->
+
+            <div class="sep"></div>
+
+
+            <h1>Cyclone Names</h1>
+
+            <p>
+                <p style="text-align:center"><strong>List of names of storms/cyclones to be used in the southwest Indian
+                        Ocean during Cyclone Season 2023-2024</strong></p>
+
+                <table align="center" border="1" bordercolor="#ccc" cellpadding="5" cellspacing="0"
+                    style="border-collapse:collapse">
+                    <tbody>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>S. No. </strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><strong>Names</strong></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Provided by</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px"><strong>Named by</strong></td>
+                            <td style="height:19px; text-align:center; width:246px"><strong>Named on</strong></td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>1</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>ALVARO</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Mozambique (M)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">Madagascar</td>
+                            <td style="height:19px; text-align:center; width:246px">31/0900UTC</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>2</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><strong><em>BELAL</em></strong></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Mauritius (M)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">Mauritius</td>
+                            <td style="height:19px; text-align:center; width:246px">13/0000UUTC</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>3 </strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><strong><em>CANDICE</em></strong></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>France (F)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">Mauritius</td>
+                            <td style="height:19px; text-align:center; width:246px">24/0800UTC</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>4</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>DJOUNGOU</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Comoros (N)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>5</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>ELEANOR</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Zimbabwe (F)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>6</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>FILIPO</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Botswana (M)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>7</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>GAMANE</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Eswatini (F)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>8</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>HIDAYA</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Tanzania (F)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>9</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>IALY</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Madagascar (F)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>10</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>JEREMY</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Seychelles (M)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>11</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>KANGA</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>South Africa (N)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>12</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>LUDZI</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Malawi (N)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>13</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>MELINA</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Tanzania (F)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>14</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>NOAH</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>France (M)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>15 </strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>ONIAS</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Zimbabwe (M)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>16</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>PELAGIE</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Madagascar (F)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>17</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>QUAMAR</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Comoros (M)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>18</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>RITA</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Seychelles (F)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>19</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>SOLANI</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Eswatini (M)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>20</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>TARIK</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Mauritius (M)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>21</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>URILIA</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>South Africa (N)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>22</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>VUYANE</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Lesotho (M)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>23</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>WAGNER</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Kenya (M)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>24</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>XUSA</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Malawi (N)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>25</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>YARONA</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Botswana (N)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td style="height:19px; width:75px">
+                                <p style="text-align:center"><strong>26</strong></p>
+                            </td>
+                            <td style="height:19px; width:227px">
+                                <p style="text-align:center"><em><strong>ZACARIAS</strong></em></p>
+                            </td>
+                            <td style="height:19px; width:246px">
+                                <p style="text-align:center"><strong>Mozambique (M)</strong></p>
+                            </td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                            <td style="height:19px; text-align:center; width:246px">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table border="1" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong><em>Cylones coming from the Australian Region will retain their original name when they enter
+                            in the zone of Responsibility of Mauritius.</em></strong></p>
+
+                <p>&nbsp;</p>
+
+                <p>&nbsp;</p>
+            </p>
+
+
+        </div>
+
+        <div class="clear"></div>
+    </div> <!-- END CONTENT OF WEBSITE -->
+
+    <div class="clear"></div>
+    <div id="footer_main">
+
+        <div class="footer">
+            <div class="block_footer">
+                <h4>Weather</h4>
+                <ul>
+                    <li><a href="http://metservice.intnet.mu/maps.php">Weather Map</a></li>
+                    <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-mauritius.php">Forecast Bulletin
+                            French</a></li>
+                    <li><a href="http://metservice.intnet.mu/forecast-bulletin-english-mauritius.php">Forecast Bulletin
+                            English</a></li>
+                    <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-rodrigues.php">Forecast Bulletin
+                            Rodrigues</a></li>
+                    <li><a href="http://metservice.intnet.mu/forecast-bulletin-french-agalega.php">Forecast Bulletin
+                            Agalega</a></li>
+                    <li><a href="http://metservice.intnet.mu/probabilistic-forecast.php">7 Day Forecast</a></li>
+                    <li><a href="http://metservice.intnet.mu/latest-weather-data.php">Latest Weather Data</a></li>
+                    <li><a href="http://metservice.intnet.mu/warning-bulletin-special-weather.php">Special Weather
+                            Bulletin</a></li>
+                </ul>
+                <br />
+                <h4>Tsunami</h4>
+                <ul>
+                    <li><a href="http://metservice.intnet.mu/warning-bulletin-tsunami.php">Tsunami Warning Bulletin</a>
+                    </li>
+                    <li><a href="http://metservice.intnet.mu/tsunami/tsunami-warning-system.php">Warning System and
+                            General Info</a></li>
+                    <li><a href="http://metservice.intnet.mu/tsunami/precautions.php">Precautions</a></li>
+                </ul>
+            </div>
+
+            <div class="block_footer">
+                <h4>Cyclone</h4>
+                <ul>
+                    <!--<li><a href="http://metservice.intnet.mu/cyclone-track.php">Cyclone Track</a></li>-->
+                    <li><a href="http://metservice.intnet.mu/current-cyclone.php">Current Storm/Cyclone</a></li>
+                    <li><a href="http://metservice.intnet.mu/cyclone-bulletin-english-mauritius.php">Cyclone Warning
+                            Bulletin Mauritius</a></li>
+                    <li><a href="http://metservice.intnet.mu/cyclone-bulletin-french-rodrigues.php">Cyclone Warning
+                            Bulletin Rodrigues</a></li>
+                    <li><a href="http://metservice.intnet.mu/tropical-cyclone/warning-system.php">Warning System and
+                            General Info</a></li>
+                    <li><a href="http://metservice.intnet.mu/tropical-cyclone/precautions.php">Precautions</a></li>
+                    <li><a href="http://metservice.intnet.mu/tropical-cyclone/cyclone-names.php">Cyclone Names</a></li>
+                </ul>
+                <br />
+                <h4>Satellite &amp; Chart</h4>
+                <ul>
+                    <li><a href="satellite-imagery.php">Satellite Imagery</a></li>
+                    <li><a href="satellite-anim.php">Satellite Animation</a></li>
+                    <li><a href="synoptic-chart.php">Synoptic Chart</a></li>
+                    <!--<li><a href="radar-imagery.php">Radar Imagery Provisional</a></li>
+                    <li><a href="radar-anim.php">Radar Imagery Animation Provisional</a></li>-->
+                </ul>
+            </div>
+
+            <div class="block_footer">
+                <h4>Torrential Rains</h4>
+                <ul>
+                    <li><a href="http://metservice.intnet.mu/warning-bulletin-torrential-rain.php">Torrential Rain
+                            Warning Bulletin</a></li>
+                    <li><a href="http://metservice.intnet.mu/torrential-rain/torrential-rain-warning-system.php">Warning
+                            System and General Info</a></li>
+                    <li><a href="http://metservice.intnet.mu/torrential-rain/precautions.php">Precautions</a></li>
+                </ul>
+                <br />
+                <h4>Climate Services</h4>
+                <ul>
+                    <li><a href="http://metservice.intnet.mu/climate-services/climate-info-and-data.php">Climate Info
+                            &amp; Data</a></li>
+                    <li><a href="http://metservice.intnet.mu/climate-services/climate-of-mauritius.php">Climate of
+                            Mauritius</a></li>
+                    <li><a href="http://metservice.intnet.mu/climate-services/climate-of-rodrigues-and-islands.php">Climate
+                            of Rodrigues &amp; Islands</a></li>
+                    <li><a href="http://metservice.intnet.mu/climate-services/climate-change.php">Climate Change</a>
+                    </li>
+                    <li><a href="http://metservice.intnet.mu/climate-services/climate-info-for-water-resources.php">Climate
+                            Info for Water Resources</a></li>
+                    <li><a href="http://metservice.intnet.mu/climate-services/climate-info-for-agriculture.php">Climate
+                            Info for Agriculture</a></li>
+                    <li><a
+                            href="http://metservice.intnet.mu/climate-services/climate-info-for-fisheries-and-marine.php">Climate
+                            Info for Fisheries &amp; Marine</a></li>
+                    <li><a href="http://metservice.intnet.mu/climate-services/seasonal-climate-forecast.php">Seasonal
+                            Climate Forecast</a></li>
+                </ul>
+            </div>
+
+            <div class="block_footer">
+                <h4>High Waves</h4>
+                <ul>
+                    <li><a href="http://metservice.intnet.mu/warning-bulletin-heavy-swell.php">Heavy Swell Warning
+                            Bulletin</a></li>
+                    <li><a href="http://metservice.intnet.mu/warning-bulletin-storm-surge.php">Storm Surge Warning
+                            Bulletin</a></li>
+                    <li><a href="http://metservice.intnet.mu/high-waves/high-waves-warning-system.php">Warning System
+                            and General Info</a></li>
+                    <li><a href="http://metservice.intnet.mu/high-waves/precautions.php">Precautions</a></li>
+                </ul>
+                <br />
+                <h4>Sun, Moon &amp; Tides</h4>
+                <ul>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-sunrise-sunset-mauritius.php">Sunrise
+                            Sunset Mauritius</a></li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-sunrise-sunset-rodrigues.php">Sunrise
+                            Sunset Rodrigues</a></li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-moonrise-moonset-mauritius.php">Moonrise
+                            Moonset Mauritius</a></li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-moonrise-moonset-rodrigues.php">Moonrise
+                            Moonset Rodrigues</a></li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-tides-mauritius.php">Tides Mauritius</a>
+                    </li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-tides-rodrigues.php">Tides Rodrigues</a>
+                    </li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-moon-phase.php">Moon Phase</a></li>
+                    <li><a href="http://metservice.intnet.mu/sun-moon-and-tides-info-eclipses.php">Info Eclipses</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="clear"></div>
+            <div class="sep_footer"></div>
+            <p style="float: left; width: 570px; font-size: 12px;"><a
+                    href="http://metservice.intnet.mu/about-us/charter/">About Us</a> &nbsp;<span
+                    class="sep">|</span>&nbsp;<a
+                    href="http://metservice.intnet.mu/publication.php">Publications</a>&nbsp;<span
+                    class="sep">|</span>&nbsp;<a href="http://publicprocurement.govmu.org"
+                    target="_blank">Procurement</a>&nbsp;<span class="sep">|</span>&nbsp;<a
+                    href="http://metservice.intnet.mu/survey/survey-links.php">Survey Links</a>&nbsp;<span
+                    class="sep">|</span>&nbsp;<a
+                    href="http://metservice.intnet.mu/faq/frequently-asked-questions.php">FAQ</a>&nbsp;<span
+                    class="sep">|</span>&nbsp;<a href="http://metservice.intnet.mu/feedback.php">Feedback</a>&nbsp;<span
+                    class="sep"><span class="sep">|</span></span>&nbsp;<a
+                    href="http://metservice.intnet.mu/contact-us.php">Contact Us</a>&nbsp;<span class="sep"><span
+                        class="sep">|</span></span>&nbsp;<a
+                    href="http://metservice.intnet.mu/useful-links/links-to-other-websites.php">Useful Links</a></p>
+
+            <p style="float: right; width: 300px; font-size:11px;">
+                &copy; Copyright <b><a href="http://metservice.intnet.mu/">Mauritius Meteorological Services</a></b></p>
+        </div>
+
+    </div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1HLKE3N67"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-Y1HLKE3N67");
+    </script>
+
+</body>
+
+</html>
