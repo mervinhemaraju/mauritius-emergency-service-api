@@ -1,0 +1,26 @@
+[
+    {
+        "level": "Class I",
+        "description": "Issued not less than 36 hours, nor more than 48 hours, before the occurrence of gusts of 120 kilometres per hour."
+    },
+    {
+        "level": " Class II",
+        "description": "Issued so as to allow, as far as practicable, 12 hours of daylight before the occurrence of gusts of 120 kilometres per hour"
+    },
+    {
+        "level": "Class III",
+        "description": "Issued so as to allow, as far as practicable, 6 hours of daylight before the occurrence of gusts of 120 kilometres per hour."
+    },
+    {
+        "level": "Class IV",
+        "description": "Issued when gusts of 120 kilometres per hour are recorded in some places and are expected to continue."
+    },
+    {
+        "level": "Safety Bulletin",
+        "description": "Issued for the purpose of lifting the cyclone warning class III or cyclone warning class IV, as the case may be; and informing the public of the existence of any severe weather conditions associated with the cyclone and other environment risk, depending on the nature and extent of the damage occurred during the passage of the cyclone"
+    },
+    {
+        "level": "Termination",
+        "description": "Following the issue of a cyclone warning class I, a cyclone warning class II or a safety bulletin, as the case may be, after consultation with, and following advice from the National Crisis Committee to the effect that outdoor risks have considerably decreased"
+    }
+]

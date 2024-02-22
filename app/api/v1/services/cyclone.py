@@ -1,13 +1,16 @@
 import requests
 import re
+import json
 from bs4 import BeautifulSoup
 from app.api.v1.utils.helpers import (
     retrieve_cyclone_class_level,
     retrieve_time_from_text,
 )
+from app.api.v1.utils.constants import guidelines_json_file, guidelines_json_def
 from app.api.v1.services.exceptions import CycloneReportFailure
 from app.api.v1.utils.constants import cyclone_report_url_def
 from app.api.v1.models.cyclone_name import CycloneName
+from app.api.v1.models.cyclone_guidelines import CycloneGuideline
 
 
 class Cyclone:
@@ -95,3 +98,24 @@ class Cyclone:
 
         # * Return the names list
         return names
+
+
+class CycloneGuidelines:
+    def __init__(self, lang) -> None:
+        self.lang = lang
+
+    def load(self):
+        # * Open the file according to the language queried
+        with open(
+            guidelines_json_file.get(self.lang, guidelines_json_def)
+        ) as guidelines_file:
+            # * Get the guidelines
+            guidelines = json.load(guidelines_file)
+
+            # * Format the guidelines into an object adn return it
+            return [
+                CycloneGuideline(
+                    level=guideline["level"], description=guideline["description"]
+                )
+                for guideline in guidelines
+            ]

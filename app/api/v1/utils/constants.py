@@ -7,6 +7,15 @@ json_file = {
 # * The default path if language doesn't match any of the services
 json_def = "data/v1/services_en.json"
 
+# * A list of the available json file in each language mapping its path
+guidelines_json_file = {
+    "en": "data/v1/guidelines_en.json",
+    "fr": "data/v1/guidelines_fr.json",
+}
+
+# * The default path if language doesn't match any of the services
+guidelines_json_def = "data/v1/guidelines_en.json"
+
 # * The default url for the cyclone report
 cyclone_report_url_def = {
     "en": "http://metservice.intnet.mu/cyclone-bulletin-english-mauritius.php",
