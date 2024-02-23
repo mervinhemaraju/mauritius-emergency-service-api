@@ -1,0 +1,26 @@
+[
+    {
+        "level": "Classe I",
+        "description": "Émis au moins 36 heures, ni plus de 48 heures, avant l'apparition de rafales de 120 kilomètres par heure."
+    },
+    {
+        "level": " Classe II",
+        "description": "Délivré de manière à permettre, dans la mesure du possible, 12 heures de clarté avant l'apparition de rafales de 120 kilomètres par heure"
+    },
+    {
+        "level": "Classe III",
+        "description": "Émis de manière à permettre, dans la mesure du possible, 6 heures de clarté avant l'apparition de rafales de 120 kilomètres par heure."
+    },
+    {
+        "level": "Classe IV",
+        "description": "Émis lorsque des rafales de 120 kilomètres par heure sont enregistrées à certains endroits et devraient se poursuivre."
+    },
+    {
+        "level": "Bulletin de sécurité",
+        "description": "Délivré dans le but de lever l'avertissement de cyclone de classe III ou d'avertissement de cyclone de classe IV, selon le cas ; et informer le public de l'existence de conditions météorologiques extrêmes associées au cyclone et d'autres risques environnementaux, en fonction de la nature et de l'étendue des dommages survenus lors du passage du cyclone."
+    },
+    {
+        "level": "Résiliation",
+        "description": "Suite à l'émission d'une alerte cyclonique de classe I, d'une alerte cyclonique de classe II ou d'un bulletin de sécurité, selon le cas, après consultation et après avis du Comité national de crise selon lequel les risques extérieurs ont considérablement diminué"
+    }
+]
