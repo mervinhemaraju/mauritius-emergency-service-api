@@ -33,6 +33,7 @@ class TestResourceCyclone:
         assert "next_bulletin" in result["report"]
         assert result["message"] == ""
         assert result["success"]
+        assert response.status_code == 200
 
     testdata = [
         ("/api/v1/en/cyclone/names"),
@@ -50,8 +51,13 @@ class TestResourceCyclone:
         # Assert
         assert "names" in result
         assert len(result["names"]) > 0
+        assert "name" in result["names"][0]
+        assert "gender" in result["names"][0]
+        assert "named_by" in result["names"][0]
+        assert "provided_by" in result["names"][0]
         assert result["message"] == ""
         assert result["success"]
+        assert response.status_code == 200
 
     testdata = [
         ("/api/v1/en/cyclone/guidelines"),
@@ -69,5 +75,9 @@ class TestResourceCyclone:
         # Assert
         assert "guidelines" in result
         assert len(result["guidelines"]) > 0
+        assert "level" in result["guidelines"][0]
+        assert "description" in result["guidelines"][0]
+        assert "precautions" in result["guidelines"][0]
         assert result["message"] == ""
         assert result["success"]
+        assert response.status_code == 200

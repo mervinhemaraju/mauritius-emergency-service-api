@@ -121,7 +121,9 @@ class CycloneGuidelines:
             # * Format the guidelines into an object adn return it
             return [
                 CycloneGuideline(
-                    level=guideline["level"], description=guideline["description"]
+                    level=guideline["level"],
+                    description=guideline["description"],
+                    precautions=guideline["precautions"],
                 )
                 for guideline in guidelines
             ]

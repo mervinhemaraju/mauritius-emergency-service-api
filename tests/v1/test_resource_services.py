@@ -57,3 +57,4 @@ class TestResourceService:
         assert len(result["services"]) == len(expected_result)
         assert result["message"] == ""
         assert result["success"]
+        assert response.status_code == 200
