@@ -1,12 +1,15 @@
-version: "3.8"
-
 services:
   mes:
     container_name: mes
     build: ./
-    image: "docker.pkg.github.com/mervin16/mauritius-emergency-services-api/mes:1.2.2"
+    image: ghcr.io/mervinhemaraju/mauritius-emergency-service-api:local
+    platform: linux/arm64
     networks:
       - mes_net
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - secrets.env
     expose:
       - 8081
     restart: always
@@ -14,6 +17,7 @@ services:
   nginx_mes:
     image: nginx
     container_name: nginx_mes
+    platform: linux/arm64
     ports:
       - "8081:80"
     networks:
@@ -28,4 +32,3 @@ services:
 networks:
   mes_net:
     name: mes_network
-    driver: bridge
