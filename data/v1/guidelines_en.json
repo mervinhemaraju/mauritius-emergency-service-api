@@ -1,26 +1,66 @@
 [
     {
-        "level": "Class I",
-        "description": "Issued not less than 36 hours, nor more than 48 hours, before the occurrence of gusts of 120 kilometres per hour."
+        "level": 1,
+        "type": "alert",
+        "description": "Issued not less than 36 hours, nor more than 48 hours, before the occurrence of gusts of 120 kilometres per hour.",
+        "precautions": [
+            "Make sure your emergency kit is ready.",
+            "Monitor cyclone bulletins on Radio / TV / MES.",
+            "Prepare to secure windows and doors with shutters or shields."
+        ]
     },
     {
-        "level": " Class II",
-        "description": "Issued so as to allow, as far as practicable, 12 hours of daylight before the occurrence of gusts of 120 kilometres per hour"
+        "level": 2,
+        "type": "alert",
+        "description": "Issued so as to allow, as far as practicable, 12 hours of daylight before the occurrence of gusts of 120 kilometres per hour.",
+        "precautions": [
+            "Verify that your emergency kit contains all essential items.",
+            "Store sufficient amount of drinking waterContinue to monitor cyclone bulletins on Radio / TV / MES"
+        ]
     },
     {
-        "level": "Class III",
-        "description": "Issued so as to allow, as far as practicable, 6 hours of daylight before the occurrence of gusts of 120 kilometres per hour."
+        "level": 3,
+        "type": "alert",
+        "description": "Issued so as to allow, as far as practicable, 6 hours of daylight before the occurrence of gusts of 120 kilometres per hour.",
+        "precautions": [
+            "Fix shutters.",
+            "Secure doors and windows.",
+            "Store loose articles.",
+            "Avoid areas prone to storm surges and flooding.",
+            "Shelter domestic animals.",
+            "Secure vehicles.",
+            "Those in insecure dwellings, move as early as possible, to cyclone refugee centre with your emergency kit.",
+            "Avoid going outside.Monitor closely cyclone bulletins on Radio / TV / MES."
+        ]
     },
     {
-        "level": "Class IV",
-        "description": "Issued when gusts of 120 kilometres per hour are recorded in some places and are expected to continue."
+        "level": 4,
+        "type": "alert",
+        "description": "Issued when gusts of 120 kilometres per hour are recorded in some places and are expected to continue.",
+        "precautions": [
+            "Stay indoors.",
+            "Seek shelter in the safest part of the house.",
+            "Disconnect all electrical appliances.",
+            "Listen attentively to cyclone bulletins and advice on the Radio / TV / MES.",
+            "If the house starts to suffer important damages, protect yourself with mattress, rugs or blankets."
+        ]
     },
     {
-        "level": "Safety Bulletin",
-        "description": "Issued for the purpose of lifting the cyclone warning class III or cyclone warning class IV, as the case may be; and informing the public of the existence of any severe weather conditions associated with the cyclone and other environment risk, depending on the nature and extent of the damage occurred during the passage of the cyclone"
+        "level": 0,
+        "type": "safety_bulletin",
+        "description": "Issued for the purpose of lifting the cyclone warning class III or cyclone warning class IV, as the case may be; and informing the public of the existence of any severe weather conditions associated with the cyclone and other environment risk, depending on the nature and extent of the damage occurred during the passage of the cyclone",
+        "precautions": []
     },
     {
-        "level": "Termination",
-        "description": "Following the issue of a cyclone warning class I, a cyclone warning class II or a safety bulletin, as the case may be, after consultation with, and following advice from the National Crisis Committee to the effect that outdoor risks have considerably decreased"
+        "level": 0,
+        "type": "termination",
+        "description": "Following the issue of a cyclone warning class I, a cyclone warning class II or a safety bulletin, as the case may be, after consultation with, and following advice from the National Crisis Committee to the effect that outdoor risks have considerably decreased",
+        "precautions": [
+            "Do not leave your shelter until the all-clear signals have been given by relevant Authorities.",
+            "Do not consume fallen fruits.",
+            "Boil water for drinking purposes.",
+            "Beware of fallen power lines, damaged buildings and trees and flooded water courses.",
+            "Clean yard and drain out stagnant water to prevent proliferation of mosquitoes/diseases."
+        ]
     }
 ]

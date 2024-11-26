@@ -1,26 +1,66 @@
 [
     {
-        "level": "Classe I",
-        "description": "Émis au moins 36 heures, ni plus de 48 heures, avant l'apparition de rafales de 120 kilomètres par heure."
+        "level": 1,
+        "type": "alert",
+        "description": "Émis au moins 36 heures, ni plus de 48 heures, avant l'apparition de rafales de 120 kilomètres par heure.",
+        "precautions": [
+            "Assurez-vous que votre trousse d'urgence est prête.",
+            "Surveiller les bulletins de cyclones sur Radio / TV / MES.",
+            "Préparez-vous à sécuriser les fenêtres et les portes avec des volets ou des boucliers."
+        ]
     },
     {
-        "level": " Classe II",
-        "description": "Délivré de manière à permettre, dans la mesure du possible, 12 heures de clarté avant l'apparition de rafales de 120 kilomètres par heure"
+        "level": 2,
+        "type": "alert",
+        "description": "Délivré de manière à permettre, dans la mesure du possible, 12 heures de clarté avant l'apparition de rafales de 120 kilomètres par heure.",
+        "precautions": [
+            "Vérifiez que votre trousse d'urgence contient tous les éléments essentiels.",
+            "Stocker une quantité suffisante d'eau potable. Continuer à surveiller les bulletins de cyclones sur Radio / TV / MES"
+        ]
     },
     {
-        "level": "Classe III",
-        "description": "Émis de manière à permettre, dans la mesure du possible, 6 heures de clarté avant l'apparition de rafales de 120 kilomètres par heure."
+        "level": 3,
+        "type": "alert",
+        "description": "Émis de manière à permettre, dans la mesure du possible, 6 heures de clarté avant l'apparition de rafales de 120 kilomètres par heure.",
+        "precautions": [
+            "Réparer les volets.",
+            "Sécurisez les portes et les fenêtres.",
+            "Stocker les articles en vrac.",
+            "Évitez les zones sujettes aux ondes de tempête et aux inondations.",
+            "Abriter les animaux domestiques.",
+            "Véhicules sécurisés.",
+            "Ceux qui vivent dans des logements précaires, déplacez-vous le plus tôt possible vers un centre de réfugiés cyclonique avec votre kit d'urgence.",
+            "Évitez de sortir. Surveillez attentivement les bulletins de cyclones sur les radios / télévisions / MES."
+        ]
     },
     {
-        "level": "Classe IV",
-        "description": "Émis lorsque des rafales de 120 kilomètres par heure sont enregistrées à certains endroits et devraient se poursuivre."
+        "level": 4,
+        "type": "alert",
+        "description": "Émis lorsque des rafales de 120 kilomètres par heure sont enregistrées à certains endroits et devraient se poursuivre.",
+        "precautions": [
+            "Restez à l'intérieur.",
+            "Cherchez refuge dans la partie la plus sûre de la maison.",
+            "Débranchez tous les appareils électriques.",
+            "Écoutez attentivement les bulletins et conseils cycloniques sur la Radio / TV / MES.",
+            "Si la maison commence à subir des dégâts importants, protégez-vous avec des matelas, des tapis ou des couvertures."
+        ]
     },
     {
-        "level": "Bulletin de sécurité",
-        "description": "Délivré dans le but de lever l'avertissement de cyclone de classe III ou d'avertissement de cyclone de classe IV, selon le cas ; et informer le public de l'existence de conditions météorologiques extrêmes associées au cyclone et d'autres risques environnementaux, en fonction de la nature et de l'étendue des dommages survenus lors du passage du cyclone."
+        "level": 0,
+        "type": "bulletin_de_securite",
+        "description": "Délivré dans le but de lever l'avertissement de cyclone de classe III ou d'avertissement de cyclone de classe IV, selon le cas; et informer le public de l'existence de conditions météorologiques extrêmes associées au cyclone et d'autres risques environnementaux, en fonction de la nature et de l'étendue des dommages survenus lors du passage du cyclone.",
+        "precautions": []
     },
     {
-        "level": "Résiliation",
-        "description": "Suite à l'émission d'une alerte cyclonique de classe I, d'une alerte cyclonique de classe II ou d'un bulletin de sécurité, selon le cas, après consultation et après avis du Comité national de crise selon lequel les risques extérieurs ont considérablement diminué"
+        "level": 0,
+        "type": "résiliation",
+        "description": "Suite à l'émission d'une alerte cyclonique de classe I, d'une alerte cyclonique de classe II ou d'un bulletin de sécurité, selon le cas, après consultation et après avis du Comité national de crise selon lequel les risques extérieurs ont considérablement diminué.",
+        "precautions": [
+            "Ne quittez pas votre abri tant que les signaux d'autorisation n'ont pas été donnés par les autorités compétentes.",
+            "Ne consommez pas les fruits tombés.",
+            "Faire bouillir de l'eau potable.",
+            "Attention aux lignes électriques tombées, aux bâtiments et arbres endommagés et aux cours d'eau inondés.",
+            "Nettoyer la cour et évacuer l'eau stagnante pour éviter la prolifération des moustiques/maladies."
+        ]
     }
 ]

@@ -77,7 +77,8 @@ class Cyclone:
         # * Retrieve the names row
         names_row = left_content.find("table").find("tbody").find_all("tr")
 
-        # * Remove the table header
+        # * Remove the table header and the first column
+        del names_row[:1]
         del names_row[:1]
 
         # * Define empty list of names
@@ -93,7 +94,12 @@ class Cyclone:
 
             # * Append the name document to the names list
             names.append(
-                CycloneName(name=values[0], provided_by=values[1], named_by=values[2])
+                CycloneName(
+                    name=values[0],
+                    gender=values[1],
+                    provided_by=values[2],
+                    named_by=values[3],
+                )
             )
 
         # * Return the names list
