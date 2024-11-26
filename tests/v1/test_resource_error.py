@@ -75,3 +75,4 @@ class TestResourceError:
         # Assert
         assert result["message"] == error_message
         assert not result["success"]
+        assert response.status_code == 404

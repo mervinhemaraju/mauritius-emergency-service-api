@@ -2,11 +2,16 @@ from flask_restful import fields
 
 
 class CycloneGuideline(object):
-    cyclone_guideline_fields = {"level": fields.String, "description": fields.String}
+    cyclone_guideline_fields = {
+        "level": fields.String,
+        "description": fields.String,
+        "precautions": fields.List(fields.String),
+    }
 
-    def __init__(self, level, description):
+    def __init__(self, level, description, precautions):
         self.level = level
         self.description = description
+        self.precautions = precautions
 
 
 class CycloneGuidelinesOutput(object):
