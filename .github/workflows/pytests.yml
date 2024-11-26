@@ -1,4 +1,4 @@
-name: continuous_integration
+name: Python CI
 
 on: push
 
@@ -17,6 +17,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     needs: build
+    env:
+      MAIL_USERNAME: "dummy_username"
+      MAIL_PASSWORD: "dummy_password"
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -27,5 +30,5 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt
 
-      - name: test_script
+      - name: Run Unit Tests
         run: python -m pytest tests/
