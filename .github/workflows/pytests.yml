@@ -31,4 +31,24 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Unit Tests
-        run: python -m pytest tests/
+        run: python -m pytest tests/ --junitxml=results.xml
+
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: results.xml
+
+  post-results:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Download Test Results
+        uses: actions/download-artifact@v2
+        with:
+          name: test-results
+
+      - name: Post Test Results on PR
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          path: results.xml
