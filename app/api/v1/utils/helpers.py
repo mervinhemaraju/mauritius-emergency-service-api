@@ -10,7 +10,7 @@ def retrieve_time_from_text(text):
             time = parser.parse(word).strftime("%H:%M:%S")
             times.append(time)
         except ValueError:
-            return None
+            continue
 
     return times[0] if times is not None and len(times) > 0 else None
 
