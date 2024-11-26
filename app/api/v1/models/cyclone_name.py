@@ -1,17 +1,30 @@
+import json
 from flask_restful import fields
 
 
 class CycloneName(object):
     cyclone_name_fields = {
         "name": fields.String,
+        "gender": fields.String,
         "provided_by": fields.String,
         "named_by": fields.String,
     }
 
-    def __init__(self, name, provided_by, named_by):
+    def __init__(self, name, gender, provided_by, named_by):
         self.name = name if name != "" else "N/A"
+        self.gender = gender if gender != "" else "N/A"
         self.provided_by = provided_by if provided_by != "" else "N/A"
         self.named_by = named_by if named_by != "" else "N/A"
+
+    def __str__(self) -> str:
+        return json.dumps(
+            {
+                "name": self.name,
+                "gender": self.gender,
+                "provided_by": self.provided_by,
+                "named_by": self.named_by,
+            }
+        )
 
 
 class CycloneNameOutput(object):
