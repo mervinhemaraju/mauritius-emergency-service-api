@@ -3,7 +3,7 @@ from flask_restful import fields
 
 class CycloneGuideline(object):
     cyclone_guideline_fields = {
-        "level": fields.String,
+        "level": fields.Integer,
         "description": fields.String,
         "precautions": fields.List(fields.String),
     }

@@ -1,4 +1,5 @@
 import random
+import time
 from flask_restful import Resource
 from flask_restful import marshal_with
 from app.api.v1.services.cyclone import Cyclone, CycloneGuidelines
@@ -60,7 +61,11 @@ class CycloneReportTestingResource(Resource):
             ]
 
             # * Create a fake next bulletin
-            fake_bulletin = "00:00:00"
+            fake_bulletin = (
+                time.strftime("%H:%M:%S", time.gmtime(random.randint(0, 86399)))
+                if random_level != 0
+                else None
+            )
 
             # * Update the output object
             output.report = CycloneReport(
