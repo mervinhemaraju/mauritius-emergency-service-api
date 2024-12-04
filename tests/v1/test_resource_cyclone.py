@@ -1,5 +1,6 @@
 import pytest
 import json
+import re
 from app import app
 
 
@@ -31,6 +32,45 @@ class TestResourceCyclone:
         assert "level" in result["report"]
         assert "news" in result["report"]
         assert "next_bulletin" in result["report"]
+
+        assert result["report"]["level"] in [0, 1, 2, 3, 4]
+
+        if result["report"]["level"] > 0:
+            time_pattern = re.compile(r"^\d{2}:\d{2}:\d{2}$")
+            assert time_pattern.match(result["report"]["next_bulletin"])
+
+        assert result["message"] == ""
+        assert result["success"]
+        assert response.status_code == 200
+
+    testdata = [
+        ("/api/v1/en/cyclone/report/testing"),
+        ("/api/v1/fr/cyclone/report/testing"),
+    ]
+
+    @pytest.mark.parametrize("endpoint", testdata)
+    def test_get_report_testing(self, client, endpoint):
+        # Arrange
+
+        # Act
+        response = client.get(endpoint)
+        result = json.loads(response.data)
+
+        # Assertions
+
+        # * Assert presence on fields
+        assert "report" in result
+        assert "level" in result["report"]
+        assert "news" in result["report"]
+        assert "next_bulletin" in result["report"]
+
+        # * Assert validity of fields
+        assert result["report"]["level"] in [0, 1, 2, 3, 4]
+
+        if result["report"]["level"] > 0:
+            time_pattern = re.compile(r"^\d{2}:\d{2}:\d{2}$")
+            assert time_pattern.match(result["report"]["next_bulletin"])
+
         assert result["message"] == ""
         assert result["success"]
         assert response.status_code == 200
