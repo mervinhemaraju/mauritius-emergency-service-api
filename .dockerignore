@@ -1,5 +1,6 @@
 # Virtual environments
 venv/
+.venv/
 
 # Python Cache
 __pycache__/
@@ -24,3 +25,6 @@ log/
 
 # Nginx File
 nginx/
+
+# Runner file
+runner.sh

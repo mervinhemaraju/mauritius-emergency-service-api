@@ -77,6 +77,8 @@ class Cyclone:
         # * Retrieve the names row
         names_row = left_content.find("table").find("tbody").find_all("tr")
 
+        print(f"Names Row: {names_row}")
+
         # * Remove the table header and the first column
         del names_row[:1]
         del names_row[:1]
@@ -89,8 +91,14 @@ class Cyclone:
             # * Get all the values in the td
             values = [value.get_text().strip() for value in name.find_all("td")]
 
+            print(f"Values: {values}")
+
             # * Delete column header
             del values[:1]
+
+            # * Verify if values length is 4
+            if len(values) < 4:
+                continue
 
             # * Append the name document to the names list
             names.append(
@@ -101,6 +109,8 @@ class Cyclone:
                     named_by=values[3],
                 )
             )
+
+        print(f"Names: {names}")
 
         # * Return the names list
         return names
