@@ -5,5 +5,5 @@ Flask-RESTful==0.3.10
 pytest==7.2.1
 python-dateutil==2.8.2
 requests==2.32.3
-uWSGI==2.0.22
+uWSGI==2.0.30
 validate-email==1.3

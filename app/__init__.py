@@ -31,6 +31,13 @@ def page_web():
     return redirect(url_for("web.home_view"))
 
 
+# * Health Check Endpoint
+@app.route("/health")
+@app.route("/web/health")
+def page_health():
+    return {"status": "ok"}, 200
+
+
 #! Error Handlers
 @app.errorhandler(404)  #! Handling HTTP 404 NOT FOUND
 @marshal_with(Error.error_fields)
