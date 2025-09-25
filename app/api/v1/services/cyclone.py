@@ -103,10 +103,9 @@ class Cyclone:
             # * Append the name document to the names list
             names.append(
                 CycloneName(
-                    name=values[0],
-                    gender=values[1],
-                    provided_by=values[2],
-                    named_by=values[3],
+                    name=values[1],
+                    gender=values[2],
+                    provided_by=values[3],
                 )
             )
 

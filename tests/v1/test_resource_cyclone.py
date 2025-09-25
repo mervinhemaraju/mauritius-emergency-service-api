@@ -93,7 +93,6 @@ class TestResourceCyclone:
         assert len(result["names"]) > 0
         assert "name" in result["names"][0]
         assert "gender" in result["names"][0]
-        assert "named_by" in result["names"][0]
         assert "provided_by" in result["names"][0]
         assert result["message"] == ""
         assert result["success"]
