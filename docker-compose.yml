@@ -4,6 +4,8 @@ services:
     build: ./
     image: ghcr.io/mervinhemaraju/mauritius-emergency-service-api:local
     platform: linux/arm64
+    environment:
+      - UWSGI_PROTOCOL=uwsgi
     networks:
       - mes_net
     volumes:

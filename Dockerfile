@@ -1,17 +1,39 @@
-# * Use the python 3.11.10 alpine image container image
+# Use the python 3.11.10 alpine image
 FROM python:3.11.10-alpine3.19
 
-# * Set the working directory to /app
+# Set the working directory to /app
 WORKDIR /app
 
-# * Copy the current directory contents into the container at /app
-COPY . /app
+# Install system dependencies for uWSGI (do this before copying application code)
+# Combine apk commands and clean up cache to reduce image size
+RUN apk add --no-cache --virtual .build-deps \
+    python3-dev \
+    build-base \
+    linux-headers \
+    pcre-dev \
+    && apk add --no-cache pcre
 
-# * Dependencies for uWSGI
-RUN apk add python3-dev build-base linux-headers pcre-dev && pip install -r requirements.txt && apk update
+# Copy only requirements first to leverage Docker layer caching
+COPY requirements.txt .
 
-# * Create a user
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Remove build dependencies to reduce image size
+RUN apk del .build-deps
+
+# Copy and make the entrypoint script executable
+COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+
+# Create a non-root user
 RUN adduser -D th3pl4gu3
 
-# * Run the command
-ENTRYPOINT ["uwsgi", "app.ini"]
+# Copy application code (done after pip install for better caching)
+COPY --chown=th3pl4gu3:th3pl4gu3 . /app
+
+# Switch to non-root user
+USER th3pl4gu3
+
+# * Run the entrypoint script
+ENTRYPOINT ["/entrypoint.sh"]
