@@ -22,6 +22,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Remove build dependencies to reduce image size
 RUN apk del .build-deps
 
+# Copy and make the entrypoint script executable
+COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+
 # Create a non-root user
 RUN adduser -D th3pl4gu3
 
@@ -31,5 +35,5 @@ COPY --chown=th3pl4gu3:th3pl4gu3 . /app
 # Switch to non-root user
 USER th3pl4gu3
 
-# Run the application
-ENTRYPOINT ["uwsgi", "app.ini"]
+# * Run the entrypoint script
+ENTRYPOINT ["/entrypoint.sh"]
