@@ -2,7 +2,7 @@ import pytest
 from bs4 import BeautifulSoup
 from app.api.v1.services.cyclone import Cyclone
 from app.api.v1.services.exceptions import CycloneReportFailure
-from app.api.v1.utils.constants import cyclone_names_url_def
+from app.api.v1.utils.constant_urls import cyclone_names_url_def
 
 
 class TestServiceCyclone:

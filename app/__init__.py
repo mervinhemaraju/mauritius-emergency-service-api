@@ -1,8 +1,9 @@
 import os
-import app.web.web as Web
+
+# import app.web.web as Web
 from app.api.v1.v1 import v1_blueprint
 from app.api.v1.models.errors import Error
-from flask import Flask, redirect, url_for
+from flask import Flask  # , redirect, url_for
 from flask_restful import marshal_with
 
 # * Create a Flask Application
@@ -10,10 +11,11 @@ app = Flask(__name__)
 
 # * Register Blueprints
 # > API Blueprint
+# app.register_blueprint(v1_blueprint, url_prefix="/v1")
 app.register_blueprint(v1_blueprint, url_prefix="/api/v1")
 
 # > Web App Blueprints
-app.register_blueprint(Web.web, url_prefix="/web")
+# app.register_blueprint(Web.web, url_prefix="/web")
 
 # * SMTP Settings
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
@@ -24,16 +26,16 @@ app.config["MAIL_USE_TLS"] = True
 app.config["MAIL_USE_SSL"] = False
 
 
-# * Redirect to the correct web page by default
-@app.route("/")
-@app.route("/web")
-def page_web():
-    return redirect(url_for("web.home_view"))
+# # * Redirect to the correct web page by default
+# @app.route("/")
+# @app.route("/web")
+# def page_web():
+#     return redirect(url_for("web.home_view"))
 
 
 # * Health Check Endpoint
 @app.route("/health")
-@app.route("/web/health")
+# @app.route("/web/health")
 def page_health():
     return {"status": "ok"}, 200
 

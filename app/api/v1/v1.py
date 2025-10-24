@@ -8,6 +8,7 @@ from app.api.v1.routes.cyclone import (
     CycloneReportTestingResource,
     CycloneGuidelinesResource,
 )
+from app.api.v1.routes.ceb import CebOutages
 
 # * Create the API V1 blueprint
 v1_blueprint = Blueprint("v1", __name__)
@@ -28,3 +29,5 @@ v1_api.add_resource(CycloneGuidelinesResource, "/<string:lang>/cyclone/guideline
 v1_api.add_resource(
     CycloneReportTestingResource, "/<string:lang>/cyclone/report/testing"
 )
+
+v1_api.add_resource(CebOutages, "/<string:lang>/ceb")

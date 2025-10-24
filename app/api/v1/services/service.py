@@ -1,19 +1,28 @@
 import json
-from app.api.v1.utils.constants import json_file, json_def
+from app.api.v1.utils.constant_paths import json_file
 from app.api.v1.models.services import Service as Service
 
 
 class Services:
+    """
+    The class that loads the MES services from the json file based
+    on the requested language
+    """
+
     def __init__(self, lang) -> None:
+        # The language requested
         self.lang = lang
 
     def load(self):
-        # * Open the file according to the language queried
-        with open(json_file.get(self.lang, json_def)) as services_file:
-            # * Get the services
+        # Define the default language
+        default_lang_file = next(iter(json_file.values()))
+
+        # Open the file according to the language queried
+        with open(json_file.get(self.lang, default_lang_file)) as services_file:
+            # Get the services
             services = json.load(services_file)
 
-            # * Format the service into an object adn return it
+            # Format the service into an object adn return it
             return [
                 Service(
                     identifier=service.get("identifier"),

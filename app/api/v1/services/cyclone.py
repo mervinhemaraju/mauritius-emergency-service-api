@@ -6,9 +6,9 @@ from app.api.v1.utils.helpers import (
     retrieve_cyclone_class_level,
     retrieve_time_from_text,
 )
-from app.api.v1.utils.constants import guidelines_json_file, guidelines_json_def
+from app.api.v1.utils.constant_paths import guidelines_json_file
 from app.api.v1.services.exceptions import CycloneReportFailure
-from app.api.v1.utils.constants import cyclone_report_url_def
+from app.api.v1.utils.constant_urls import cyclone_report_url_def
 from app.api.v1.models.cyclone_name import CycloneName
 from app.api.v1.models.cyclone_guidelines import CycloneGuideline
 
@@ -116,18 +116,25 @@ class Cyclone:
 
 
 class CycloneGuidelines:
+    """
+    The class that handles cyclone guidelines
+    """
+
     def __init__(self, lang) -> None:
         self.lang = lang
 
     def load(self):
-        # * Open the file according to the language queried
+        # Define the default language
+        default_lang_file = next(iter(guidelines_json_file.values()))
+
+        # Open the file according to the language queried
         with open(
-            guidelines_json_file.get(self.lang, guidelines_json_def)
+            guidelines_json_file.get(self.lang, default_lang_file)
         ) as guidelines_file:
-            # * Get the guidelines
+            # Get the guidelines
             guidelines = json.load(guidelines_file)
 
-            # * Format the guidelines into an object adn return it
+            # Format the guidelines into an object adn return it
             return [
                 CycloneGuideline(
                     level=guideline["level"],
