@@ -10,24 +10,33 @@ from app.api.v1.routes.cyclone import (
 )
 from app.api.v1.routes.ceb import CebOutages
 
-# * Create the API V1 blueprint
-v1_blueprint = Blueprint("v1", __name__)
 
-# * Generate a Flask API from the blueprint
-v1_api = Api(v1_blueprint)
+def create_v1_blueprint(name="v1"):
+    """
+    Factory function to create v1 API blueprint.
+    This allows creating multiple instances for different URL prefixes.
+    """
+    # Create the API V1 blueprint
+    blueprint = Blueprint(name, __name__)
 
-# * Define API Routes
-v1_api.add_resource(HealthResource, "/health")
+    # Generate a Flask API from the blueprint
+    api = Api(blueprint)
 
-v1_api.add_resource(AllServices, "/<string:lang>/services")
-v1_api.add_resource(OneService, "/<string:lang>/service/<string:identifier>")
-v1_api.add_resource(EmergencyOnly, "/<string:lang>/services/emergencies")
+    # Define API Routes
+    api.add_resource(HealthResource, "/health")
+    api.add_resource(AllServices, "/<string:lang>/services")
+    api.add_resource(OneService, "/<string:lang>/service/<string:identifier>")
+    api.add_resource(EmergencyOnly, "/<string:lang>/services/emergencies")
+    api.add_resource(CycloneReportResource, "/<string:lang>/cyclone/report")
+    api.add_resource(CycloneNamesResource, "/<string:lang>/cyclone/names")
+    api.add_resource(CycloneGuidelinesResource, "/<string:lang>/cyclone/guidelines")
+    api.add_resource(
+        CycloneReportTestingResource, "/<string:lang>/cyclone/report/testing"
+    )
+    api.add_resource(CebOutages, "/<string:lang>/ceb/outages")
 
-v1_api.add_resource(CycloneReportResource, "/<string:lang>/cyclone/report")
-v1_api.add_resource(CycloneNamesResource, "/<string:lang>/cyclone/names")
-v1_api.add_resource(CycloneGuidelinesResource, "/<string:lang>/cyclone/guidelines")
-v1_api.add_resource(
-    CycloneReportTestingResource, "/<string:lang>/cyclone/report/testing"
-)
+    return blueprint
 
-v1_api.add_resource(CebOutages, "/<string:lang>/ceb/outages")
+
+# Create the default v1 blueprint instance
+v1_blueprint = create_v1_blueprint()

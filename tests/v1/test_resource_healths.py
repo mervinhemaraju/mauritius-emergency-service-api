@@ -14,8 +14,7 @@ class TestResourceError:
             yield client
 
     testdata = [
-        ("/health", {"status": "ok"}, 200),
-        # ("/web/health", {"status": "ok"}, 200),
+        ("/v1/health", {"status": "ok"}, 200),
         ("/api/v1/health", {"status": "ok"}, 200),
         (
             "/api/health",
