@@ -1,6 +1,5 @@
 from flask import Blueprint
 from flask_restful import Api
-from app.api.v1.routes.health import HealthResource
 from app.api.v1.routes.services import AllServices, OneService, EmergencyOnly
 from app.api.v1.routes.cyclone import (
     CycloneReportResource,
@@ -23,8 +22,6 @@ def create_v1_blueprint(name="v1"):
     api = Api(blueprint)
 
     # > All API Routes
-    # Health Routes
-    api.add_resource(HealthResource, "/health")
 
     # Services routes
     api.add_resource(AllServices, "/<string:lang>/services")

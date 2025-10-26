@@ -14,8 +14,7 @@ class TestResourceError:
             yield client
 
     testdata = [
-        ("/v1/health", {"status": "ok"}, 200),
-        ("/api/v1/health", {"status": "ok"}, 200),
+        ("/health", {"status": "ok"}, 200),
         (
             "/api/health",
             error_404_response(),
