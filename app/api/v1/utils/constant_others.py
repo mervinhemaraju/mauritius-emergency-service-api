@@ -28,3 +28,16 @@ MONTH_NUMBER_MAPPING_VARIANTS = {
     "decembre": 12,
     "december": 12,
 }
+
+# A dictionnary containing all the CEB districts
+CEB_DISTRICTS = {
+    "blackriver": "Black River",
+    "flacq": "Flacq",
+    "grandport": "Grand Port",
+    "moka": "Moka",
+    "pamplemousses": "Pamplemousses",
+    "plainewilhems": "Plaines Wilhems",
+    "portlouis": "Port Louis",
+    "rivieredurempart": "Rivière du Rempart",
+    "savanne": "Savanne",
+}

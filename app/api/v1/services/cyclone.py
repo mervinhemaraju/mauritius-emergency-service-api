@@ -16,9 +16,10 @@ from app.api.v1.models.cyclone_guidelines import CycloneGuideline
 class Cyclone:
     __level = {"N/A": 0, "I": 1, "II": 2, "III": 3, "IV": 4}
 
-    def __init__(self, lang, url=cyclone_report_url_def) -> None:
+    def __init__(self, lang, url=cyclone_report_url_def, request_timeout=15) -> None:
         # * Get the HTML page
-        response = requests.get(url=url[lang])
+        response = requests.get(url=url[lang], timeout=request_timeout)
+        response.raise_for_status()
 
         # * Verify if request was successful
         if response.status_code != 200:

@@ -30,4 +30,4 @@ v1_api.add_resource(
     CycloneReportTestingResource, "/<string:lang>/cyclone/report/testing"
 )
 
-v1_api.add_resource(CebOutages, "/<string:lang>/ceb")
+v1_api.add_resource(CebOutages, "/<string:lang>/ceb/outages")

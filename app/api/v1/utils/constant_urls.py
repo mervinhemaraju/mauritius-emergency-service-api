@@ -9,3 +9,6 @@ cyclone_names_url_def = {
     "en": "http://metservice.intnet.mu/tropical-cyclone/cyclone-names.php",
     "fr": "http://metservice.intnet.mu/tropical-cyclone/cyclone-names.php",
 }
+
+# Url for ceb outages
+CEB_OUTAGES_URL = "https://ceb.mu/customer-corner/power-outage-information"

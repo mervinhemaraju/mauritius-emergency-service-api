@@ -1,9 +1,6 @@
-import os
-
-# import app.web.web as Web
 from app.api.v1.v1 import v1_blueprint
 from app.api.v1.models.errors import Error
-from flask import Flask  # , redirect, url_for
+from flask import Flask
 from flask_restful import marshal_with
 
 # * Create a Flask Application
@@ -18,12 +15,12 @@ app.register_blueprint(v1_blueprint, url_prefix="/api/v1")
 # app.register_blueprint(Web.web, url_prefix="/web")
 
 # * SMTP Settings
-app.config["MAIL_SERVER"] = "smtp.gmail.com"
-app.config["MAIL_PORT"] = 587
-app.config["MAIL_USERNAME"] = os.environ["MAIL_USERNAME"]
-app.config["MAIL_PASSWORD"] = os.environ["MAIL_PASSWORD"]
-app.config["MAIL_USE_TLS"] = True
-app.config["MAIL_USE_SSL"] = False
+# app.config["MAIL_SERVER"] = "smtp.gmail.com"
+# app.config["MAIL_PORT"] = 587
+# app.config["MAIL_USERNAME"] = os.environ["MAIL_USERNAME"]
+# app.config["MAIL_PASSWORD"] = os.environ["MAIL_PASSWORD"]
+# app.config["MAIL_USE_TLS"] = True
+# app.config["MAIL_USE_SSL"] = False
 
 
 # # * Redirect to the correct web page by default
