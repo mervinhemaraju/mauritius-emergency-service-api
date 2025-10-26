@@ -57,3 +57,18 @@ class CebOutagesOutput(object):
         self.district_outages = district_outages
         self.message = message
         self.success = success
+
+
+class CebOutagesByDistrictOutput(object):
+    ceb_outages_by_district_output_fields = {
+        "outages": fields.List(
+            fields.Nested(CebOutage.ceb_outage_fields, default=None)
+        ),
+        "message": fields.String,
+        "success": fields.Boolean,
+    }
+
+    def __init__(self, outages=None, message="", success=False) -> None:
+        self.outages = outages
+        self.message = message
+        self.success = success

@@ -8,7 +8,7 @@ from app.api.v1.routes.cyclone import (
     CycloneReportTestingResource,
     CycloneGuidelinesResource,
 )
-from app.api.v1.routes.ceb import CebOutages
+from app.api.v1.routes.ceb import CebOutages, CebOutagesByDistrict
 
 
 def create_v1_blueprint(name="v1"):
@@ -22,19 +22,30 @@ def create_v1_blueprint(name="v1"):
     # Generate a Flask API from the blueprint
     api = Api(blueprint)
 
-    # Define API Routes
+    # > All API Routes
+    # Health Routes
     api.add_resource(HealthResource, "/health")
+
+    # Services routes
     api.add_resource(AllServices, "/<string:lang>/services")
     api.add_resource(OneService, "/<string:lang>/service/<string:identifier>")
     api.add_resource(EmergencyOnly, "/<string:lang>/services/emergencies")
+
+    # Cyclone routes
     api.add_resource(CycloneReportResource, "/<string:lang>/cyclone/report")
     api.add_resource(CycloneNamesResource, "/<string:lang>/cyclone/names")
     api.add_resource(CycloneGuidelinesResource, "/<string:lang>/cyclone/guidelines")
     api.add_resource(
         CycloneReportTestingResource, "/<string:lang>/cyclone/report/testing"
     )
-    api.add_resource(CebOutages, "/<string:lang>/ceb/outages")
 
+    # CEB routes
+    api.add_resource(CebOutages, "/<string:lang>/ceb/outages")
+    api.add_resource(
+        CebOutagesByDistrict, "/<string:lang>/ceb/outages/<string:district>"
+    )
+
+    # > Return blueprint
     return blueprint
 
 
