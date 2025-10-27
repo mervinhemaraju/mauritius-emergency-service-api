@@ -1,5 +1,6 @@
-import requests
 import re
+import codecs
+import requests
 from bs4 import BeautifulSoup
 from app.api.v1.models.ceb_outage import (
     CebOutages as CebOutagesModel,
@@ -7,7 +8,7 @@ from app.api.v1.models.ceb_outage import (
     CebOutageRaw,
 )
 from app.api.v1.services.exceptions import CebOutagesFailure
-from app.api.v1.utils.helpers import parse_ceb_datetimes
+from app.api.v1.utils.helpers import parse_ceb_datetimes, retrieve_ceb_streets
 from app.api.v1.utils.constant_urls import CEB_OUTAGES_URL
 from app.api.v1.utils.constant_others import CEB_DISTRICTS
 
@@ -73,9 +74,18 @@ class Ceb:
                                     for row in rows:
                                         cells = row.find_all("td")
                                         if len(cells) == 3:
-                                            date = cells[0].get_text(strip=True)
-                                            locality = cells[1].get_text(strip=True)
-                                            streets = cells[2].get_text(strip=True)
+                                            date = codecs.decode(
+                                                cells[0].get_text(strip=True),
+                                                "unicode_escape",
+                                            )
+                                            locality = codecs.decode(
+                                                cells[1].get_text(strip=True),
+                                                "unicode_escape",
+                                            )
+                                            streets = codecs.decode(
+                                                cells[2].get_text(strip=True),
+                                                "unicode_escape",
+                                            )
 
                                             # Only process if there's actual data
                                             if date and locality and streets:
@@ -84,6 +94,11 @@ class Ceb:
                                                     date=date,
                                                     locality=locality,
                                                     streets=streets,
+                                                )
+
+                                                # Process the streets list
+                                                streets_list = retrieve_ceb_streets(
+                                                    raw_streets=streets
                                                 )
 
                                                 # Parse datetime if date exists
@@ -102,13 +117,6 @@ class Ceb:
                                                         print(
                                                             f"Error parsing date: {e}"
                                                         )
-
-                                                # Parse streets into list (split by comma or newline)
-                                                streets_list = [
-                                                    s.strip()
-                                                    for s in re.split(r"[,\n]", streets)
-                                                    if s.strip()
-                                                ]
 
                                                 # Create outage object
                                                 outage = CebOutage(

@@ -31,13 +31,13 @@ MONTH_NUMBER_MAPPING_VARIANTS = {
 
 # A dictionnary containing all the CEB districts
 CEB_DISTRICTS = {
-    "blackriver": "Black-River",
-    "flacq": "Flacq",
-    "grandport": "Grand-Port",
-    "moka": "Moka",
-    "pamplemousses": "Pamplemousses",
-    "plainewilhems": "Plaines-Wilhems",
-    "portlouis": "Port-Louis",
-    "rivieredurempart": "Riviere-du-Rempart",
-    "savanne": "Savanne",
+    "blackriver": "riviere-noir",
+    "flacq": "flacq",
+    "grandport": "grand-port",
+    "moka": "moka",
+    "pamplemousses": "pamplemousses",
+    "plainewilhems": "plaines-wilhems",
+    "portlouis": "port-louis",
+    "rivieredurempart": "riviere-du-rempart",
+    "savanne": "savanne",
 }

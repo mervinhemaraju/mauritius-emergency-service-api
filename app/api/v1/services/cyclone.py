@@ -76,13 +76,21 @@ class Cyclone:
         left_content = self.soup.select_one(".left_content")
 
         # * Retrieve the names row
-        names_row = left_content.find("table").find("tbody").find_all("tr")
+        names_row: list = left_content.find("table").find("tbody").find_all("tr")
 
-        print(f"Names Row: {names_row}")
+        print(f"{len(names_row)} names row are {names_row}")
 
-        # * Remove the table header and the first column
-        del names_row[:1]
-        del names_row[:1]
+        # Remove unused rows until names are obtained
+        for i, row_html in enumerate(names_row):
+            # We check a lowercase version to make it case-insensitive
+            row_lower = row_html.get_text().lower()
+
+            # Check if both keywords are in this row string
+            if "names" in row_lower and "gender" in row_lower:
+                # Found the header!
+                # Return a new list starting from this index (i).
+                names_row = names_row[i + 1 :]
+                break
 
         # * Define empty list of names
         names: list[CycloneName] = []
@@ -91,8 +99,6 @@ class Cyclone:
         for name in names_row:
             # * Get all the values in the td
             values = [value.get_text().strip() for value in name.find_all("td")]
-
-            print(f"Values: {values}")
 
             # * Delete column header
             del values[:1]
@@ -109,8 +115,6 @@ class Cyclone:
                     provided_by=values[3],
                 )
             )
-
-        print(f"Names: {names}")
 
         # * Return the names list
         return names

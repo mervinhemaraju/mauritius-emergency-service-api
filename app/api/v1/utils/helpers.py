@@ -5,6 +5,58 @@ from dateutil import parser
 from app.api.v1.utils.constant_others import MONTH_NUMBER_MAPPING_VARIANTS
 
 
+def retrieve_ceb_streets(raw_streets):
+    """
+    Cleans and splits a raw string of street names into a list.
+
+    This final version:
+    1. Fixes double-escaped Unicode characters.
+    2. Strips whitespace.
+    3. **NEW:** Only removes "et les environs" if it's at the
+       very end of the string.
+    4. Splits by primary delimiters (comma, newline).
+    5. **NEW:** Checks the last item for two types of separators,
+       checking for the longer "et les environs de" first,
+       then for "et".
+    6. Strips trailing periods from all final items.
+    """
+
+    # 1. Fix Unicode and strip whitespace
+    text = raw_streets.strip()
+
+    # 2. NEW Rule:
+    #    Only remove "et les environs" if it's at the very end.
+    if text.lower().endswith("et les environs"):
+        # Find the index of the last occurrence
+        end_index = text.lower().rfind("et les environs")
+        # Slice the string to remove it
+        text = text[:end_index].strip()
+
+    # 3. Now, lowercase the whole thing for processing
+    text = text.lower()
+
+    # 4. Split by primary delimiters (comma, newline)
+    streets_list = [s.strip() for s in re.split(r"[,\n]", text) if s]
+
+    # 5. Apply the refined 'et' separator logic.
+    #    We must check for the longer "et les environs de" FIRST,
+    #    otherwise "et" would match it incorrectly.
+    separator_regex = r"\s+(?:et les environs de|et)\s+"
+
+    if streets_list and re.search(separator_regex, streets_list[-1]):
+        # Remove the last item to be split
+        last_element = streets_list.pop()
+
+        # Split *only that item* by the complex separator
+        parts = re.split(separator_regex, last_element)
+
+        # Add the new, split parts back to the list
+        streets_list.extend(parts)
+
+    # 6. Final clean-up: strip whitespace and trailing periods
+    return [s.strip().rstrip(".") for s in streets_list if s.strip()]
+
+
 def parse_ceb_datetimes(date_string):
     """
     Parses French datetime strings and extracts start and end datetimes.
@@ -15,12 +67,6 @@ def parse_ceb_datetimes(date_string):
     Returns:
         tuple: (start_datetime, end_datetime) as datetime objects
     """
-
-    # Decode data
-    # date_string = date_string.encode().decode("unicode-escape").lower()
-    if "\\u00e0" in date_string:
-        date_string = date_string.replace("\\u00e0", "à")
-
     # Extract date components using regex
     # Pattern: Le <day> <day_num> <month> <year> de <start_time> à <end_time>
     pattern = (

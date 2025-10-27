@@ -82,14 +82,6 @@ class TestServiceCyclone:
         # Assert
         assert result == expected_result
 
-        testdata = [
-            ("tests/v1.0/dummy_data/cyclone_class_1.html", []),
-            # ("tests/v1.0/dummy_data/cyclone_class_2.html", 2),
-            # ("tests/v1.0/dummy_data/cyclone_class_3.html", 3),
-            # ("tests/v1.0/dummy_data/cyclone_class_4.html", 4),
-            # ("tests/v1.0/dummy_data/cyclone_class_none.html", 0),
-        ]
-
     testdata = [
         (
             "tests/v1/dummy_data/levels/cyclone_class_1.html",
