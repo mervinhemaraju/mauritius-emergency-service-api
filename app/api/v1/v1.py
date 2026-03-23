@@ -15,6 +15,7 @@ from app.api.v1.routes.alert_infos import (
     TsunamiPrecautionsResource,
     TsunamiWarningsResource,
 )
+from app.api.v1.routes.sunrise_sunset import SunriseSunsetResource
 
 
 def create_v1_blueprint(name="v1"):
@@ -69,6 +70,9 @@ def create_v1_blueprint(name="v1"):
     api.add_resource(
         CebOutagesByDistrict, "/<string:lang>/ceb/outages/<string:district>"
     )
+
+    # Sun routes
+    api.add_resource(SunriseSunsetResource, "/<string:lang>/sun")
 
     # > Return blueprint
     return blueprint

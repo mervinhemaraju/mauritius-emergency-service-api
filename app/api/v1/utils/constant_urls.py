@@ -17,3 +17,8 @@ CEB_OUTAGES_URL = "https://ceb.mu/customer-corner/power-outage-information"
 TORRENTIAL_RAIN_ALERT_URL = (
     "https://metservice.intnet.mu/warning-bulletin-torrential-rain-warning.php"
 )
+
+# Url for sunrise sunset Mauritius
+SUNRISE_SUNSET_URL = (
+    "https://metservice.intnet.mu/sun-moon-and-tides-sunrise-sunset-mauritius.php"
+)
