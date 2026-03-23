@@ -1,6 +1,7 @@
 import pytest
 import json
 from app import app
+from tests.v1.constants import error_404_response
 
 
 class TestResourceError:
@@ -16,19 +17,19 @@ class TestResourceError:
     testdata = [
         (
             "/api/v1/en/cyclone",
-            "You've landed on a non-existant page. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
+            error_404_response()["message"],
         ),
         (
             "/api/v1/fr/cyclone",
-            "You've landed on a non-existant page. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
+            error_404_response()["message"],
         ),
         (
             "/api/v1/en/service",
-            "You've landed on a non-existant page. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
+            error_404_response()["message"],
         ),
         (
             "/api/v1/fr/service",
-            "You've landed on a non-existant page. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
+            error_404_response()["message"],
         ),
         (
             "/api/v1/en/service/unknown",
@@ -40,27 +41,27 @@ class TestResourceError:
         ),
         (
             "/api/v1/en",
-            "You've landed on a non-existant page. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
+            error_404_response()["message"],
         ),
         (
             "/api/v1/fr",
-            "You've landed on a non-existant page. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
+            error_404_response()["message"],
         ),
         (
             "/api/v1",
-            "You've landed on a non-existant page. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
+            error_404_response()["message"],
         ),
         (
             "/api/v1",
-            "You've landed on a non-existant page. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
+            error_404_response()["message"],
         ),
         (
             "/api",
-            "You've landed on a non-existant page. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
+            error_404_response()["message"],
         ),
         (
             "/api",
-            "You've landed on a non-existant page. Please check our docs at https://github.com/mervinhemaraju/mauritius-emergency-service-api",
+            error_404_response()["message"],
         ),
     ]
 

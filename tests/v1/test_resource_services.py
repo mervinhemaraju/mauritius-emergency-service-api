@@ -5,18 +5,18 @@ from app import app
 
 class TestResourceService:
     def one_service(lang: str, identifier: str):
-        with open(f"data/v1/services_{lang}.json") as services_file:
+        with open(f"data/v1/contacts/services_{lang}.json") as services_file:
             services = json.loads(services_file.read())
             return [
                 service for service in services if service["identifier"] == identifier
             ]
 
     def get_services(lang: str):
-        with open(f"data/v1/services_{lang}.json") as services_file:
+        with open(f"data/v1/contacts/services_{lang}.json") as services_file:
             return json.loads(services_file.read())
 
     def get_emergencies(lang: str):
-        with open(f"data/v1/services_{lang}.json") as services_file:
+        with open(f"data/v1/contacts/services_{lang}.json") as services_file:
             services = json.loads(services_file.read())
             return [service for service in services if service["type"] == "E"]
 

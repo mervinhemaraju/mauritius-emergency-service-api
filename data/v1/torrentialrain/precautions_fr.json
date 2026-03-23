@@ -1,0 +1,18 @@
+{
+    "id": "torrential_rain_precautions",
+    "title": "Précautions",
+    "sections": [
+        {
+            "id": "precautions_during_torrential_rain",
+            "title": "Précautions lors de pluies torrentielles",
+            "content": "Dès qu'un avertissement de pluies torrentielles entre en vigueur, le public est invité à prendre les précautions suivantes :",
+            "precautions": [
+                "Garder les enfants scolarisés à l'intérieur et ne pas les envoyer à l'école.",
+                "Éviter de s'aventurer près des rivières et cours d'eau en crue ainsi que des ponts en débordement.",
+                "Éviter d'effectuer de longs trajets en véhicule, notamment dans les zones inondables. Ne pas traverser les ponts inondés ou les zones submergées, que ce soit à pied ou en véhicule.",
+                "Dans les zones inondables, sécurisez vos biens et propriétés. Si le niveau de l'eau continue de monter dans les zones inondables, évacuez la zone si nécessaire.",
+                "Éviter de s'approcher des versants de collines ou de montagnes sujets aux glissements de terrain."
+            ]
+        }
+    ]
+}

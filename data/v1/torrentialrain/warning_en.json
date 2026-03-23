@@ -1,0 +1,33 @@
+{
+    "id": "torrential_rain_warning_system",
+    "title": "Torrential Rain Warning System",
+    "sections": [
+        {
+            "id": "criteria",
+            "title": "When does torrential rain conditions exist?",
+            "content": "Following observations indicating that accumulated rainfall has reached 100 millimetres in a given region or is likely to reach 100 millimetres in a given region in the ensuing hour, and the rain is expected to continue."
+        },
+        {
+            "id": "hazards",
+            "title": "Hazards",
+            "content": "Torrential rain can cause flash floods or urban floods in any locality while the most likely effect is water accumulations in flood prone areas. Heavy rain may also be responsible for the overflow of rivulets and streams or even major rivers leading to riverine flooding. Such floods usually occur downstream where it may not be necessarily raining heavily. Another hazard in the aftermath of heavy rain is landslide which can occur on hill or mountain slopes which are usually considered as high-risk areas."
+        },
+        {
+            "id": "flood_warning_scope",
+            "title": "Flood Warning Scope",
+            "content": "Mauritius Meteorological Services provide flood warning of a general nature without being site specific or quantifying water level in rivers."
+        },
+        {
+            "id": "warning_bulletin",
+            "title": "Torrential Rain Warning Bulletin",
+            "content": "Following observations indicating that accumulated rainfall has reached 100 millimetres in a given region or is likely to reach 100 millimetres in a given region in the ensuing hour, and the rain is expected to continue, the Mauritius Meteorological Services will issue warnings at regular intervals and will be broadcasted on the MBC and private radio stations.",
+            "stakeholders": [
+                "Prime Minister's Office",
+                "Mauritius Police Force",
+                "NDRRMC",
+                "Ministry of Education and Human Resource",
+                "Ministry of Tertiary Education, Science and Research"
+            ]
+        }
+    ]
+}

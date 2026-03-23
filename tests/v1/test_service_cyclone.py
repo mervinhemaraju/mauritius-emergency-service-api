@@ -2,7 +2,7 @@ import pytest
 from bs4 import BeautifulSoup
 from app.api.v1.services.cyclone import Cyclone
 from app.api.v1.services.exceptions import CycloneReportFailure
-from app.api.v1.utils.constants import cyclone_names_url_def
+from app.api.v1.utils.constant_urls import cyclone_names_url_def
 
 
 class TestServiceCyclone:
@@ -81,14 +81,6 @@ class TestServiceCyclone:
 
         # Assert
         assert result == expected_result
-
-        testdata = [
-            ("tests/v1.0/dummy_data/cyclone_class_1.html", []),
-            # ("tests/v1.0/dummy_data/cyclone_class_2.html", 2),
-            # ("tests/v1.0/dummy_data/cyclone_class_3.html", 3),
-            # ("tests/v1.0/dummy_data/cyclone_class_4.html", 4),
-            # ("tests/v1.0/dummy_data/cyclone_class_none.html", 0),
-        ]
 
     testdata = [
         (

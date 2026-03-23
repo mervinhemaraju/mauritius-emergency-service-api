@@ -7,7 +7,7 @@ from app.api.v1.models.cyclone_report import CycloneReport
 from app.api.v1.models.cyclone_name import CycloneNameOutput
 from app.api.v1.models.cyclone_report import CycloneReportOutput
 from app.api.v1.models.cyclone_guidelines import CycloneGuidelinesOutput
-from app.api.v1.utils.constants import cyclone_names_url_def
+from app.api.v1.utils.constant_urls import cyclone_names_url_def
 
 
 class CycloneReportResource(Resource):

@@ -6,9 +6,9 @@ from app.api.v1.utils.helpers import (
     retrieve_cyclone_class_level,
     retrieve_time_from_text,
 )
-from app.api.v1.utils.constants import guidelines_json_file, guidelines_json_def
+from app.api.v1.utils.constant_paths import guidelines_json_file
 from app.api.v1.services.exceptions import CycloneReportFailure
-from app.api.v1.utils.constants import cyclone_report_url_def
+from app.api.v1.utils.constant_urls import cyclone_report_url_def
 from app.api.v1.models.cyclone_name import CycloneName
 from app.api.v1.models.cyclone_guidelines import CycloneGuideline
 
@@ -16,9 +16,10 @@ from app.api.v1.models.cyclone_guidelines import CycloneGuideline
 class Cyclone:
     __level = {"N/A": 0, "I": 1, "II": 2, "III": 3, "IV": 4}
 
-    def __init__(self, lang, url=cyclone_report_url_def) -> None:
+    def __init__(self, lang, url=cyclone_report_url_def, request_timeout=15) -> None:
         # * Get the HTML page
-        response = requests.get(url=url[lang])
+        response = requests.get(url=url[lang], timeout=request_timeout)
+        response.raise_for_status()
 
         # * Verify if request was successful
         if response.status_code != 200:
@@ -75,13 +76,21 @@ class Cyclone:
         left_content = self.soup.select_one(".left_content")
 
         # * Retrieve the names row
-        names_row = left_content.find("table").find("tbody").find_all("tr")
+        names_row: list = left_content.find("table").find("tbody").find_all("tr")
 
-        print(f"Names Row: {names_row}")
+        print(f"{len(names_row)} names row are {names_row}")
 
-        # * Remove the table header and the first column
-        del names_row[:1]
-        del names_row[:1]
+        # Remove unused rows until names are obtained
+        for i, row_html in enumerate(names_row):
+            # We check a lowercase version to make it case-insensitive
+            row_lower = row_html.get_text().lower()
+
+            # Check if both keywords are in this row string
+            if "names" in row_lower and "gender" in row_lower:
+                # Found the header!
+                # Return a new list starting from this index (i).
+                names_row = names_row[i + 1 :]
+                break
 
         # * Define empty list of names
         names: list[CycloneName] = []
@@ -90,8 +99,6 @@ class Cyclone:
         for name in names_row:
             # * Get all the values in the td
             values = [value.get_text().strip() for value in name.find_all("td")]
-
-            print(f"Values: {values}")
 
             # * Delete column header
             del values[:1]
@@ -109,25 +116,30 @@ class Cyclone:
                 )
             )
 
-        print(f"Names: {names}")
-
         # * Return the names list
         return names
 
 
 class CycloneGuidelines:
+    """
+    The class that handles cyclone guidelines
+    """
+
     def __init__(self, lang) -> None:
         self.lang = lang
 
     def load(self):
-        # * Open the file according to the language queried
+        # Define the default language
+        default_lang_file = next(iter(guidelines_json_file.values()))
+
+        # Open the file according to the language queried
         with open(
-            guidelines_json_file.get(self.lang, guidelines_json_def)
+            guidelines_json_file.get(self.lang, default_lang_file)
         ) as guidelines_file:
-            # * Get the guidelines
+            # Get the guidelines
             guidelines = json.load(guidelines_file)
 
-            # * Format the guidelines into an object adn return it
+            # Format the guidelines into an object adn return it
             return [
                 CycloneGuideline(
                     level=guideline["level"],
