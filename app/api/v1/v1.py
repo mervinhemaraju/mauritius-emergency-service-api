@@ -16,6 +16,7 @@ from app.api.v1.routes.alert_infos import (
     TsunamiWarningsResource,
 )
 from app.api.v1.routes.sunrise_sunset import SunriseSunsetResource
+from app.api.v1.routes.moonrise_moonset import MoonriseMoonsetResource
 
 
 def create_v1_blueprint(name="v1"):
@@ -73,6 +74,9 @@ def create_v1_blueprint(name="v1"):
 
     # Sun routes
     api.add_resource(SunriseSunsetResource, "/<string:lang>/sun")
+
+    # Moon routes
+    api.add_resource(MoonriseMoonsetResource, "/<string:lang>/moon")
 
     # > Return blueprint
     return blueprint

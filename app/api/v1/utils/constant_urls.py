@@ -22,3 +22,8 @@ TORRENTIAL_RAIN_ALERT_URL = (
 SUNRISE_SUNSET_URL = (
     "https://metservice.intnet.mu/sun-moon-and-tides-sunrise-sunset-mauritius.php"
 )
+
+# Url for moonrise moonset Mauritius
+MOONRISE_MOONSET_URL = (
+    "https://metservice.intnet.mu/sun-moon-and-tides-moonrise-moonset-mauritius.php"
+)
