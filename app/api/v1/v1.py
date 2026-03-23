@@ -8,6 +8,7 @@ from app.api.v1.routes.cyclone import (
     CycloneGuidelinesResource,
 )
 from app.api.v1.routes.ceb import CebOutages, CebOutagesByDistrict
+from app.api.v1.routes.rainfall import HeavyRainfallAlertsResource
 
 
 def create_v1_blueprint(name="v1"):
@@ -27,6 +28,9 @@ def create_v1_blueprint(name="v1"):
     api.add_resource(AllServices, "/<string:lang>/services")
     api.add_resource(OneService, "/<string:lang>/service/<string:identifier>")
     api.add_resource(EmergencyOnly, "/<string:lang>/services/emergencies")
+
+    # Heavy Rainfall Alerts
+    api.add_resource(HeavyRainfallAlertsResource, "/<string:lang>/hra")
 
     # Cyclone routes
     api.add_resource(CycloneReportResource, "/<string:lang>/cyclone/report")
