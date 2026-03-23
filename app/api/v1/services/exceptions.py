@@ -8,3 +8,7 @@ class CebOutagesFailure(Exception):
     """
     All CEB Outages failure exceptions
     """
+
+
+class GeneralAlertFailure(Exception):
+    """All General Alert failures"""

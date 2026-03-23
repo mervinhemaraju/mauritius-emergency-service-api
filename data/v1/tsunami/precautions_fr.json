@@ -1,0 +1,33 @@
+{
+    "id": "tsunami_precautions",
+    "title": "Précautions",
+    "sections": [
+        {
+            "id": "when_to_evacuate",
+            "title": "Quand Évacuer ?",
+            "content": "Lorsqu'un Bulletin d'Avertissement de Tsunami est émis par les Services Météorologiques de Maurice, des annonces d'évacuation seront diffusées par les stations de TV et de radio ainsi que par les haut-parleurs de la Police. Le public est invité à suivre les directives de la Police lors de l'évacuation."
+        },
+        {
+            "id": "where_to_evacuate",
+            "title": "Où Évacuer ?",
+            "content": "Les personnes vivant ou travaillant dans les zones côtières doivent immédiatement se déplacer vers des terrains plus élevés ou évacuer verticalement lorsqu'un bâtiment solide en béton est disponible."
+        },
+        {
+            "id": "things_to_remember",
+            "title": "Choses à Retenir",
+            "precautions": [
+                "Si vous observez une montée ou une baisse inattendue de la mer, un tsunami pourrait approcher. Il vous est fortement conseillé de vous diriger vers les hauteurs.",
+                "Restez à l'écoute de votre radio ou de votre télévision lors d'une catastrophe. Des bulletins d'information sur la situation seront diffusés régulièrement.",
+                "Suivez les panneaux d'urgence et les directives de la Police.",
+                "Ne vous rendez jamais sur la côte pour observer un tsunami. Les tsunamis se déplacent plus vite qu'une personne ne peut courir.",
+                "Ne retournez pas à la plage tant que les Responsables des Services d'Urgence n'ont pas donné le signal 'Tout est Clear'.",
+                "Toutes les zones côtières basses peuvent être touchées par un tsunami.",
+                "Les tsunamis peuvent survenir à tout moment du jour ou de la nuit.",
+                "Les tsunamis peuvent remonter les rivières et les cours d'eau depuis l'océan.",
+                "Les tsunamis peuvent facilement contourner les îles et être tout aussi dangereux sur les côtes ne faisant pas face à la source du tsunami.",
+                "Préparez un kit d'urgence avec les produits de première nécessité (eau, denrées alimentaires, couvertures, matériel de premiers secours, médicaments, radio, torche) qui soit portable lors d'une évacuation.",
+                "Partagez vos connaissances avec votre famille et vos amis, cela pourrait leur sauver la vie."
+            ]
+        }
+    ]
+}
