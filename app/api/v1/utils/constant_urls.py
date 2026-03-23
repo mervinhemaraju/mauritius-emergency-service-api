@@ -12,3 +12,8 @@ cyclone_names_url_def = {
 
 # Url for ceb outages
 CEB_OUTAGES_URL = "https://ceb.mu/customer-corner/power-outage-information"
+
+# Url for heavy rainfall alert
+TORRENTIAL_RAIN_ALERT_URL = (
+    "https://metservice.intnet.mu/warning-bulletin-torrential-rain-warning.php"
+)

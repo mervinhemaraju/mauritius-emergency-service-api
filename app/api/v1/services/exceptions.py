@@ -8,3 +8,9 @@ class CebOutagesFailure(Exception):
     """
     All CEB Outages failure exceptions
     """
+
+
+class TorrentialRainAlertFailure(Exception):
+    """
+    All Torrential Rain Alert failure exceptions
+    """
