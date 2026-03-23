@@ -59,11 +59,7 @@ jobs:
           tags: "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.tag.outputs.tag }}"
 
   build-prod-image:
-    if: |
-      github.event_name == 'push' &&
-      github.ref == 'refs/heads/main' &&
-      startsWith(github.event.head_commit.message, 'Merge pull request') &&
-      contains(github.event.head_commit.message, 'release/')
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -88,17 +84,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Extract version from merge commit
-        id: tag
-        run: |
-          # Extract release version from merge commit message
-          VERSION=$(echo "${{ github.event.head_commit.message }}" | grep -oP 'release/\K[^\s"]+' | head -1)
-          if [[ -z "$VERSION" ]]; then
-            echo "::error::Could not extract version from release branch"
-            exit 1
-          fi
-          echo "tag=prod-${VERSION}" >> $GITHUB_OUTPUT
-
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
@@ -106,4 +91,4 @@ jobs:
           file: ./Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.tag.outputs.tag }}"
+          tags: "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:prod"
