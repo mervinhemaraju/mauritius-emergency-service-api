@@ -1,0 +1,18 @@
+{
+    "id": "torrential_rain_precautions",
+    "title": "Precautions",
+    "sections": [
+        {
+            "id": "precautions_during_torrential_rain",
+            "title": "Precautions during torrential rain",
+            "content": "As soon as a torrential rains warning comes in force, the public is advised to take the following precautions:",
+            "precautions": [
+                "Keep school children indoors and not to send them to school.",
+                "Avoid venturing near flooded rivers and streams and overflowing bridges.",
+                "Avoid taking long trips in vehicles, especially in flood prone areas. Do not cross flooded bridges or submerged areas either by foot or by vehicle.",
+                "In flood prone areas, secure your belongings and properties. If the water level continues to rise in flood prone areas, evacuate the area if necessary.",
+                "Avoid going near hill or mountain slopes prone to landslide."
+            ]
+        }
+    ]
+}

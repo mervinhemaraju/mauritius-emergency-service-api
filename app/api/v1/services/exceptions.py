@@ -10,7 +10,5 @@ class CebOutagesFailure(Exception):
     """
 
 
-class TorrentialRainAlertFailure(Exception):
-    """
-    All Torrential Rain Alert failure exceptions
-    """
+class GeneralAlertFailure(Exception):
+    """All General Alert failures"""

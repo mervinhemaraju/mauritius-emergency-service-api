@@ -1,0 +1,33 @@
+{
+    "id": "tsunami_precautions",
+    "title": "Precautions",
+    "sections": [
+        {
+            "id": "when_to_evacuate",
+            "title": "When To Evacuate?",
+            "content": "When a Tsunami Warning Bulletin is issued by the Mauritius Meteorological Services, announcements to evacuate will be made through TV & radio stations and Police hailers. The public is advised to follow the directives of the Police during evacuation."
+        },
+        {
+            "id": "where_to_evacuate",
+            "title": "Where To Evacuate?",
+            "content": "Those living or working in coastal areas should immediately move to higher grounds or evacuate vertically wherever a tall strong building, made of concrete, is available."
+        },
+        {
+            "id": "things_to_remember",
+            "title": "Things to Remember",
+            "precautions": [
+                "If you see an unexpected rise or fall in the sea, a tsunami may be approaching. You are strongly advised to move uphill.",
+                "Stay tuned to your radio or TV during a disaster. Information bulletins regarding the situation will be broadcast regularly.",
+                "Follow the emergency signs and the directives of the Police.",
+                "Never go to the coast to watch a tsunami. Tsunamis move faster than a person can run.",
+                "Do not return to the beach until Emergency Officials give the 'All Clear' signal.",
+                "All low lying coastal areas can be struck by a tsunami.",
+                "Tsunamis can occur at any time of day or night.",
+                "Tsunamis can travel up rivers and streams from the ocean.",
+                "Tsunamis can easily wrap around islands and be just as dangerous on coasts not facing the source of the tsunami.",
+                "Prepare an emergency kit with basic necessities (water, food items, blankets, first aid supplies, medicines, radio, torch) which is portable during evacuation.",
+                "Share your knowledge with family and friends, it could save their lives."
+            ]
+        }
+    ]
+}

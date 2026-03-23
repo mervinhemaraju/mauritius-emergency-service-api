@@ -8,7 +8,13 @@ from app.api.v1.routes.cyclone import (
     CycloneGuidelinesResource,
 )
 from app.api.v1.routes.ceb import CebOutages, CebOutagesByDistrict
-from app.api.v1.routes.torrential_rain import TorrentialRainAlertResource
+from app.api.v1.routes.general_alerts import GeneralAlertResource
+from app.api.v1.routes.alert_infos import (
+    TorrentialRainPrecautionsResource,
+    TorrentialRainWarningsResource,
+    TsunamiPrecautionsResource,
+    TsunamiWarningsResource,
+)
 
 
 def create_v1_blueprint(name="v1"):
@@ -29,9 +35,25 @@ def create_v1_blueprint(name="v1"):
     api.add_resource(OneService, "/<string:lang>/service/<string:identifier>")
     api.add_resource(EmergencyOnly, "/<string:lang>/services/emergencies")
 
-    # Torrential Rain Alerts
+    # General alerts routes
+    api.add_resource(GeneralAlertResource, "/<string:lang>/alerts")
+
+    # Alert info routes
     api.add_resource(
-        TorrentialRainAlertResource, "/<string:lang>/rainfall/torrential/alerts"
+        TorrentialRainPrecautionsResource,
+        "/<string:lang>/alert/torrentialrain/precautions",
+    )
+    api.add_resource(
+        TorrentialRainWarningsResource,
+        "/<string:lang>/alert/torrentialrain/warnings",
+    )
+    api.add_resource(
+        TsunamiPrecautionsResource,
+        "/<string:lang>/alert/tsunami/precautions",
+    )
+    api.add_resource(
+        TsunamiWarningsResource,
+        "/<string:lang>/alert/tsunami/warnings",
     )
 
     # Cyclone routes

@@ -1,0 +1,33 @@
+{
+    "id": "torrential_rain_warning_system",
+    "title": "Système d'Avertissement des Pluies Torrentielles",
+    "sections": [
+        {
+            "id": "criteres",
+            "title": "Quand les conditions de pluies torrentielles existent-elles ?",
+            "content": "Suite à des observations indiquant que les précipitations accumulées ont atteint 100 millimètres dans une région donnée ou sont susceptibles d'atteindre 100 millimètres dans une région donnée dans l'heure qui suit, et que la pluie devrait continuer."
+        },
+        {
+            "id": "risques",
+            "title": "Risques",
+            "content": "Les pluies torrentielles peuvent provoquer des crues soudaines ou des inondations urbaines dans n'importe quelle localité, tandis que l'effet le plus probable est l'accumulation d'eau dans les zones inondables. De fortes pluies peuvent également être responsables du débordement de ruisseaux et de cours d'eau, voire de grands fleuves, entraînant des inondations fluviales. Ces inondations surviennent généralement en aval où il ne pleut pas nécessairement fortement. Un autre danger consécutif aux fortes pluies est le glissement de terrain, qui peut se produire sur des versants de collines ou de montagnes généralement considérés comme des zones à haut risque."
+        },
+        {
+            "id": "portee_avertissement_inondation",
+            "title": "Portée de l'Avertissement d'Inondation",
+            "content": "Les Services Météorologiques de Maurice fournissent des avertissements d'inondation de nature générale, sans être spécifiques à un site particulier ni quantifier le niveau d'eau dans les rivières."
+        },
+        {
+            "id": "bulletin_avertissement",
+            "title": "Bulletin d'Avertissement de Pluies Torrentielles",
+            "content": "Suite à des observations indiquant que les précipitations accumulées ont atteint 100 millimètres dans une région donnée ou sont susceptibles d'atteindre 100 millimètres dans une région donnée dans l'heure qui suit, et que la pluie devrait continuer, les Services Météorologiques de Maurice émettront des avertissements à intervalles réguliers qui seront diffusés sur la MBC et les stations de radio privées.",
+            "stakeholders": [
+                "Bureau du Premier Ministre",
+                "Force Policière de Maurice",
+                "NDRRMC",
+                "Ministère de l'Éducation et des Ressources Humaines",
+                "Ministère de l'Enseignement Supérieur, des Sciences et de la Recherche"
+            ]
+        }
+    ]
+}
