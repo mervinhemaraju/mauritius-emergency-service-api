@@ -27,3 +27,6 @@ SUNRISE_SUNSET_URL = (
 MOONRISE_MOONSET_URL = (
     "https://metservice.intnet.mu/sun-moon-and-tides-moonrise-moonset-mauritius.php"
 )
+
+# Url for tides Mauritius
+TIDES_URL = "https://metservice.intnet.mu/sun-moon-and-tides-tides-mauritius.php"

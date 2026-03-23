@@ -17,6 +17,7 @@ from app.api.v1.routes.alert_infos import (
 )
 from app.api.v1.routes.sunrise_sunset import SunriseSunsetResource
 from app.api.v1.routes.moonrise_moonset import MoonriseMoonsetResource
+from app.api.v1.routes.tides import TidesResource
 
 
 def create_v1_blueprint(name="v1"):
@@ -77,6 +78,9 @@ def create_v1_blueprint(name="v1"):
 
     # Moon routes
     api.add_resource(MoonriseMoonsetResource, "/<string:lang>/moon")
+
+    # Tides route
+    api.add_resource(TidesResource, "/<string:lang>/tides")
 
     # > Return blueprint
     return blueprint
